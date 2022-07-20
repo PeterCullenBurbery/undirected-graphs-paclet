@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Cullen Burbery",
     "License" -> "MIT",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "1.1.0",
+    "Version" -> "1.2.0",
     "WolframVersion" -> "13.1+",
     "Extensions" -> {
       {
@@ -19,7 +19,10 @@ PacletObject[
             "UndirectedGraphs.wl"
           }
         },
-        "Symbols" -> {"PeterBurbery`UndirectedGraphs`OddNodes"}
+        "Symbols" -> {
+          "PeterBurbery`UndirectedGraphs`FindBlossomInequalities",
+          "PeterBurbery`UndirectedGraphs`OddNodes"
+        }
       },
       {"Documentation", "Language" -> "English"}
     }

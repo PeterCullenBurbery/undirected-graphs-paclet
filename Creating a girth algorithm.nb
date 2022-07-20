@@ -1,0 +1,1997 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     87380,       1989]
+NotebookOptionsPosition[     83217,       1913]
+NotebookOutlinePosition[     83654,       1930]
+CellTagsIndexPosition[     83611,       1927]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GirthShortestCycleAlgorithm", "[", 
+   RowBox[{"graph_", "?", "GraphQ"}], "]"}], ":=", 
+  RowBox[{"Min", "[", 
+   RowBox[{"Length", "/@", 
+    RowBox[{"FindCycle", "[", 
+     RowBox[{"graph", ",", "Infinity", ",", "All"}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[9]:=",ExpressionUUID->"d6617d6b-cea4-43e8-8d08-4b9df0100168"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Combinatorica`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.867320508288731*^9, 3.8673205106997137`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"0a9bf6f8-ed61-4241-90de-1fd849a85226"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "compat", 
+   "\"Combinatorica Graph and Permutations functionality has been superseded \
+by preloaded functionality. The package now being loaded may conflict with \
+this. Please see the Compatibility Guide for details.\"", 2, 13, 15, 
+   19448096043367766718, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.867320585901475*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"0b0ca8c6-934b-4a80-8798-94947d533e69"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DodecahedralGraph", "shdw", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"DodecahedralGraph\\\\\\\"\\\"}]\\) \
+appears in multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"Combinatorica`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"Combinatorica`\\\\\\\"\\\"}]\\) may shadow or be \
+shadowed by other definitions.\"", 2, 13, 16, 19448096043367766718, "Local", 
+   "Combinatorica`DodecahedralGraph"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.867320586049463*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"71ffd797-6a0a-4f9b-8894-4d3a01d85083"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "GraphJoin", "shdw", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"GraphJoin\\\\\\\"\\\"}]\\) appears \
+in multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"Combinatorica`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"System`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"Combinatorica`\\\\\\\"\\\"}]\\) may shadow or be \
+shadowed by other definitions.\"", 2, 13, 17, 19448096043367766718, "Local", 
+   "Combinatorica`GraphJoin"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.867320586266472*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"da592c71-d492-4831-ad28-3f5c3e1bed09"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "GraphProduct", "shdw", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"GraphProduct\\\\\\\"\\\"}]\\) \
+appears in multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"Combinatorica`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"System`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"Combinatorica`\\\\\\\"\\\"}]\\) may shadow or be \
+shadowed by other definitions.\"", 2, 13, 18, 19448096043367766718, "Local", 
+   "Combinatorica`GraphProduct"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.867320586458476*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"f0d04dff-d712-448f-b9a8-c14326048d48"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "GraphSum", "shdw", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"GraphSum\\\\\\\"\\\"}]\\) appears \
+in multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"Combinatorica`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"System`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"Combinatorica`\\\\\\\"\\\"}]\\) may shadow or be \
+shadowed by other definitions.\"", 2, 13, 19, 19448096043367766718, "Local", 
+   "Combinatorica`GraphSum"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.8673205866624837`*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"d9d29dc7-405c-4db8-bda7-c7bbe2a38b44"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetDelayed", "write", 
+   "\"Tag \\!\\(\\*RowBox[{\\\"EdgeChromaticNumber\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"EdgeChromaticNumber\\\", \\\"[\\\", \\\"g_Graph\\\", \
+\\\"]\\\"}]\\) is Protected.\"", 2, 13, 20, 19448096043367766718, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8673205868854685`*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"6b9baec0-3f5b-4db9-9f63-76d77ce59c1b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Combinatorica`Girth", "[", 
+  RowBox[{"PetersenGraph", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8673205119296985`*^9, 3.8673205229417095`*^9}, {
+  3.8673205606644926`*^9, 3.8673205632284784`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"ac7f0736-3ccd-4fe8-90ce-3374291e3bdd"],
+
+Cell[BoxData[
+ RowBox[{"Girth", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    InterpretationBox[
+     StyleBox[
+      RowBox[{"\[SkeletonIndicator]", 
+       RowBox[{"Graph", ":", "<"}], "15", ",", "10", ",", "Undirected", 
+       RowBox[{">", "\[SkeletonIndicator]"}]}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     Combinatorica`Graph[{{{1, 3}}, {{1, 4}}, {{2, 4}}, {{2, 5}}, {{3, 5}}, {{
+      6, 7}}, {{7, 8}}, {{8, 9}}, {{9, 10}}, {{6, 10}}, {{1, 6}}, {{2, 7}}, {{
+      3, 8}}, {{4, 9}}, {{5, 
+      10}}}, {{{0.30901699437494745`, 
+       0.9510565162951535}}, {{-0.8090169943749473, 
+       0.5877852522924732}}, {{-0.8090169943749475, -0.587785252292473}}, {{
+       0.30901699437494723`, -0.9510565162951536}}, {{1., 0}}, {{
+       0.6180339887498949, 1.902113032590307}}, {{-1.6180339887498947`, 
+       1.1755705045849465`}}, {{-1.618033988749895, -1.175570504584946}}, {{
+       0.6180339887498945, -1.9021130325903073`}}, {{2., 0}}}],
+     Editable->False], ")"}], "[", "]"}], "]"}]], "Output",
+ CellChangeTimes->{{3.8673205635734806`*^9, 3.8673205921274815`*^9}},
+ CellLabel->"Out[14]=",ExpressionUUID->"80798212-c276-4c85-acb4-1a0381c05e93"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DodecahedralGraph", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.8673205701115007`*^9, 3.867320574329483*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"475aa651-bf5f-4e07-865a-795c106aaa24"],
+
+Cell[BoxData[
+ RowBox[{"DodecahedralGraph", "[", "]"}]], "Output",
+ CellChangeTimes->{3.867320574825463*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"6879335c-b7f2-4313-8d9d-01e06ac34862"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ContextPath"], "Input",
+ CellChangeTimes->{{3.867320577219475*^9, 3.867320578914461*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"376e5bef-6892-43d4-9f06-2827ef70bdc6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"DocumentationTools`GuidePages`\"\>", 
+   ",", "\<\"DocumentationTools`\"\>", ",", "\<\"PDFTools`\"\>", 
+   ",", "\<\"PeterBurbery`UndirectedGraphs`\"\>", 
+   ",", "\<\"CodeFormatter`Notebooks`\"\>", 
+   ",", "\<\"DocumentationSearch`\"\>", ",", "\<\"ResourceLocator`\"\>", 
+   ",", "\<\"System`\"\>", ",", "\<\"Global`\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.867320579232487*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"6fd5bdd1-d6b8-41cc-b279-7c37249b45b1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "ToAdjacencyLists"}]], "Input",
+ CellChangeTimes->{{3.8673208367392826`*^9, 3.8673208382902527`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"b27e9923-9e5d-4df1-87d9-b0b6d29f6b3e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"ToAdjacencyLists\\\", \
+\\\"[\\\", StyleBox[\\\"g\\\", \\\"TI\\\"], \\\"]\\\"}]\\) constructs an \
+adjacency list representation for graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\\\
+\"]\\). \\n\\!\\(\\*RowBox[{\\\"ToAdjacencyLists\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"g\\\", \\\"TI\\\"], \\\",\\\", \\\"EdgeWeight\\\"}], \
+\\\"]\\\"}]\\) returns an adjacency list representation along with edge \
+weights.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"ToAdjacencyLists", "[", 
+                    RowBox[{"Combinatorica`Private`g_Graph", ",", 
+                    
+                    RowBox[{
+                    "Combinatorica`Private`opts___", "?", "OptionQ"}]}], 
+                    "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"Combinatorica`Private`type", ",", 
+                    "Combinatorica`Private`s", ",", 
+                    "Combinatorica`Private`al", ",", 
+                    RowBox[{"Combinatorica`Private`e", "=", 
+                    RowBox[{"Edges", "[", "Combinatorica`Private`g", "]"}]}], 
+                    ",", "Combinatorica`Private`n", ",", 
+                    "Combinatorica`Private`i"}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"Combinatorica`Private`type", "=", 
+                    RowBox[{"Type", "/.", "\[VeryThinSpace]", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Combinatorica`Private`opts", ",", 
+                    RowBox[{"Options", "[", "ToAdjacencyLists", "]"}]}], 
+                    "}"}], "]"}]}]}], ";", 
+                    RowBox[{"Combinatorica`Private`s", "=", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"UndirectedQ", "[", "Combinatorica`Private`g", 
+                    "]"}], ",", 
+                    
+                    RowBox[{"Combinatorica`Private`Double", "[", 
+                    "Combinatorica`Private`e", "]"}], ",", 
+                    "Combinatorica`Private`e"}], "]"}], ",", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"Combinatorica`Private`i", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Combinatorica`Private`i", ",", 
+                    RowBox[{"V", "[", "Combinatorica`Private`g", "]"}]}], 
+                    "}"}]}], "]"}]}], "]"}]}], ";", 
+                    RowBox[{"Combinatorica`Private`al", "=", 
+                    RowBox[{"Rest", "/@", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Split", "[", 
+                    RowBox[{
+                    RowBox[{"Sort", "[", "Combinatorica`Private`s", "]"}], 
+                    ",", 
+                    RowBox[{
+                    RowBox[{
+                    
+                    RowBox[{"#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "===", 
+                    
+                    RowBox[{"#2", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], "&"}]}], "]"}], "/.", 
+                    "\[VeryThinSpace]", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"_Integer", ",", 
+                    "Combinatorica`Private`n_Integer"}], "}"}], 
+                    "\[RuleDelayed]", "Combinatorica`Private`n"}]}], 
+                    ")"}]}]}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"Combinatorica`Private`type", "===", "Simple"}], 
+                    ",", 
+                    RowBox[{"Union", "/@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Select", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`al", 
+                    "\[LeftDoubleBracket]", "Combinatorica`Private`i", 
+                    "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{
+                    RowBox[{"#1", "\[NotEqual]", "Combinatorica`Private`i"}], 
+                    "&"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Combinatorica`Private`i", ",", 
+                    
+                    RowBox[{"Length", "[", "Combinatorica`Private`al", 
+                    "]"}]}], "}"}]}], "]"}]}], ",", 
+                    "Combinatorica`Private`al"}], "]"}]}]}], "]"}]}]}, {" "}, {
+                    RowBox[{
+                    RowBox[{"ToAdjacencyLists", "[", 
+                    
+                    RowBox[{
+                    "Combinatorica`Private`g_Graph", ",", "EdgeWeight", ",", 
+                    
+                    RowBox[{
+                    "Combinatorica`Private`opts___", "?", "OptionQ"}]}], 
+                    "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"Combinatorica`Private`type", ",", 
+                    "Combinatorica`Private`s", ",", 
+                    "Combinatorica`Private`al", ",", 
+                    RowBox[{"Combinatorica`Private`e", "=", 
+                    RowBox[{"Edges", "[", 
+                    RowBox[{"Combinatorica`Private`g", ",", "EdgeWeight"}], 
+                    "]"}]}], ",", "Combinatorica`Private`i"}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"Combinatorica`Private`type", "=", 
+                    RowBox[{"Type", "/.", "\[VeryThinSpace]", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Combinatorica`Private`opts", ",", 
+                    RowBox[{"Options", "[", "ToAdjacencyLists", "]"}]}], 
+                    "}"}], "]"}]}]}], ";", 
+                    RowBox[{"Combinatorica`Private`s", "=", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"UndirectedQ", "[", "Combinatorica`Private`g", 
+                    "]"}], ",", 
+                    RowBox[{"Combinatorica`Private`Double", "[", 
+                    RowBox[{"Combinatorica`Private`e", ",", "EdgeWeight"}], 
+                    "]"}], ",", "Combinatorica`Private`e"}], "]"}], ",", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"Combinatorica`Private`i", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Combinatorica`Private`i", ",", 
+                    RowBox[{"V", "[", "Combinatorica`Private`g", "]"}]}], 
+                    "}"}]}], "]"}]}], "]"}]}], ";", 
+                    RowBox[{"Combinatorica`Private`al", "=", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Rest", "[", 
+                    RowBox[{"Rest", "/@", 
+                    RowBox[{"Partition", "[", 
+                    RowBox[{
+                    RowBox[{"Flatten", "[", "#1", "]"}], ",", "3", ",", "3"}],
+                     "]"}]}], "]"}], "&"}], ")"}], "/@", 
+                    RowBox[{"Split", "[", 
+                    RowBox[{
+                    RowBox[{"Sort", "[", "Combinatorica`Private`s", "]"}], 
+                    ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#1", "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], 
+                    "\[Equal]", 
+                    RowBox[{"#2", "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], 
+                    "&"}]}], "]"}]}]}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"Combinatorica`Private`type", "===", "Simple"}], 
+                    ",", 
+                    RowBox[{"Union", "/@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Select", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`al", 
+                    "\[LeftDoubleBracket]", "Combinatorica`Private`i", 
+                    "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    
+                    RowBox[{"#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[NotEqual]", 
+                    "Combinatorica`Private`i"}], "&"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Combinatorica`Private`i", ",", 
+                    
+                    RowBox[{"Length", "[", "Combinatorica`Private`al", 
+                    "]"}]}], "}"}]}], "]"}]}], ",", 
+                    "Combinatorica`Private`al"}], "]"}]}]}], "]"}]}]}, {" "}},
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Options\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Options\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Options", "Tooltip"]& ], 
+                   RowBox[{"Type", "\[Rule]", "All"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", "Protected", "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Combinatorica`ToAdjacencyLists\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"ToAdjacencyLists\\\", \
+\\\"[\\\", StyleBox[\\\"g\\\", \\\"TI\\\"], \\\"]\\\"}]\\) constructs an \
+adjacency list representation for graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\\\
+\"]\\). \\n\\!\\(\\*RowBox[{\\\"ToAdjacencyLists\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"g\\\", \\\"TI\\\"], \\\",\\\", \\\"EdgeWeight\\\"}], \
+\\\"]\\\"}]\\) returns an adjacency list representation along with edge \
+weights.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{12.5, {4., 8.5}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{12.5, {4., 8.5}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"ToAdjacencyLists\", \"[\", StyleBox[\"g\", \"TI\"], \
+\"]\"}]\) constructs an adjacency list representation for graph \
+\!\(\*StyleBox[\"g\", \"TI\"]\). \n\!\(\*RowBox[{\"ToAdjacencyLists\", \"[\", \
+RowBox[{StyleBox[\"g\", \"TI\"], \",\", \"EdgeWeight\"}], \"]\"}]\) returns \
+an adjacency list representation along with edge weights.", "Documentation" -> 
+    None, "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, Combinatorica`ToAdjacencyLists, {
+      Combinatorica`ToAdjacencyLists[
+         Pattern[Combinatorica`Private`g, 
+          Blank[Combinatorica`Graph]], 
+         PatternTest[
+          Pattern[Combinatorica`Private`opts, 
+           BlankNullSequence[]], OptionQ]] :> 
+       Module[{Combinatorica`Private`type, Combinatorica`Private`s, 
+          Combinatorica`Private`al, Combinatorica`Private`e = 
+          Combinatorica`Edges[Combinatorica`Private`g], 
+          Combinatorica`Private`n, Combinatorica`Private`i}, 
+         Combinatorica`Private`type = ReplaceAll[Combinatorica`Type, 
+            Flatten[{Combinatorica`Private`opts, 
+              Options[Combinatorica`ToAdjacencyLists]}]]; 
+         Combinatorica`Private`s = Join[
+            If[
+             Combinatorica`UndirectedQ[Combinatorica`Private`g], 
+             Combinatorica`Private`Double[Combinatorica`Private`e], 
+             Combinatorica`Private`e], 
+            Table[{Combinatorica`Private`i, -1}, {Combinatorica`Private`i, 
+              Combinatorica`V[Combinatorica`Private`g]}]]; 
+         Combinatorica`Private`al = Map[Rest, 
+            ReplaceAll[
+             Split[
+              Sort[Combinatorica`Private`s], Part[#, 1] === Part[#2, 1]& ], {
+               Blank[Integer], 
+               Pattern[Combinatorica`Private`n, 
+                Blank[Integer]]} :> Combinatorica`Private`n]]; 
+         If[Combinatorica`Private`type === Combinatorica`Simple, 
+           Map[Union, 
+            Table[
+             Select[
+              Part[Combinatorica`Private`al, Combinatorica`Private`i], # != 
+              Combinatorica`Private`i& ], {Combinatorica`Private`i, 
+              Length[Combinatorica`Private`al]}]], Combinatorica`Private`al]],
+        Combinatorica`ToAdjacencyLists[
+         Pattern[Combinatorica`Private`g, 
+          Blank[Combinatorica`Graph]], Combinatorica`EdgeWeight, 
+         PatternTest[
+          Pattern[Combinatorica`Private`opts, 
+           BlankNullSequence[]], OptionQ]] :> 
+       Module[{Combinatorica`Private`type, Combinatorica`Private`s, 
+          Combinatorica`Private`al, Combinatorica`Private`e = 
+          Combinatorica`Edges[
+           Combinatorica`Private`g, Combinatorica`EdgeWeight], 
+          Combinatorica`Private`i}, 
+         Combinatorica`Private`type = ReplaceAll[Combinatorica`Type, 
+            Flatten[{Combinatorica`Private`opts, 
+              Options[Combinatorica`ToAdjacencyLists]}]]; 
+         Combinatorica`Private`s = Join[
+            If[
+             Combinatorica`UndirectedQ[Combinatorica`Private`g], 
+             Combinatorica`Private`Double[
+             Combinatorica`Private`e, Combinatorica`EdgeWeight], 
+             Combinatorica`Private`e], 
+            
+            Table[{{Combinatorica`Private`i, -1}, 1}, {
+             Combinatorica`Private`i, 
+              Combinatorica`V[Combinatorica`Private`g]}]]; 
+         Combinatorica`Private`al = Map[Rest[
+             Map[Rest, 
+              Partition[
+               Flatten[#], 3, 3]]]& , 
+            Split[
+             Sort[Combinatorica`Private`s], Part[#, 1, 1] == 
+             Part[#2, 1, 1]& ]]; 
+         If[Combinatorica`Private`type === Combinatorica`Simple, 
+           Map[Union, 
+            Table[
+             Select[
+              Part[Combinatorica`Private`al, Combinatorica`Private`i], 
+              Part[#, 1] != Combinatorica`Private`i& ], {
+             Combinatorica`Private`i, 
+              Length[Combinatorica`Private`al]}]], 
+           Combinatorica`Private`al]]}], "SubValues" -> None, "DefaultValues" -> 
+    None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> {Combinatorica`Type -> All}, "Attributes" -> {Protected}, 
+    "FullName" -> "Combinatorica`ToAdjacencyLists"|>, False]]], "Output",
+ CellChangeTimes->{3.8673208388562555`*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"43580e35-005c-4339-aa38-e16ef7d3a0bb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "AdjacencyList"}]], "Input",
+ CellChangeTimes->{{3.8673208495932674`*^9, 3.8673208517638044`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"3aca1d0a-296d-46da-a92c-18b2b87a896e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              
+              ButtonData->
+               "http://reference.wolfram.com/language/ref/AdjacencyList.html",
+              
+              ButtonNote->
+               "http://reference.wolfram.com/language/ref/AdjacencyList.html"],
+             
+             "\"http://reference.wolfram.com/language/ref/AdjacencyList.html\"\
+"],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"AdjacencyList\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"g\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"v\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) gives a list of vertices adjacent to vertex \\!\
+\\(\\*StyleBox[\\\"v\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"AdjacencyList\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"g\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"patt\\\", \\\
+\"TI\\\"]}], \\\"]\\\"}]\\) gives a list of vertices adjacent to vertices \
+that match the pattern \\!\\(\\*StyleBox[\\\"patt\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"AdjacencyList\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"g\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"patt\\\", \\\
+\"TI\\\"], \\\",\\\", StyleBox[\\\"d\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) gives \
+a list of vertices that are at distance at most \\!\\(\\*StyleBox[\\\"d\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"AdjacencyList\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{StyleBox[\\\"v\\\", \\\"TI\\\"], \
+\\\"\[Rule]\\\", StyleBox[\\\"w\\\", \\\"TI\\\"]}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}], \\\",\\\", \
+\\\"\[Ellipsis]\\\"}], \\\"]\\\"}]\\) uses rules \\!\\(\\*RowBox[{StyleBox[\\\
+\"v\\\", \\\"TI\\\"], \\\"\[Rule]\\\", StyleBox[\\\"w\\\", \\\"TI\\\"]}]\\) \
+to specify the graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\\\"]\\). \"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   TemplateBox[{
+                    TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL[
+                    "http://reference.wolfram.com/language/ref/AdjacencyList.\
+html"], None}, "http://reference.wolfram.com/language/ref/AdjacencyList.html",
+                     "Hyperlink", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", "Protected", "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`AdjacencyList\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{16.25, {5., 11.25}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{16.25, {5., 11.25}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              
+              ButtonData->
+               "http://reference.wolfram.com/language/ref/AdjacencyList.html",
+              
+              ButtonNote->
+               "http://reference.wolfram.com/language/ref/AdjacencyList.html"],
+             
+             "\"http://reference.wolfram.com/language/ref/AdjacencyList.html\"\
+"],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"AdjacencyList\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"g\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"v\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) gives a list of vertices adjacent to vertex \\!\
+\\(\\*StyleBox[\\\"v\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"AdjacencyList\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"g\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"patt\\\", \\\
+\"TI\\\"]}], \\\"]\\\"}]\\) gives a list of vertices adjacent to vertices \
+that match the pattern \\!\\(\\*StyleBox[\\\"patt\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"AdjacencyList\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"g\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"patt\\\", \\\
+\"TI\\\"], \\\",\\\", StyleBox[\\\"d\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) gives \
+a list of vertices that are at distance at most \\!\\(\\*StyleBox[\\\"d\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"AdjacencyList\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{StyleBox[\\\"v\\\", \\\"TI\\\"], \
+\\\"\[Rule]\\\", StyleBox[\\\"w\\\", \\\"TI\\\"]}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}], \\\",\\\", \
+\\\"\[Ellipsis]\\\"}], \\\"]\\\"}]\\) uses rules \\!\\(\\*RowBox[{StyleBox[\\\
+\"v\\\", \\\"TI\\\"], \\\"\[Rule]\\\", StyleBox[\\\"w\\\", \\\"TI\\\"]}]\\) \
+to specify the graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\\\"]\\). \"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{12.5, {4., 8.5}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{12.5, {4., 8.5}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"AdjacencyList\", \"[\", RowBox[{StyleBox[\"g\", \"TI\"], \
+\",\", StyleBox[\"v\", \"TI\"]}], \"]\"}]\) gives a list of vertices adjacent \
+to vertex \!\(\*StyleBox[\"v\", \"TI\"]\).\n\!\(\*RowBox[{\"AdjacencyList\", \
+\"[\", RowBox[{StyleBox[\"g\", \"TI\"], \",\", StyleBox[\"patt\", \"TI\"]}], \
+\"]\"}]\) gives a list of vertices adjacent to vertices that match the \
+pattern \!\(\*StyleBox[\"patt\", \"TI\"]\).\n\!\(\*RowBox[{\"AdjacencyList\", \
+\"[\", RowBox[{StyleBox[\"g\", \"TI\"], \",\", StyleBox[\"patt\", \"TI\"], \
+\",\", StyleBox[\"d\", \"TI\"]}], \"]\"}]\) gives a list of vertices that are \
+at distance at most \!\(\*StyleBox[\"d\", \"TI\"]\).\n\
+\!\(\*RowBox[{\"AdjacencyList\", \"[\", RowBox[{RowBox[{\"{\", \
+RowBox[{RowBox[{StyleBox[\"v\", \"TI\"], \"\[Rule]\", StyleBox[\"w\", \
+\"TI\"]}], \",\", StyleBox[\"\[Ellipsis]\", \"TR\"]}], \"}\"}], \",\", \"\
+\[Ellipsis]\"}], \"]\"}]\) uses rules \!\(\*RowBox[{StyleBox[\"v\", \"TI\"], \
+\"\[Rule]\", StyleBox[\"w\", \"TI\"]}]\) to specify the graph \!\(\*StyleBox[\
+\"g\", \"TI\"]\). ", 
+    "Documentation" -> <|
+     "Web" -> "http://reference.wolfram.com/language/ref/AdjacencyList.html"|>\
+, "OwnValues" -> None, "UpValues" -> None, "DownValues" -> None, "SubValues" -> 
+    None, "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {Protected}, "FullName" -> 
+    "System`AdjacencyList"|>, False]]], "Output",
+ CellChangeTimes->{3.8673208525168*^9},
+ CellLabel->"Out[23]=",ExpressionUUID->"48656a32-7f39-4463-bea9-b3c29d1820d6"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CombinatoricaGirth", "[", 
+   RowBox[{"g_", "?", "GraphQ"}], "]"}], " ", ":=", " ", "\n", "\t", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"v", ",", "dist", ",", "queue", ",", 
+      RowBox[{"n", "=", 
+       RowBox[{"VertexCount", "[", "g", "]"}]}], ",", 
+      RowBox[{"girth", "=", "Infinity"}], ",", "\n", "                ", 
+      "parent", ",", 
+      RowBox[{"e", "=", 
+       RowBox[{"AdjacencyList", "[", 
+        RowBox[{"g", ",", "_"}], "]"}]}], ",", "x"}], "}"}], ",", "\n", 
+    "\t\t", 
+    RowBox[{
+     RowBox[{"Do", " ", "[", "\n", "\t\t\t", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dist", " ", "=", " ", 
+         RowBox[{"parent", " ", "=", " ", 
+          RowBox[{"Table", "[", 
+           RowBox[{"Infinity", ",", " ", 
+            RowBox[{"{", "n", "}"}]}], "]"}]}]}], ";", "\n", "\t\t\t", 
+        RowBox[{
+         RowBox[{"dist", "[", 
+          RowBox[{"[", "v", "]"}], "]"}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{"parent", "[", 
+           RowBox[{"[", "v", "]"}], "]"}], " ", "=", " ", "0"}]}], ";", "\n", 
+        "\t\t\t", 
+        RowBox[{"queue", " ", "=", " ", 
+         RowBox[{"{", "v", "}"}]}], ";", "\n", "\t\t\t", 
+        RowBox[{"While", " ", "[", 
+         RowBox[{
+          RowBox[{"queue", " ", "!=", " ", 
+           RowBox[{"{", "}"}]}], ",", "\t\t", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"x", ",", "queue"}], "}"}], " ", "=", " ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"First", "[", "queue", "]"}], ",", 
+              RowBox[{"Rest", "[", "queue", "]"}]}], "}"}]}], ";", "\n", 
+           "\t\t\t\t", 
+           RowBox[{"Scan", "[", "\n", "\t\t\t\t\t", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"If", " ", "[", " ", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"dist", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], "+", 
+                    RowBox[{"dist", "[", 
+                    RowBox[{"[", "x", "]"}], "]"}]}], "<", "girth"}], ")"}], 
+                  " ", "&&", "\n", "\t\t\t\t     \t      ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"parent", "[", 
+                    RowBox[{"[", "x", "]"}], "]"}], " ", "!=", " ", "#"}], 
+                   ")"}]}], ",", "\n", "\t\t\t\t\t\t", 
+                 RowBox[{"girth", "=", 
+                  RowBox[{
+                   RowBox[{"dist", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], "+", 
+                   RowBox[{"dist", "[", 
+                    RowBox[{"[", "x", "]"}], "]"}], " ", "+", " ", "1"}]}], 
+                 ",", "\n", "\t\t\t\t \t ", 
+                 RowBox[{"If", " ", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"dist", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], "==", "Infinity"}], ",", 
+                   "\n", "\t\t\t\t\t\t", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"dist", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], " ", "=", " ", 
+                    RowBox[{
+                    RowBox[{"dist", "[", 
+                    RowBox[{"[", "x", "]"}], "]"}], " ", "+", " ", "1"}]}], 
+                    ";", "\n", "\t\t\t\t\t\t", 
+                    RowBox[{
+                    RowBox[{"parent", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], " ", "=", " ", "x"}], ";",
+                     "\n", "\t\t\t\t\t\t", 
+                    RowBox[{"If", " ", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"2", " ", 
+                    RowBox[{"dist", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}]}], " ", "<", " ", 
+                    RowBox[{"girth", "-", "1"}]}], ",", "\n", 
+                    "\t\t\t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"queue", ",", "#"}], "]"}]}], " ", "]"}]}]}], 
+                  "\n", "\t\t\t\t\t", "]"}]}], "]"}], ")"}], "&"}], ",", "\n",
+              "\t\t\t\t\t", 
+             RowBox[{"e", "[", 
+              RowBox[{"[", " ", "x", " ", "]"}], "]"}]}], "\n", "\t\t\t\t", 
+            "]"}], ";"}]}], "\n", "\t\t\t", "]"}]}], ",", "\n", "\t\t\t", 
+       RowBox[{"{", 
+        RowBox[{"v", ",", "n"}], "}"}]}], "\n", "\t\t", "]"}], ";", 
+     "girth"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8673206723171377`*^9, 3.8673207395861387`*^9}, {
+  3.867320859574829*^9, 3.8673208712848153`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"0c62c3f5-7056-48f7-8ed0-f36445ced4ef"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CombinatoricaGirth", "[", 
+  RowBox[{"System`PetersenGraph", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.86732071281112*^9, 3.867320722768133*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"085fcf03-928b-4129-9c24-1b650aac9987"],
+
+Cell[BoxData["\[Infinity]"], "Output",
+ CellChangeTimes->{{3.8673207158791223`*^9, 3.8673207508881235`*^9}, 
+   3.8673208751518087`*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"a773fb38-8188-480b-8733-43f441ef82db"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`MixedGraphs`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.86732114349776*^9, 3.867321160417759*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"4b194ab2-807b-4895-8318-20a36cc484e6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "EulerizeGraph", "shdw", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"EulerizeGraph\\\\\\\"\\\"}]\\) \
+appears in multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"PeterBurbery`MixedGraphs`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"PeterBurbery`MixedGraphs`\\\\\\\"\\\"}]\\) may \
+shadow or be shadowed by other definitions.\"", 2, 26, 43, 
+   19448096043367766718, "Local", "PeterBurbery`MixedGraphs`EulerizeGraph"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.8673211609237423`*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"58ccff6f-78c1-462f-bd43-da99d4828fd3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UndirectedGraphToMixedGraph", "[", 
+  RowBox[{
+   RowBox[{"System`PetersenGraph", "[", "]"}], ",", "0.68"}], "]"}]], "Input",
+ CellChangeTimes->{{3.867321164190771*^9, 3.867321189713324*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"dc4da3d1-d9a8-4e24-bd90-cb365eacf6fa"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8, 9, 
+      10}, {{{5, 10}, {3, 5}, {2, 5}, {6, 7}, {3, 8}, {4, 9}, {9, 10}, {1, 
+       4}, {2, 7}, {6, 10}}, {{1, 3}, {1, 6}, {2, 4}, {7, 8}, {8, 9}}}, {
+      EdgeWeight -> {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 
+       GraphLayout -> {"Dimension" -> 2}, 
+       VertexCoordinates -> {{0.9510565162951535, 0.30901699437494745`}, {
+        0.5877852522924732, -0.8090169943749473}, {-0.587785252292473, \
+-0.8090169943749475}, {-0.9510565162951536, 
+        0.30901699437494723`}, {-2.4492935982947064`*^-16, 1.}, {
+        1.902113032590307, 0.6180339887498949}, {
+        1.1755705045849465`, -1.6180339887498947`}, {-1.175570504584946, \
+-1.618033988749895}, {-1.9021130325903073`, 
+        0.6180339887498945}, {-4.898587196589413*^-16, 2.}}}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{0.9510565162951535, 0.30901699437494745`}, {
+       0.5877852522924732, -0.8090169943749473}, {-0.587785252292473, \
+-0.8090169943749475}, {-0.9510565162951536, 
+       0.30901699437494723`}, {-2.4492935982947064`*^-16, 1.}, {
+       1.902113032590307, 0.6180339887498949}, {
+       1.1755705045849465`, -1.6180339887498947`}, {-1.175570504584946, \
+-1.618033988749895}, {-1.9021130325903073`, 
+       0.6180339887498945}, {-4.898587196589413*^-16, 2.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         {Arrowheads[0.], ArrowBox[{1, 3}, 0.03574187784409402]}, 
+         {Arrowheads[0.], ArrowBox[{1, 6}, 0.03574187784409402]}, 
+         ArrowBox[{1, 4}, 0.03574187784409402], 
+         {Arrowheads[0.], ArrowBox[{2, 4}, 0.03574187784409402]}, 
+         ArrowBox[{2, 5}, 0.03574187784409402], 
+         ArrowBox[{2, 7}, 0.03574187784409402], 
+         ArrowBox[{3, 5}, 0.03574187784409402], 
+         ArrowBox[{3, 8}, 0.03574187784409402], 
+         ArrowBox[{4, 9}, 0.03574187784409402], 
+         ArrowBox[{5, 10}, 0.03574187784409402], 
+         ArrowBox[{6, 7}, 0.03574187784409402], 
+         ArrowBox[{6, 10}, 0.03574187784409402], 
+         {Arrowheads[0.], ArrowBox[{7, 8}, 0.03574187784409402]}, 
+         {Arrowheads[0.], ArrowBox[{8, 9}, 0.03574187784409402]}, 
+         ArrowBox[{9, 10}, 0.03574187784409402]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.03574187784409402], DiskBox[2, 0.03574187784409402], 
+         DiskBox[3, 0.03574187784409402], DiskBox[4, 0.03574187784409402], 
+         DiskBox[5, 0.03574187784409402], DiskBox[6, 0.03574187784409402], 
+         DiskBox[7, 0.03574187784409402], DiskBox[8, 0.03574187784409402], 
+         DiskBox[9, 0.03574187784409402], DiskBox[10, 0.03574187784409402]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{3.8673212140294433`*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"62dba299-72c1-4188-979d-948262669ca4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<C:\\\\Users\\\\peter\\\\Documents\\\\GitHub\\\\wolfram-summer-school-\
+2022\\\\petersen mixed graph.jpeg\>\"", ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 6, 7, 8, 9, 
+        10}, {{{5, 10}, {3, 5}, {2, 5}, {6, 7}, {3, 8}, {4, 9}, {9, 10}, {1, 
+         4}, {2, 7}, {6, 10}}, {{1, 3}, {1, 6}, {2, 4}, {7, 8}, {8, 9}}}, {
+        EdgeWeight -> {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 
+         GraphLayout -> {"Dimension" -> 2}, 
+         VertexCoordinates -> {{0.9510565162951535, 0.30901699437494745`}, {
+          0.5877852522924732, -0.8090169943749473}, {-0.587785252292473, \
+-0.8090169943749475}, {-0.9510565162951536, 
+          0.30901699437494723`}, {-2.4492935982947064`*^-16, 1.}, {
+          1.902113032590307, 0.6180339887498949}, {
+          1.1755705045849465`, -1.6180339887498947`}, {-1.175570504584946, \
+-1.618033988749895}, {-1.9021130325903073`, 
+          0.6180339887498945}, {-4.898587196589413*^-16, 2.}}}]]}, 
+      TagBox[
+       GraphicsGroupBox[
+        GraphicsComplexBox[{{0.9510565162951535, 0.30901699437494745`}, {
+         0.5877852522924732, -0.8090169943749473}, {-0.587785252292473, \
+-0.8090169943749475}, {-0.9510565162951536, 
+         0.30901699437494723`}, {-2.4492935982947064`*^-16, 1.}, {
+         1.902113032590307, 0.6180339887498949}, {
+         1.1755705045849465`, -1.6180339887498947`}, {-1.175570504584946, \
+-1.618033988749895}, {-1.9021130325903073`, 
+         0.6180339887498945}, {-4.898587196589413*^-16, 2.}}, {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           {Arrowheads[0.], ArrowBox[{1, 3}, 0.03574187784409402]}, 
+           {Arrowheads[0.], ArrowBox[{1, 6}, 0.03574187784409402]}, 
+           ArrowBox[{1, 4}, 0.03574187784409402], 
+           {Arrowheads[0.], ArrowBox[{2, 4}, 0.03574187784409402]}, 
+           ArrowBox[{2, 5}, 0.03574187784409402], 
+           ArrowBox[{2, 7}, 0.03574187784409402], 
+           ArrowBox[{3, 5}, 0.03574187784409402], 
+           ArrowBox[{3, 8}, 0.03574187784409402], 
+           ArrowBox[{4, 9}, 0.03574187784409402], 
+           ArrowBox[{5, 10}, 0.03574187784409402], 
+           ArrowBox[{6, 7}, 0.03574187784409402], 
+           ArrowBox[{6, 10}, 0.03574187784409402], 
+           {Arrowheads[0.], ArrowBox[{7, 8}, 0.03574187784409402]}, 
+           {Arrowheads[0.], ArrowBox[{8, 9}, 0.03574187784409402]}, 
+           ArrowBox[{9, 10}, 0.03574187784409402]}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.03574187784409402], DiskBox[2, 0.03574187784409402], 
+           DiskBox[3, 0.03574187784409402], DiskBox[4, 0.03574187784409402], 
+           DiskBox[5, 0.03574187784409402], DiskBox[6, 0.03574187784409402], 
+           DiskBox[7, 0.03574187784409402], DiskBox[8, 0.03574187784409402], 
+           DiskBox[9, 0.03574187784409402], 
+           DiskBox[10, 0.03574187784409402]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    FormatType->TraditionalForm,
+    FrameTicks->None]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8673212359914637`*^9, 3.867321274955264*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"0d96f933-9546-4f16-92c4-26028cef0843"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\peter\\\\Documents\\\\GitHub\\\\wolfram-\
+summer-school-2022\\\\petersen mixed graph.jpeg\"\>"], "Output",
+ CellChangeTimes->{3.8673212764052677`*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"dd213408-afb7-4b2f-a07c-755452d23aa2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Girth"}]], "Input",
+ CellChangeTimes->{{3.867321565281475*^9, 3.8673215686114626`*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"f2984823-cd5b-4e9b-8a8a-724b8d7fa72e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Girth\\\", \\\"[\\\", \
+StyleBox[\\\"g\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives the length of a \
+shortest cycle in a simple graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\\\"]\\).\
+\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    
+                    RowBox[{
+                    "Girth", "[", "Combinatorica`Private`g_Graph", "]"}], 
+                    ":=", 
+                    RowBox[{"1", "/;", 
+                    
+                    RowBox[{
+                    "SelfLoopsQ", "[", "Combinatorica`Private`g", 
+                    "]"}]}]}]}, {" "}, {
+                    RowBox[{
+                    
+                    RowBox[{
+                    "Girth", "[", "Combinatorica`Private`g_Graph", "]"}], 
+                    ":=", 
+                    RowBox[{"2", "/;", 
+                    
+                    RowBox[{
+                    "MultipleEdgesQ", "[", "Combinatorica`Private`g", 
+                    "]"}]}]}]}, {" "}, {
+                    RowBox[{
+                    
+                    RowBox[{
+                    "Girth", "[", "Combinatorica`Private`g_Graph", "]"}], 
+                    ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"Combinatorica`Private`v", ",", 
+                    "Combinatorica`Private`dist", ",", 
+                    "Combinatorica`Private`queue", ",", 
+                    RowBox[{"Combinatorica`Private`n", "=", 
+                    RowBox[{"V", "[", "Combinatorica`Private`g", "]"}]}], ",", 
+                    
+                    RowBox[{"Combinatorica`Private`girth", "=", 
+                    "\[Infinity]"}], ",", "Combinatorica`Private`parent", ",", 
+                    RowBox[{"Combinatorica`Private`e", "=", 
+                    
+                    RowBox[{"ToAdjacencyLists", "[", 
+                    "Combinatorica`Private`g", "]"}]}], ",", 
+                    "Combinatorica`Private`x"}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"Do", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Combinatorica`Private`dist", "=", 
+                    RowBox[{"Combinatorica`Private`parent", "=", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{"\[Infinity]", ",", 
+                    RowBox[{"{", "Combinatorica`Private`n", "}"}]}], 
+                    "]"}]}]}], ";", 
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`dist", 
+                    "\[LeftDoubleBracket]", "Combinatorica`Private`v", 
+                    "\[RightDoubleBracket]"}], "=", 
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`parent", 
+                    "\[LeftDoubleBracket]", "Combinatorica`Private`v", 
+                    "\[RightDoubleBracket]"}], "=", "0"}]}], ";", 
+                    RowBox[{"Combinatorica`Private`queue", "=", 
+                    RowBox[{"{", "Combinatorica`Private`v", "}"}]}], ";", 
+                    RowBox[{"While", "[", 
+                    RowBox[{
+                    RowBox[{"Combinatorica`Private`queue", "\[NotEqual]", 
+                    RowBox[{"{", "}"}]}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"Combinatorica`Private`x", ",", 
+                    "Combinatorica`Private`queue"}], "}"}], "=", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    
+                    RowBox[{"First", "[", "Combinatorica`Private`queue", 
+                    "]"}], ",", 
+                    
+                    RowBox[{"Rest", "[", "Combinatorica`Private`queue", 
+                    "]"}]}], "}"}]}], ";", 
+                    RowBox[{"Scan", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`dist", 
+                    "\[LeftDoubleBracket]", "#1", "\[RightDoubleBracket]"}], 
+                    "+", 
+                    RowBox[{"Combinatorica`Private`dist", 
+                    "\[LeftDoubleBracket]", "Combinatorica`Private`x", 
+                    "\[RightDoubleBracket]"}]}], "<", 
+                    "Combinatorica`Private`girth"}], "&&", 
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`parent", 
+                    "\[LeftDoubleBracket]", "Combinatorica`Private`x", 
+                    "\[RightDoubleBracket]"}], "\[NotEqual]", "#1"}]}], ",", 
+                    RowBox[{"Combinatorica`Private`girth", "=", 
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`dist", 
+                    "\[LeftDoubleBracket]", "#1", "\[RightDoubleBracket]"}], 
+                    "+", 
+                    RowBox[{
+                    "Combinatorica`Private`dist", "\[LeftDoubleBracket]", 
+                    "Combinatorica`Private`x", "\[RightDoubleBracket]"}], "+",
+                     "1"}]}], ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`dist", 
+                    "\[LeftDoubleBracket]", "#1", "\[RightDoubleBracket]"}], 
+                    "\[Equal]", "\[Infinity]"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`dist", 
+                    "\[LeftDoubleBracket]", "#1", "\[RightDoubleBracket]"}], 
+                    "=", 
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`dist", 
+                    "\[LeftDoubleBracket]", "Combinatorica`Private`x", 
+                    "\[RightDoubleBracket]"}], "+", "1"}]}], ";", 
+                    RowBox[{
+                    
+                    RowBox[{"Combinatorica`Private`parent", 
+                    "\[LeftDoubleBracket]", "#1", "\[RightDoubleBracket]"}], 
+                    "=", "Combinatorica`Private`x"}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"2", " ", 
+                    
+                    RowBox[{"Combinatorica`Private`dist", 
+                    "\[LeftDoubleBracket]", "#1", "\[RightDoubleBracket]"}]}],
+                     "<", 
+                    RowBox[{"Combinatorica`Private`girth", "-", "1"}]}], ",", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"Combinatorica`Private`queue", ",", "#1"}], 
+                    "]"}]}], "]"}]}]}], "]"}]}], "]"}], "&"}], ",", 
+                    
+                    RowBox[{"Combinatorica`Private`e", "\[LeftDoubleBracket]",
+                     "Combinatorica`Private`x", "\[RightDoubleBracket]"}]}], 
+                    "]"}], ";"}]}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"Combinatorica`Private`v", ",", 
+                    "Combinatorica`Private`n"}], "}"}]}], "]"}], ";", 
+                    "Combinatorica`Private`girth"}]}], "]"}]}]}, {" "}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", "Protected", "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Combinatorica`Girth\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{12.5, {4., 8.5}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{12.5, {4., 8.5}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Girth\\\", \\\"[\\\", \
+StyleBox[\\\"g\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives the length of a \
+shortest cycle in a simple graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\\\"]\\).\
+\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{12.5, {4., 8.5}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{12.5, {4., 8.5}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"Girth\", \"[\", StyleBox[\"g\", \"TI\"], \"]\"}]\) gives \
+the length of a shortest cycle in a simple graph \!\(\*StyleBox[\"g\", \
+\"TI\"]\).", "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None,
+     "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, Combinatorica`Girth, {Combinatorica`Girth[
+         Pattern[Combinatorica`Private`g, 
+          Blank[Combinatorica`Graph]]] :> Condition[1, 
+         Combinatorica`SelfLoopsQ[Combinatorica`Private`g]], 
+       Combinatorica`Girth[
+         Pattern[Combinatorica`Private`g, 
+          Blank[Combinatorica`Graph]]] :> Condition[2, 
+         Combinatorica`MultipleEdgesQ[Combinatorica`Private`g]], 
+       Combinatorica`Girth[
+         Pattern[Combinatorica`Private`g, 
+          Blank[Combinatorica`Graph]]] :> 
+       Module[{Combinatorica`Private`v, Combinatorica`Private`dist, 
+          Combinatorica`Private`queue, Combinatorica`Private`n = 
+          Combinatorica`V[Combinatorica`Private`g], 
+          Combinatorica`Private`girth = Infinity, 
+          Combinatorica`Private`parent, Combinatorica`Private`e = 
+          Combinatorica`ToAdjacencyLists[Combinatorica`Private`g], 
+          Combinatorica`Private`x}, 
+         Do[Combinatorica`Private`dist = (Combinatorica`Private`parent = 
+             Table[Infinity, {Combinatorica`Private`n}]); 
+           Part[Combinatorica`Private`dist, Combinatorica`Private`v] = (
+             Part[Combinatorica`Private`parent, Combinatorica`Private`v] = 0); 
+           Combinatorica`Private`queue = {Combinatorica`Private`v}; 
+           While[Combinatorica`Private`queue != {}, {
+               Combinatorica`Private`x, Combinatorica`Private`queue} = {
+                First[Combinatorica`Private`queue], 
+                Rest[Combinatorica`Private`queue]}; Scan[If[
+                And[
+                Part[Combinatorica`Private`dist, #] + 
+                  Part[Combinatorica`Private`dist, Combinatorica`Private`x] < 
+                 Combinatorica`Private`girth, 
+                 Part[Combinatorica`Private`parent, 
+                   Combinatorica`Private`x] != #], 
+                Combinatorica`Private`girth = 
+                Part[Combinatorica`Private`dist, #] + 
+                 Part[Combinatorica`Private`dist, Combinatorica`Private`x] + 
+                 1, 
+                If[
+                Part[Combinatorica`Private`dist, #] == Infinity, 
+                 Part[Combinatorica`Private`dist, #] = 
+                  Part[Combinatorica`Private`dist, Combinatorica`Private`x] + 
+                   1; Part[Combinatorica`Private`parent, #] = 
+                  Combinatorica`Private`x; 
+                 If[2 Part[Combinatorica`Private`dist, #] < 
+                   Combinatorica`Private`girth - 1, 
+                   AppendTo[Combinatorica`Private`queue, #]]]]& , 
+               Part[Combinatorica`Private`e, Combinatorica`Private`x]]; 
+             Null], {Combinatorica`Private`v, Combinatorica`Private`n}]; 
+         Combinatorica`Private`girth]}], "SubValues" -> None, "DefaultValues" -> 
+    None, "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {Protected}, "FullName" -> "Combinatorica`Girth"|>, 
+   False]]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.8673215694324694`*^9, 
+  3.867321650851015*^9},ExpressionUUID->"41df6eca-17f9-4e32-be64-\
+7143c411d683"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`UndirectedGraphs`\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.867321572006469*^9, 3.8673215907324724`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"cfc93cd9-5312-431e-bf82-f95c1b3389ec"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Remove", "@", "Girth"}]], "Input",
+ CellChangeTimes->{{3.8673215946424675`*^9, 3.8673216024984627`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"0aa2a7d8-9aef-48be-8f84-6dc342a320cb"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Remove", "rmptc", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"Girth\\\"}]\\) is Protected and cannot be \
+removed.\"", 2, 31, 44, 19448096043367766718, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8673216028414745`*^9},
+ CellLabel->
+  "During evaluation of \
+In[31]:=",ExpressionUUID->"bcab18e4-d08b-472d-a586-deb43a9886de"]
+}, Open  ]],
+
+Cell[BoxData["?"], "Input",
+ CellChangeTimes->{{3.867321604135478*^9, 
+  3.8673216411190042`*^9}},ExpressionUUID->"4bc4ea6f-9465-49ca-a0d0-\
+7687ac24bc46"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Girth", "[", 
+   RowBox[{"graph_", "?", "GraphQ"}], "]"}], ":=", 
+  RowBox[{"Min", "[", 
+   RowBox[{"Length", "/@", 
+    RowBox[{"FindFundamentalCycles", "[", "graph", "]"}]}], "]"}]}]], "Input",
+ CellLabel->"In[47]:=",ExpressionUUID->"f5211342-df82-42ac-a089-1d726f5f72bc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GroupBy", "[", 
+  RowBox[{
+   RowBox[{"GraphData", "[", "]"}], ",", 
+   RowBox[{
+    RowBox[{"TrueQ", "[", 
+     RowBox[{
+      RowBox[{"Girth", "[", 
+       RowBox[{"GraphData", "[", "#", "]"}], "]"}], "==", 
+      RowBox[{"GraphData", "[", 
+       RowBox[{"#", ",", "\"\<Girth\>\""}], "]"}]}], "]"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8673220825349846`*^9, 3.8673220841909943`*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"9922bb49-e430-4f2f-ac22-e6d87ee51373"],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.867322150901887*^9},
+ CellLabel->"Out[48]=",ExpressionUUID->"6bab7ef4-7206-4870-b82a-f2fad01e0322"]
+}, Open  ]]
+},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1d216310-8332-4e9a-b782-af31fed0edfe"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 367, 9, 35, "Input",ExpressionUUID->"d6617d6b-cea4-43e8-8d08-4b9df0100168"],
+Cell[CellGroupData[{
+Cell[950, 33, 226, 3, 35, "Input",ExpressionUUID->"0a9bf6f8-ed61-4241-90de-1fd849a85226"],
+Cell[1179, 38, 501, 11, 59, "Message",ExpressionUUID->"0b0ca8c6-934b-4a80-8798-94947d533e69"],
+Cell[1683, 51, 721, 14, 59, "Message",ExpressionUUID->"71ffd797-6a0a-4f9b-8894-4d3a01d85083"],
+Cell[2407, 67, 697, 14, 58, "Message",ExpressionUUID->"da592c71-d492-4831-ad28-3f5c3e1bed09"],
+Cell[3107, 83, 706, 14, 58, "Message",ExpressionUUID->"f0d04dff-d712-448f-b9a8-c14326048d48"],
+Cell[3816, 99, 696, 14, 58, "Message",ExpressionUUID->"d9d29dc7-405c-4db8-bda7-c7bbe2a38b44"],
+Cell[4515, 115, 461, 10, 35, "Message",ExpressionUUID->"6b9baec0-3f5b-4db9-9f63-76d77ce59c1b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5013, 130, 309, 5, 35, "Input",ExpressionUUID->"ac7f0736-3ccd-4fe8-90ce-3374291e3bdd"],
+Cell[5325, 137, 1165, 23, 40, "Output",ExpressionUUID->"80798212-c276-4c85-acb4-1a0381c05e93"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6527, 165, 212, 3, 35, "Input",ExpressionUUID->"475aa651-bf5f-4e07-865a-795c106aaa24"],
+Cell[6742, 170, 187, 3, 40, "Output",ExpressionUUID->"6879335c-b7f2-4313-8d9d-01e06ac34862"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6966, 178, 183, 2, 35, "Input",ExpressionUUID->"376e5bef-6892-43d4-9f06-2827ef70bdc6"],
+Cell[7152, 182, 509, 9, 65, "Output",ExpressionUUID->"6fd5bdd1-d6b8-41cc-b279-7c37249b45b1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7698, 196, 208, 3, 35, "Input",ExpressionUUID->"b27e9923-9e5d-4df1-87d9-b0b6d29f6b3e"],
+Cell[7909, 201, 23796, 536, 148, "Output",ExpressionUUID->"43580e35-005c-4339-aa38-e16ef7d3a0bb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31742, 742, 205, 3, 35, "Input",ExpressionUUID->"3aca1d0a-296d-46da-a92c-18b2b87a896e"],
+Cell[31950, 747, 15098, 336, 218, "Output",ExpressionUUID->"48656a32-7f39-4463-bea9-b3c29d1820d6"]
+}, Open  ]],
+Cell[47063, 1086, 4786, 112, 583, "Input",ExpressionUUID->"0c62c3f5-7056-48f7-8ed0-f36445ced4ef"],
+Cell[CellGroupData[{
+Cell[51874, 1202, 257, 4, 35, "Input",ExpressionUUID->"085fcf03-928b-4129-9c24-1b650aac9987"],
+Cell[52134, 1208, 215, 3, 40, "Output",ExpressionUUID->"a773fb38-8188-480b-8733-43f441ef82db"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52386, 1216, 234, 3, 35, "Input",ExpressionUUID->"4b194ab2-807b-4895-8318-20a36cc484e6"],
+Cell[52623, 1221, 744, 14, 59, "Message",ExpressionUUID->"58ccff6f-78c1-462f-bd43-da99d4828fd3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53404, 1240, 294, 5, 35, "Input",ExpressionUUID->"dc4da3d1-d9a8-4e24-bd90-cb365eacf6fa"],
+Cell[53701, 1247, 3144, 56, 449, "Output",ExpressionUUID->"62dba299-72c1-4188-979d-948262669ca4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56882, 1308, 3448, 61, 169, "Input",ExpressionUUID->"0d96f933-9546-4f16-92c4-26028cef0843"],
+Cell[60333, 1371, 262, 3, 40, "Output",ExpressionUUID->"dd213408-afb7-4b2f-a07c-755452d23aa2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60632, 1379, 195, 3, 35, "Input",ExpressionUUID->"f2984823-cd5b-4e9b-8a8a-724b8d7fa72e"],
+Cell[60830, 1384, 20332, 465, 790, "Output",ExpressionUUID->"41df6eca-17f9-4e32-be64-7143c411d683"]
+}, Open  ]],
+Cell[81177, 1852, 245, 4, 35, "Input",ExpressionUUID->"cfc93cd9-5312-431e-bf82-f95c1b3389ec"],
+Cell[CellGroupData[{
+Cell[81447, 1860, 207, 3, 35, "Input",ExpressionUUID->"0aa2a7d8-9aef-48be-8f84-6dc342a320cb"],
+Cell[81657, 1865, 374, 9, 35, "Message",ExpressionUUID->"bcab18e4-d08b-472d-a586-deb43a9886de"]
+}, Open  ]],
+Cell[82046, 1877, 155, 3, 35, "Input",ExpressionUUID->"4bc4ea6f-9465-49ca-a0d0-7687ac24bc46"],
+Cell[82204, 1882, 309, 7, 35, "Input",ExpressionUUID->"f5211342-df82-42ac-a089-1d726f5f72bc"],
+Cell[CellGroupData[{
+Cell[82538, 1893, 504, 13, 35, "Input",ExpressionUUID->"9922bb49-e430-4f2f-ac22-e6d87ee51373"],
+Cell[83045, 1908, 156, 2, 40, "Output",ExpressionUUID->"6bab7ef4-7206-4870-b82a-f2fad01e0322"]
+}, Open  ]]
+}
+]
+*)
+
