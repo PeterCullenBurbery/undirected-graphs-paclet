@@ -10,11 +10,11 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17023,        489]
-NotebookOptionsPosition[     12109,        385]
-NotebookOutlinePosition[     14190,        438]
-CellTagsIndexPosition[     14105,        433]
-WindowTitle->OddNodes
+NotebookDataLength[     16781,        475]
+NotebookOptionsPosition[     11918,        373]
+NotebookOutlinePosition[     13980,        426]
+CellTagsIndexPosition[     13895,        421]
+WindowTitle->Girth
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -76,12 +76,12 @@ Cell[BoxData[GridBox[{
             PlotRange->{{-3, 4}, {-1, 1}}]]]
          }]],
          StripOnInput->
-          False], {"\<\"PeterBurbery/UndirectedGraphs/ref/OddNodes\"\>":>
+          False], {"\<\"PeterBurbery/UndirectedGraphs/ref/Girth\"\>":>
         None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
         Module[{DocumentationSearch`Private`nb$}, 
          DocumentationSearch`Private`nb$ = NotebookPut[
             Notebook[{
-              Cell["PeterBurbery/UndirectedGraphs/ref/OddNodes"]}, Visible -> 
+              Cell["PeterBurbery/UndirectedGraphs/ref/Girth"]}, Visible -> 
              False]]; SelectionMove[
           DocumentationSearch`Private`nb$, All, Notebook]; 
          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
@@ -95,18 +95,18 @@ Cell[BoxData[GridBox[{
                 MakeBoxes[
                  Hyperlink[
                  "http://reference.wolfram.com/language/PeterBurbery/\
-UndirectedGraphs/ref/OddNodes.html"], StandardForm]], "Input", 
-               TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+UndirectedGraphs/ref/Girth.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
          NotebookClose[DocumentationSearch`Private`nb$]; 
          Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
           NotebookLocate[{
             URL[(If[
-                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$410257], 
+                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$813601], 
                 "http://reference.wolfram.com/system-modeler/", 
                 "http://reference.wolfram.com/language/"] <> 
-              "PeterBurbery/UndirectedGraphs/ref/OddNodes") <> ".html"], 
+              "PeterBurbery/UndirectedGraphs/ref/Girth") <> ".html"], 
             None}]}]},
         Appearance->None,
         MenuAppearance->Automatic,
@@ -128,7 +128,7 @@ Cell[CellGroupData[{
 
 Cell[BoxData[GridBox[{
    {Cell[TextData[{
-     Cell["OddNodes", "ObjectName"],
+     Cell["Girth", "ObjectName"],
      Cell[BoxData[
       TemplateBox[{8},
        "Spacer1"]]],
@@ -142,16 +142,19 @@ Cell[BoxData[GridBox[{
       RowBox[{
        TemplateBox[{
          Cell[
-          TextData["OddNodes"]], 
-         "paclet:PeterBurberyUndirectedGraphs/ref/OddNodes", 
-         "PeterBurberyUndirectedGraphs Package Symbol"},
+          TextData["Girth"]], "paclet:PeterBurberyUndirectedGraphs/ref/Girth",
+          "PeterBurberyUndirectedGraphs Package Symbol"},
         "PackageLink",
-        BaseStyle->"InlineFormula"], "[", "graph", "]"}]], "InlineFormula",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["graph", "TI"], "]"}]], "InlineFormula",
       FontFamily->"Source Sans Pro"],
-     "\[LineSeparator]find the odd nodes in graph"
+     "\[LineSeparator]find the girth of ",
+     Cell[BoxData[
+      StyleBox["graph", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro"]
     }]]}
   }]], "Usage",
- CellID->7060467]
+ CellID->187635743]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -200,20 +203,27 @@ Cell[TextData[Cell[BoxData[
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
  CacheGraphics->False,
- CellID->366225695],
+ CellID->456344253],
 
-Cell["An odd node has an odd degree.", "Notes",
- CellID->119245707],
+Cell["The girth is the length of the shortest cycle in a graph.", "Notes",
+ CellID->39564733],
 
-Cell["\<\
-This means the node is adjacent to an odd number of other nodes.\
-\>", "Notes",
- CellID->386635598],
+Cell["An acyclic graph with no cycles has a girth of \[Infinity].", "Notes",
+ CellID->509339527],
 
 Cell["\<\
-Finding the odd nodes in a graph is an important step in Eulerizing a graph.\
+A k-cage is a graph with the smallest number of nodes that has girth k.\
 \>", "Notes",
- CellID->33839086]
+ CellID->333637280],
+
+Cell["\<\
+A cage must also be regular. This means all the nodes must have the same \
+degree.\
+\>", "Notes",
+ CellID->177140162],
+
+Cell["For example, the Petersen graph is the unique 5 cage.", "Notes",
+ CellID->646736689]
 }, Dynamic[CurrentValue[
  EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
 
@@ -254,13 +264,13 @@ Cell[TextData[{
  WholeCellGroupOpener->True,
  CacheGraphics->False,
  CellTags->"PrimaryExamplesSection",
- CellID->293414425],
+ CellID->708716521],
 
 Cell[BoxData[
  RowBox[{"Needs", "[", "\"\<PeterBurbery`UndirectedGraphs`\>\"", 
   "]"}]], "Input", "ExampleInitialization",
  CellLabel->"In[1]:=",
- CellID->92843605],
+ CellID->283974840],
 
 Cell[CellGroupData[{
 
@@ -298,62 +308,40 @@ Cell[TextData[{
 }], "ExampleSection", "ExampleSection",
  WholeCellGroupOpener->True,
  CacheGraphics->False,
- CellID->199139403],
+ CellID->133757135],
 
-Cell["Find the odd nodes in the Petersen graph:", "ExampleText",
- CellID->465268447],
+Cell["Find the girth of the Petersen graph:", "ExampleText",
+ CellID->297846961],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"OddNodes", "[", 
+ RowBox[{"Girth", "[", 
   RowBox[{"PetersenGraph", "[", "]"}], "]"}]], "Input",
  CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
  CellLabel->"In[1]:=",
- CellID->20634992],
+ CellID->28784465],
 
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-  "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
-   ",", "9", ",", "10"}], "}"}]], "Output",
+Cell[BoxData["5"], "Output",
  CellLabel->"Out[1]=",
- CellID->30395136]
+ CellID->529786624]
 }, Open  ]],
 
-Cell["\<\
-An Eulerian graph has no odd nodes. Every complete graph of a odd number is \
-Eulerian.\
-\>", "ExampleText",
- CellID->728614385],
+Cell["Compare to the computed GraphData value:", "ExampleText",
+ CellID->405016270],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"OddNodes", "[", 
-  RowBox[{"CompleteGraph", "[", "11", "]"}], "]"}]], "Input",
+ RowBox[{"GraphData", "[", 
+  RowBox[{"\"\<PetersenGraph\>\"", ",", "\"\<Girth\>\""}], "]"}]], "Input",
  CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
  CellLabel->"In[2]:=",
- CellID->53472738],
+ CellID->387089288],
 
-Cell[BoxData[
- RowBox[{"{", "}"}]], "Output",
+Cell[BoxData["5"], "Output",
  CellLabel->"Out[2]=",
- CellID->30902513]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"EulerianGraphQ", "[", 
-  RowBox[{"CompleteGraph", "[", "11", "]"}], "]"}]], "Input",
- CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
- CellLabel->"In[3]:=",
- CellID->207213203],
-
-Cell[BoxData["True"], "Output",
- CellLabel->"Out[3]=",
- CellID->322967935]
+ CellID->139939028]
 }, Open  ]]
 }, Dynamic[CurrentValue[
  EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
@@ -387,7 +375,7 @@ Saveable->False,
 ScreenStyleEnvironment->"Working",
 WindowSize->{900., 604.8},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-WindowTitle->"OddNodes",
+WindowTitle->"Girth",
 TaggingRules->{
  "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
   "HasOptions" -> True, "ExampleCounter" -> 1, 
@@ -396,16 +384,16 @@ TaggingRules->{
     "NotesSection" -> Closed}, "NewStyles" -> True, 
   "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
   "", "Metadata" -> {
-   "built" -> "{2022, 7, 21, 20, 29, 11.4493786}", 
+   "built" -> "{2022, 7, 21, 20, 45, 26.4326742}", 
     "history" -> {"", "", "", ""}, "context" -> 
     "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
      "label" -> "Peter Burbery/ Undirected Graphs Symbol", "language" -> "en",
      "paclet" -> "PeterBurbery/UndirectedGraphs", "status" -> "None", 
-    "summary" -> "OddNodes[graph] find the odd nodes in graph", 
-    "synonyms" -> {}, "tabletags" -> {}, "title" -> "OddNodes", 
-    "titlemodifier" -> "", "windowtitle" -> "OddNodes", "type" -> "Symbol", 
-    "uri" -> "PeterBurbery/UndirectedGraphs/ref/OddNodes"}},
+    "summary" -> "Girth[graph] find the girth of graph", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "Girth", "titlemodifier" -> "", 
+    "windowtitle" -> "Girth", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/UndirectedGraphs/ref/Girth"}},
 CellContext->"Global`",
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
 StyleDefinitions->Notebook[{
@@ -425,72 +413,70 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "PrimaryExamplesSection"->{
-  Cell[7385, 221, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"2dcb7b03-cbf2-42ad-aa2f-3c41b54eb523",
+  Cell[7706, 231, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"7e013da6-14dd-4b3b-ac10-99d98d16a7c6",
    CellTags->"PrimaryExamplesSection",
-   CellID->293414425]}
+   CellID->708716521]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PrimaryExamplesSection", 13906, 426}
+ {"PrimaryExamplesSection", 13696, 414}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[580, 21, 3906, 101, 70, "AnchorBarGrid",ExpressionUUID->"c9ba2f11-26f2-4c95-b086-446eba12db50",
+Cell[577, 21, 3894, 101, 70, "AnchorBarGrid",ExpressionUUID->"40fdb22d-98e2-4391-ac4e-4f4e65068fc0",
  CellID->1],
-Cell[4489, 124, 57, 0, 70, "ContextNameCell",ExpressionUUID->"c46eb6ef-d0e1-4f10-b5ba-759e3721c7c0"],
+Cell[4474, 124, 57, 0, 70, "ContextNameCell",ExpressionUUID->"c522a60e-2aa7-4551-89f2-c23abe0fe576"],
 Cell[CellGroupData[{
-Cell[4571, 128, 243, 8, 70, "ObjectNameGrid",ExpressionUUID->"00b88971-fd1d-40fa-99ca-7dfeee75c342"],
-Cell[4817, 138, 500, 15, 70, "Usage",ExpressionUUID->"acd585ed-287c-4550-93fc-60ace3ff861d",
- CellID->7060467]
+Cell[4556, 128, 240, 8, 70, "ObjectNameGrid",ExpressionUUID->"fb5a0bfc-6e38-48fd-b317-e044b08127a1"],
+Cell[4799, 138, 607, 18, 70, "Usage",ExpressionUUID->"45afba4c-9664-4963-a701-5fee27f2edeb",
+ CellID->187635743]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5354, 158, 1599, 44, 70, "NotesSection",ExpressionUUID->"834f6feb-9dec-4510-aab6-40963044d7c5",
+Cell[5443, 161, 1599, 44, 70, "NotesSection",ExpressionUUID->"67320321-584a-48d0-a568-fcf291af4fdf",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->366225695],
-Cell[6956, 204, 67, 1, 70, "Notes",ExpressionUUID->"00bda64e-18bf-4a96-b369-8aca6bc5829e",
- CellID->119245707],
-Cell[7026, 207, 109, 3, 70, "Notes",ExpressionUUID->"308233b5-768d-468a-92cb-b9a38c788dd4",
- CellID->386635598],
-Cell[7138, 212, 120, 3, 70, "Notes",ExpressionUUID->"9dbccfe1-90e2-4a9b-bf2b-cc2000ddc4be",
- CellID->33839086]
+ CellID->456344253],
+Cell[7045, 207, 93, 1, 70, "Notes",ExpressionUUID->"9be016bc-999d-498c-a012-27c4324ead54",
+ CellID->39564733],
+Cell[7141, 210, 96, 1, 70, "Notes",ExpressionUUID->"d675ea49-d320-4ccd-9436-a9ceae80b14e",
+ CellID->509339527],
+Cell[7240, 213, 116, 3, 70, "Notes",ExpressionUUID->"a8931ad9-8500-489e-9934-491f042f2897",
+ CellID->333637280],
+Cell[7359, 218, 127, 4, 70, "Notes",ExpressionUUID->"616e134b-6a52-4a50-8239-9bc305bd7623",
+ CellID->177140162],
+Cell[7489, 224, 90, 1, 70, "Notes",ExpressionUUID->"8898e84b-fc42-41e2-80f5-12b7d186e666",
+ CellID->646736689]
 }, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
 Cell[CellGroupData[{
-Cell[7385, 221, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"2dcb7b03-cbf2-42ad-aa2f-3c41b54eb523",
+Cell[7706, 231, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"7e013da6-14dd-4b3b-ac10-99d98d16a7c6",
  CellTags->"PrimaryExamplesSection",
- CellID->293414425],
-Cell[8552, 258, 165, 4, 70, "Input",ExpressionUUID->"6f3267ce-0d7c-4dbb-b4b7-cfc2251bc387",
- CellID->92843605],
+ CellID->708716521],
+Cell[8873, 268, 166, 4, 70, "Input",ExpressionUUID->"b0699397-6be4-45a3-88aa-9c90789a25e9",
+ CellID->283974840],
 Cell[CellGroupData[{
-Cell[8742, 266, 1175, 34, 70, "ExampleSection",ExpressionUUID->"181e3dd6-f5a8-4593-944a-2c970128a653",
- CellID->199139403],
-Cell[9920, 302, 84, 1, 70, "ExampleText",ExpressionUUID->"ebb0893d-1c93-4896-a8e5-2bd38a507cde",
- CellID->465268447],
+Cell[9064, 276, 1175, 34, 70, "ExampleSection",ExpressionUUID->"a5085035-f8f0-4dca-ac87-490f75db4450",
+ CellID->133757135],
+Cell[10242, 312, 80, 1, 70, "ExampleText",ExpressionUUID->"f43f859d-2fbb-4016-a726-c4ffb1d8d782",
+ CellID->297846961],
 Cell[CellGroupData[{
-Cell[10029, 307, 192, 5, 70, "Input",ExpressionUUID->"d59df5b3-ccec-42b1-a2f1-be033d0e2525",
- CellID->20634992],
-Cell[10224, 314, 203, 6, 70, "Output",ExpressionUUID->"c0b9d45e-8987-41b6-8ff6-10a76933c7f4",
- CellID->30395136]
+Cell[10347, 317, 189, 5, 70, "Input",ExpressionUUID->"9e575b93-0a9d-4eae-acac-916c3ae60121",
+ CellID->28784465],
+Cell[10539, 324, 71, 2, 70, "Output",ExpressionUUID->"c67661d8-2ca1-4860-b522-805ffcf9d8e1",
+ CellID->529786624]
 }, Open  ]],
-Cell[10442, 323, 138, 4, 70, "ExampleText",ExpressionUUID->"1ea8348d-ac01-4163-a78a-4da505bd208b",
- CellID->728614385],
+Cell[10625, 329, 83, 1, 70, "ExampleText",ExpressionUUID->"2d082a2e-ec15-4285-80cd-cc5847925496",
+ CellID->405016270],
 Cell[CellGroupData[{
-Cell[10605, 331, 198, 5, 70, "Input",ExpressionUUID->"d314e7bf-49a4-47b3-96f9-578b68c888b5",
- CellID->53472738],
-Cell[10806, 338, 87, 3, 70, "Output",ExpressionUUID->"df7e30dc-79d6-4522-b84d-fb72415c22b2",
- CellID->30902513]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[10930, 346, 205, 5, 70, "Input",ExpressionUUID->"299bd9e2-d670-4c84-afa9-fae0841c073a",
- CellID->207213203],
-Cell[11138, 353, 74, 2, 70, "Output",ExpressionUUID->"d0183023-33de-474e-b145-cb1f11ef54c7",
- CellID->322967935]
+Cell[10733, 334, 214, 5, 70, "Input",ExpressionUUID->"c4ec2c16-726b-40a5-8b67-c82a1242b4cc",
+ CellID->387089288],
+Cell[10950, 341, 71, 2, 70, "Output",ExpressionUUID->"fcdf2914-998e-41bb-8edc-ef0346693037",
+ CellID->139939028]
 }, Open  ]]
 }, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
 }, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
-Cell[11454, 364, 625, 17, 70, "MoreAboutSection",ExpressionUUID->"782d3a2f-74ee-4ac4-9f64-d87dfb800153"],
-Cell[12082, 383, 23, 0, 70, "FooterCell",ExpressionUUID->"5d89298d-4c06-4a4b-921e-389f7c850e6e"]
+Cell[11263, 352, 625, 17, 70, "MoreAboutSection",ExpressionUUID->"3b20163c-f65f-4896-aa15-08c486e69b8c"],
+Cell[11891, 371, 23, 0, 70, "FooterCell",ExpressionUUID->"2d98b972-3ac9-4936-958a-18a9c83b35d9"]
 }
 ]
 *)

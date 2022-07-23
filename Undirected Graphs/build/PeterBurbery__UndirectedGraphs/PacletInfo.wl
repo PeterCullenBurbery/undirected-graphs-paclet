@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Cullen Burbery",
     "License" -> "MIT",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "1.2.0",
+    "Version" -> "1.9.0",
     "WolframVersion" -> "13.1+",
     "Extensions" -> {
       {
@@ -21,7 +21,15 @@ PacletObject[
         },
         "Symbols" -> {
           "PeterBurbery`UndirectedGraphs`FindBlossomInequalities",
-          "PeterBurbery`UndirectedGraphs`OddNodes"
+          "PeterBurbery`UndirectedGraphs`GeneralizedGraphData",
+          "PeterBurbery`UndirectedGraphs`Girth",
+          "PeterBurbery`UndirectedGraphs`GraphConvexHull",
+          "PeterBurbery`UndirectedGraphs`GraphicalDegreeSequenceQ",
+          "PeterBurbery`UndirectedGraphs`GraphPredicateData",
+          "PeterBurbery`UndirectedGraphs`OddNodes",
+          "PeterBurbery`UndirectedGraphs`RandomCustomGraph",
+          "PeterBurbery`UndirectedGraphs`ResistanceMatrix",
+          "PeterBurbery`UndirectedGraphs`TakeLargestGraphComponentBy"
         }
       },
       {"Documentation", "Language" -> "English"}

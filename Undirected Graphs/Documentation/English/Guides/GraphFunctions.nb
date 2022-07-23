@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7181,        200]
-NotebookOptionsPosition[      3817,        125]
-NotebookOutlinePosition[      4375,        143]
-CellTagsIndexPosition[      4332,        140]
+NotebookDataLength[     11499,        303]
+NotebookOptionsPosition[      7365,        214]
+NotebookOutlinePosition[      7971,        234]
+CellTagsIndexPosition[      7928,        231]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,7 +23,8 @@ Cell[CellGroupData[{
 Cell["Graph Functions", "GuideTitle",
  CellID->20858713,ExpressionUUID->"d4d2c7f8-a578-4856-9658-fe92fbbf4a93"],
 
-Cell["XXXX", "GuideAbstract",
+Cell["functions for undirected graphs", "GuideAbstract",
+ CellChangeTimes->{{3.867433653480688*^9, 3.867433657800782*^9}},
  CellID->510547802,ExpressionUUID->"a52c7ddc-84dd-4ee6-b2b2-bd375a352231"]
 }, Open  ]],
 
@@ -34,19 +35,107 @@ Cell["", "GuideFunctionsSection",
 
 Cell[TextData[{
  Cell[BoxData[
- "XXXX"], "InlineGuideFunction",ExpressionUUID->
+  ButtonBox["Girth",
+   BaseStyle->"Link",
+   ButtonData->"paclet:PeterBurbery/UndirectedGraphs/ref/Girth"]], 
+  "InlineGuideFunction",ExpressionUUID->
   "3635886e-416b-403f-831b-704f70a2468e"],
- " \[LongDash] XXXX"
+ " \[LongDash] compute the girth of a graph"
 }], "GuideText",
+ CellChangeTimes->{{3.8674316199877825`*^9, 3.867431640086137*^9}},
  CellID->251545897,ExpressionUUID->"2674bf3b-9764-4637-a52a-5790187fdfa2"],
 
 Cell[TextData[{
  Cell[BoxData[
- "XXXX"], "InlineGuideFunction",ExpressionUUID->
+  ButtonBox["OddNodes",
+   BaseStyle->"Link",
+   ButtonData->"paclet:PeterBurbery/UndirectedGraphs/ref/OddNodes"]], 
+  "InlineGuideFunction",ExpressionUUID->
   "53e80f46-8be9-4854-bc1f-f2fac957e01f"],
- " \[LongDash] XXXX"
+ " \[LongDash] find the odd nodes"
 }], "GuideText",
+ CellChangeTimes->{{3.86743164992391*^9, 3.867431655681843*^9}, {
+  3.8674336667003293`*^9, 3.8674336667003293`*^9}},
  CellID->121124663,ExpressionUUID->"96c72ea2-f957-412d-811d-2014af53cbee"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["GraphInformation",
+   BaseStyle->"Link",
+   ButtonData->"paclet:PeterBurbery/UndirectedGraphs/ref/GraphInformation"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "2b6f588d-a151-44ae-970f-411432b5f664"],
+ " \[LongDash] information for a graph"
+}], "GuideText",
+ CellChangeTimes->{{3.8674316609847703`*^9, 3.867431669416707*^9}, {
+  3.867433751057963*^9, 3.867433751057963*^9}},
+ CellID->42675078,ExpressionUUID->"34343c3a-0ccb-4929-9cec-eac414adb5c4"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["GeneralizedGraphData",
+   BaseStyle->"Link",
+   ButtonData->
+    "paclet:PeterBurbery/UndirectedGraphs/ref/GeneralizedGraphData"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "279d89f4-9ffa-47ac-bd6c-e1be2970e81d"],
+ " \[LongDash] compute data for a graph"
+}], "GuideText",
+ CellChangeTimes->{{3.86743167560336*^9, 3.8674316950870447`*^9}, {
+  3.86743394839318*^9, 3.8674339591518607`*^9}},
+ CellID->279209129,ExpressionUUID->"1c27339d-b1af-4384-8cad-2a7ee606b106"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["TakeLargestGraphComponentBy",
+   BaseStyle->"Link",
+   ButtonData->
+    "paclet:PeterBurbery/UndirectedGraphs/ref/TakeLargestGraphComponentBy"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "e72f899f-73ce-4a38-a2be-72aca48e4bdb"],
+ " \[LongDash] take the largest component of a graph based on an objective \
+function such as EdgeCount or VertexCount"
+}], "GuideText",
+ CellChangeTimes->{{3.8674339915840297`*^9, 3.8674340211446433`*^9}},
+ CellID->341999033,ExpressionUUID->"6bf9091a-ab2f-4087-a90d-364e2bc5062c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["GraphicalDegreeSequenceQ",
+   BaseStyle->"Link",
+   ButtonData->
+    "paclet:PeterBurbery/UndirectedGraphs/ref/GraphicalDegreeSequenceQ"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "8adc92d6-ba52-4730-972d-a56d27d89c98"],
+ " \[LongDash] test if a sequence is graphical"
+}], "GuideText",
+ CellChangeTimes->{{3.867434024301628*^9, 3.867434024301628*^9}, {
+  3.867434058276867*^9, 3.8674340740305667`*^9}},
+ CellID->515542252,ExpressionUUID->"4502b90c-d605-4d92-a114-5c45f575abd1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["GraphConvexHull",
+   BaseStyle->"Link",
+   ButtonData->"paclet:PeterBurbery/UndirectedGraphs/ref/GraphConvexHull"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "db157e43-8280-49c8-ba73-ac2c1ef61965"],
+ " \[LongDash] find the convex hull of a graph"
+}], "GuideText",
+ CellChangeTimes->{{3.8674340328557463`*^9, 3.867434080382629*^9}},
+ CellID->82951532,ExpressionUUID->"05d769c8-482d-4eda-af0f-37ef08e62e60"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["ResistanceMatrix",
+   BaseStyle->"Link",
+   ButtonData->"paclet:PeterBurbery/UndirectedGraphs/ref/ResistanceMatrix"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "33bac819-98b3-425f-bac3-65b1090b3061"],
+ " \[LongDash] compute the resistance matrix of a graph"
+}], "GuideText",
+ CellChangeTimes->{{3.86743403666075*^9, 3.8674340878347483`*^9}},
+ CellID->361660348,ExpressionUUID->"77857ebf-536d-48a7-99a7-54e83723bbd0"],
 
 Cell[CellGroupData[{
 
@@ -123,9 +212,11 @@ Cell["XXXX", "Keywords",
 }, Closed]]
 }, Closed]]
 },
-WindowSize->{700.1999999999999, 604.8},
-WindowMargins->{{162.6, Automatic}, {Automatic, 39.6}},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
 TaggingRules-><|"Paclet" -> "PeterBurbery/UndirectedGraphs"|>,
+Magnification:>1.2 Inherited,
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStylesExt.nb", 
   CharacterEncoding -> "UTF-8"],
@@ -143,68 +234,78 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 111, 1, 108, "GuideTitle",ExpressionUUID->"d4d2c7f8-a578-4856-9658-fe92fbbf4a93",
+Cell[580, 22, 111, 1, 131, "GuideTitle",ExpressionUUID->"d4d2c7f8-a578-4856-9658-fe92fbbf4a93",
  CellID->20858713],
-Cell[694, 25, 104, 1, 36, "GuideAbstract",ExpressionUUID->"a52c7ddc-84dd-4ee6-b2b2-bd375a352231",
+Cell[694, 25, 197, 2, 44, "GuideAbstract",ExpressionUUID->"a52c7ddc-84dd-4ee6-b2b2-bd375a352231",
  CellID->510547802]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[835, 31, 107, 1, 90, "GuideFunctionsSection",ExpressionUUID->"b8bf4655-80ff-4fa0-a5fd-e457fc32613e",
+Cell[928, 32, 107, 1, 108, "GuideFunctionsSection",ExpressionUUID->"b8bf4655-80ff-4fa0-a5fd-e457fc32613e",
  CellID->47977190],
-Cell[945, 34, 235, 6, 28, "GuideText",ExpressionUUID->"2674bf3b-9764-4637-a52a-5790187fdfa2",
+Cell[1038, 35, 430, 10, 34, "GuideText",ExpressionUUID->"2674bf3b-9764-4637-a52a-5790187fdfa2",
  CellID->251545897],
-Cell[1183, 42, 235, 6, 28, "GuideText",ExpressionUUID->"96c72ea2-f957-412d-811d-2014af53cbee",
+Cell[1471, 47, 476, 11, 34, "GuideText",ExpressionUUID->"96c72ea2-f957-412d-811d-2014af53cbee",
  CellID->121124663],
+Cell[1950, 60, 495, 11, 34, "GuideText",ExpressionUUID->"34343c3a-0ccb-4929-9cec-eac414adb5c4",
+ CellID->42675078],
+Cell[2448, 73, 510, 12, 34, "GuideText",ExpressionUUID->"1c27339d-b1af-4384-8cad-2a7ee606b106",
+ CellID->279209129],
+Cell[2961, 87, 556, 12, 59, "GuideText",ExpressionUUID->"6bf9091a-ab2f-4087-a90d-364e2bc5062c",
+ CellID->341999033],
+Cell[3520, 101, 525, 12, 34, "GuideText",ExpressionUUID->"4502b90c-d605-4d92-a114-5c45f575abd1",
+ CellID->515542252],
+Cell[4048, 115, 452, 10, 34, "GuideText",ExpressionUUID->"05d769c8-482d-4eda-af0f-37ef08e62e60",
+ CellID->82951532],
+Cell[4503, 127, 463, 10, 34, "GuideText",ExpressionUUID->"77857ebf-536d-48a7-99a7-54e83723bbd0",
+ CellID->361660348],
 Cell[CellGroupData[{
-Cell[1443, 52, 102, 1, 34, "GuideDelimiter",ExpressionUUID->"5f5e92c0-b3e6-42eb-b0f0-f92d16b2b5fe",
+Cell[4991, 141, 102, 1, 41, "GuideDelimiter",ExpressionUUID->"5f5e92c0-b3e6-42eb-b0f0-f92d16b2b5fe",
  CellID->37705654],
-Cell[1548, 55, 126, 1, 26, "InlineGuideFunctionListing",ExpressionUUID->"6638c89b-711e-4111-a412-4d4251ee13ef",
+Cell[5096, 144, 126, 1, 32, "InlineGuideFunctionListing",ExpressionUUID->"6638c89b-711e-4111-a412-4d4251ee13ef",
  CellID->36858170]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1723, 62, 118, 1, 93, "GuideTutorialsSection",ExpressionUUID->"5be99030-4696-476c-9ebe-6f6d374d5e04",
+Cell[5271, 151, 118, 1, 111, "GuideTutorialsSection",ExpressionUUID->"5be99030-4696-476c-9ebe-6f6d374d5e04",
  CellID->203081126],
-Cell[1844, 65, 104, 1, 29, "GuideTutorial",ExpressionUUID->"3ee7e36e-8417-4278-8fb4-93f426e7f764",
+Cell[5392, 154, 104, 1, 36, "GuideTutorial",ExpressionUUID->"3ee7e36e-8417-4278-8fb4-93f426e7f764",
  CellID->282079475],
-Cell[1951, 68, 104, 1, 29, "GuideTutorial",ExpressionUUID->"c5be0108-19a4-47c2-a781-c7a7ade46922",
+Cell[5499, 157, 104, 1, 36, "GuideTutorial",ExpressionUUID->"c5be0108-19a4-47c2-a781-c7a7ade46922",
  CellID->330900859]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2092, 74, 190, 2, 93, "GuideMoreAboutSection",ExpressionUUID->"962a5667-187c-4a24-823e-ddafb4a94b9b",
+Cell[5640, 163, 190, 2, 111, "GuideMoreAboutSection",ExpressionUUID->"962a5667-187c-4a24-823e-ddafb4a94b9b",
  CellID->300940696],
-Cell[2285, 78, 103, 1, 29, "GuideMoreAbout",ExpressionUUID->"464d5fbf-62d5-4036-a559-57d1ba09449d",
+Cell[5833, 167, 103, 1, 36, "GuideMoreAbout",ExpressionUUID->"464d5fbf-62d5-4036-a559-57d1ba09449d",
  CellID->2572616],
-Cell[2391, 81, 105, 1, 70, "GuideMoreAbout",ExpressionUUID->"2d00ec26-c527-4996-bbf7-6d61e5657b23",
+Cell[5939, 170, 105, 1, 36, "GuideMoreAbout",ExpressionUUID->"2d00ec26-c527-4996-bbf7-6d61e5657b23",
  CellID->166270479]
 }, Open  ]],
-Cell[2511, 85, 124, 1, 70, "GuideRelatedLinksSection",ExpressionUUID->"a847b2b0-3a52-48cf-afaf-dc3467fc4468",
+Cell[6059, 174, 124, 1, 111, "GuideRelatedLinksSection",ExpressionUUID->"a847b2b0-3a52-48cf-afaf-dc3467fc4468",
  CellID->848817701],
 Cell[CellGroupData[{
-Cell[2660, 90, 110, 1, 70, "MetadataSection",ExpressionUUID->"5f74df10-684b-4444-9a32-49b22770052e",
+Cell[6208, 179, 110, 1, 92, "MetadataSection",ExpressionUUID->"5f74df10-684b-4444-9a32-49b22770052e",
  CellID->171811982],
 Cell[CellGroupData[{
-Cell[2795, 95, 121, 1, 70, "CategorizationSection",ExpressionUUID->"dfcc271b-3849-495c-aa58-cc00a75f29b6",
+Cell[6343, 184, 121, 1, 84, "CategorizationSection",ExpressionUUID->"dfcc271b-3849-495c-aa58-cc00a75f29b6",
  CellID->89506514],
-Cell[2919, 98, 133, 2, 70, "Categorization",ExpressionUUID->"643cf7e3-fc81-49b8-9abd-2a4093a14da9",
+Cell[6467, 187, 133, 2, 84, "Categorization",ExpressionUUID->"643cf7e3-fc81-49b8-9abd-2a4093a14da9",
  CellID->583847488],
-Cell[3055, 102, 157, 2, 70, "Categorization",ExpressionUUID->"ad751a78-e190-403e-9b0c-a7434723a760",
+Cell[6603, 191, 157, 2, 84, "Categorization",ExpressionUUID->"ad751a78-e190-403e-9b0c-a7434723a760",
  CellID->610669698],
-Cell[3215, 106, 154, 2, 70, "Categorization",ExpressionUUID->"6fe9dfd2-efae-46d6-b8ac-96df404ced48",
+Cell[6763, 195, 154, 2, 84, "Categorization",ExpressionUUID->"6fe9dfd2-efae-46d6-b8ac-96df404ced48",
  CellID->212183943],
-Cell[3372, 110, 170, 2, 70, "Categorization",ExpressionUUID->"3e4a11c8-9cfa-47e4-b6da-d05c76881b3e",
+Cell[6920, 199, 170, 2, 84, "Categorization",ExpressionUUID->"3e4a11c8-9cfa-47e4-b6da-d05c76881b3e",
  CellID->435634440]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[3579, 117, 108, 1, 70, "KeywordsSection",ExpressionUUID->"f7991954-298d-4139-97b2-f63c7bbd93b3",
+Cell[7127, 206, 108, 1, 84, "KeywordsSection",ExpressionUUID->"f7991954-298d-4139-97b2-f63c7bbd93b3",
  CellID->3784359],
-Cell[3690, 120, 99, 1, 70, "Keywords",ExpressionUUID->"bccbe2d2-5a33-426f-bd19-363739b25af5",
+Cell[7238, 209, 99, 1, 84, "Keywords",ExpressionUUID->"bccbe2d2-5a33-426f-bd19-363739b25af5",
  CellID->100540833]
 }, Closed]]
 }, Closed]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

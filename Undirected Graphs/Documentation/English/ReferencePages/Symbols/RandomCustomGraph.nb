@@ -1,0 +1,818 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30490,        810]
+NotebookOptionsPosition[     24466,        678]
+NotebookOutlinePosition[     25276,        704]
+CellTagsIndexPosition[     25197,        699]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["RandomCustomGraph", "ObjectName",
+ CellID->356105422,ExpressionUUID->"bbe64141-d12e-4ab6-ad0e-dfda777a0ef4"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"c7a33ba3-714a-4f18-980d-04933c7c4914"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["RandomCustomGraph",
+    BaseStyle->"Link",
+    ButtonData->"paclet:PeterBurberyUndirectedGraphs/ref/RandomCustomGraph"], 
+   "[", 
+   RowBox[{"graph", ","}], "]"}]], "InlineFormula",ExpressionUUID->
+  "79a99255-c2b5-4870-9b24-7a79648f2b50"],
+ "\[LineSeparator]XXXX"
+}], "Usage",
+ CellChangeTimes->{
+  3.8674383000499763`*^9, {3.8674411591184063`*^9, 3.867441160442403*^9}},
+ CellID->185124296,ExpressionUUID->"28ce2201-4de5-4d2f-a890-909873ff8361"],
+
+Cell["XXXX", "Notes",
+ CellID->518639667,ExpressionUUID->"b6e23794-5849-4fe7-953b-b1612d63e89e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "68579ff8-6acf-4068-9845-076d05809da4"]
+}], "TechNotesSection",
+ CellID->658406727,ExpressionUUID->"9fad7f42-2867-43d8-8d39-2b084c2d57ca"],
+
+Cell["XXXX", "Tutorials",
+ CellID->5225773,ExpressionUUID->"3900b871-8c09-498e-ab50-dbe2249f45b0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "d7d333c3-6d4c-48bf-a831-d47ec4b480d2"]
+}], "RelatedLinksSection",
+ CellID->97699975,ExpressionUUID->"bad9f1b0-246e-4366-8ea6-466b1463d42d"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->269707729,ExpressionUUID->"8aeac4ee-e334-4bf6-a3f4-2c7056f32418"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages. Type a space, \
+a period and then another space between function names. Then click the \
+palette's Inline Listing Toggle button.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "fe34d427-f5a0-4c91-933e-cd4bd21e79d7"]
+}], "SeeAlsoSection",
+ CellID->159596719,ExpressionUUID->"416f752a-7c63-481f-a062-46a243b4158a"],
+
+Cell["XXXX", "SeeAlso",
+ CellID->3769216,ExpressionUUID->"1207c5d8-6f44-4da7-9177-ad6bf5980e33"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellChangeTimes->{{3.843042374232973*^9, 3.843042375545676*^9}},
+ CellID->654781124,ExpressionUUID->"bcafdd97-c66d-4e59-a141-1fe242111219"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->177125224,ExpressionUUID->"117a8629-6f4d-4009-932d-34e2f650d873"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "31c3ad4a-bdc2-46d1-9bb4-b61ac30512d1"]
+}], "ExamplesInitializationSection",
+ CellID->430284331,ExpressionUUID->"44b5d3bf-cd12-4dc7-bc9a-fa1b00fd2b85"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`UndirectedGraphs`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->875406565,ExpressionUUID->"79891b3a-2636-4d1c-aebb-1124843ba554"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->173385700,ExpressionUUID->"f02a3da2-94f8-45b8-8873-d3ec7ba82630"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "RandomCustomGraph"}]], "Input",
+ CellChangeTimes->{{3.8674411651595097`*^9, 3.8674411672045183`*^9}},
+ CellLabel->"In[73]:=",
+ CellID->2198733,ExpressionUUID->"ab557f2b-a0fb-4d72-9bf5-d02340844536"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{16.25, {5., 11.25}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{16.25, {5., 11.25}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              
+              ButtonData->
+               "paclet:PeterBurbery/UndirectedGraphs/ref/RandomCustomGraph",
+              
+              ButtonNote->
+               "paclet:PeterBurbery/UndirectedGraphs/ref/RandomCustomGraph"],
+             "\"paclet:PeterBurbery/UndirectedGraphs/ref/RandomCustomGraph\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"PeterBurbery`UndirectedGraphs`RandomCustomGraph\"\>\
+", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"RandomCustomGraph", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"PeterBurbery`UndirectedGraphs`Private`nodes_", 
+                    ",", "PeterBurbery`UndirectedGraphs`Private`edges_"}], 
+                    "}"}], ",", 
+                    "PeterBurbery`UndirectedGraphs`Private`quality_"}], "]"}],
+                     ":=", 
+                    RowBox[{"NestWhile", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"RandomGraph", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"PeterBurbery`UndirectedGraphs`Private`nodes", 
+                    ",", "PeterBurbery`UndirectedGraphs`Private`edges"}], 
+                    "}"}], "]"}], "&"}], ",", "Null", ",", 
+                    
+                    RowBox[{
+                    "!", "PeterBurbery`UndirectedGraphs`Private`quality"}], 
+                    ",", "1", ",", "2980"}], "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   TemplateBox[{
+                    
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", 
+                    "paclet:PeterBurbery/UndirectedGraphs/ref/\
+RandomCustomGraph", 
+                    "paclet:PeterBurbery/UndirectedGraphs/ref/\
+RandomCustomGraph", "Link", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], \
+"\<\"PeterBurbery`UndirectedGraphs`RandomCustomGraph\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{12.5, {4., 8.5}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{12.5, {4., 8.5}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              
+              ButtonData->
+               "paclet:PeterBurbery/UndirectedGraphs/ref/RandomCustomGraph",
+              
+              ButtonNote->
+               "paclet:PeterBurbery/UndirectedGraphs/ref/RandomCustomGraph"],
+             "\"paclet:PeterBurbery/UndirectedGraphs/ref/RandomCustomGraph\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"PeterBurbery`UndirectedGraphs`RandomCustomGraph\"\>\
+", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "PeterBurbery`UndirectedGraphs`RandomCustomGraph", 
+    "Documentation" -> <|
+     "Local" -> 
+      "paclet:PeterBurbery/UndirectedGraphs/ref/RandomCustomGraph"|>, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, PeterBurbery`UndirectedGraphs`RandomCustomGraph, {
+      PeterBurbery`UndirectedGraphs`RandomCustomGraph[{
+          Pattern[PeterBurbery`UndirectedGraphs`Private`nodes, 
+           Blank[]], 
+          Pattern[PeterBurbery`UndirectedGraphs`Private`edges, 
+           Blank[]]}, 
+         Pattern[PeterBurbery`UndirectedGraphs`Private`quality, 
+          Blank[]]] :> 
+       NestWhile[
+        RandomGraph[{
+          PeterBurbery`UndirectedGraphs`Private`nodes, 
+           PeterBurbery`UndirectedGraphs`Private`edges}]& , Null, 
+         Not[PeterBurbery`UndirectedGraphs`Private`quality], 1, 2980]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "PeterBurbery`UndirectedGraphs`RandomCustomGraph"|>, False]]], "Output",
+ CellChangeTimes->{3.8674411703175097`*^9},
+ CellLabel->"Out[73]=",
+ CellID->576005781,ExpressionUUID->"fbc489a6-5e66-4afa-94ab-0dbba8079546"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "124527f8-c968-49a7-9b09-69e29b6d237f"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->73402941,ExpressionUUID->"f6a731d0-2312-46c7-8c54-ae9b7dafccb3"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "b389f54a-4e12-460e-91e0-411f47849f43"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->338479796,ExpressionUUID->"f0cef5e0-ce58-4c2a-91e2-12b038769240"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "7d9260d8-fdaf-487f-8d03-6d91ecda7e4e"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->55989765,ExpressionUUID->"a5c4ed6a-6b91-43a8-a350-cb4aaff6ef9c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "11f01a0c-9a6b-431e-8cba-228e6335fd63"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->657683998,ExpressionUUID->"42f23def-c10b-4a19-a05c-2fdc8a6afbbc"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "7fd55751-327e-4b34-8265-6bb20edf8dc2"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->84862453,ExpressionUUID->"bd73d979-ebc4-4f13-b71d-ee42bb0cf7dd"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "a5821a1f-f6fa-46bb-b3ee-a401300357f6"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->260905657,ExpressionUUID->"905f9222-4704-4844-a4ef-f8f935be0c7a"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "27736b0c-44b8-4b74-9006-5b5a1ae52cee"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->575275353,ExpressionUUID->"8eb2a635-8772-48aa-a969-55d5f6e01a4e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "1bfc0e7f-542e-4ba7-afbb-3c774e352546"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->67430813,ExpressionUUID->"7a530547-44f4-4a96-aad2-ce8090555bdd"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "d8507f92-32b7-4ff1-8e4c-a9a5e10717e4"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->189409451,ExpressionUUID->"8db04a3b-1057-407c-8d53-b2ed3b13d309"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "97856fa9-28b2-4d47-85ee-0cf1814914c7"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->127793018,ExpressionUUID->"7c40122a-6132-494c-960e-94db07e58884"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "5420e80a-4441-454b-86f3-88088eaa0889"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->5239937,ExpressionUUID->"aecbe0c6-a951-4547-a72a-5eadd1378ff8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->524976813,ExpressionUUID->"18f98db7-5e03-4477-a561-e010f4352861"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "616d837d-b82c-4b82-b243-1355a09496c9"]
+}], "CategorizationSection",
+ CellID->576199175,ExpressionUUID->"b7cfe451-8650-4199-827b-af00f65d75c3"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->63968186,ExpressionUUID->"54fe1657-2d7c-46bf-88ce-faf119cacb61"],
+
+Cell["PeterBurbery/UndirectedGraphs", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->460077748,ExpressionUUID->"fcf3b47b-f6a6-4a28-95d6-071edbee4c78"],
+
+Cell["PeterBurbery`UndirectedGraphs`", "Categorization",
+ CellLabel->"Context",
+ CellID->219764047,ExpressionUUID->"43cc4d16-ff68-4f8c-b480-3538fd22cd9a"],
+
+Cell["PeterBurbery/UndirectedGraphs/ref/RandomCustomGraph", "Categorization",
+ CellLabel->"URI",
+ CellID->141608878,ExpressionUUID->"95877266-1d88-46a4-beb5-d2c8e3cd373e"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->235692487,ExpressionUUID->"d77d27aa-72be-4609-ae53-1f078b4a42b8"],
+
+Cell["XXXX", "Keywords",
+ CellID->31391699,ExpressionUUID->"79f17d40-40a6-4e6a-9c20-ceca90fe77c0"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->89838564,ExpressionUUID->"f84b37a5-0ca9-47f4-b3e3-f426948755c3"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->184834792,ExpressionUUID->"e1d4083c-80d9-47d2-8b78-55449f9b4127"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->22122535,ExpressionUUID->"a7b2d81a-3088-4ae0-8820-516eb3d225dc"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->28989643,ExpressionUUID->"60528df5-4ff6-4866-8a59-ef3bf03273ed"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->665207435,ExpressionUUID->"4cb9aa38-4261-487f-b244-46faace0857e"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{700.1999999999999, 574.8},
+WindowMargins->{{Automatic, 177}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "PeterBurbery/UndirectedGraphs"|>,
+CellContext->"Global`",
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"5ab5e590-7200-4b7d-aa42-e20b099d42a0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[19138, 518, 486, 13, 71, "ExtendedExamplesSection",ExpressionUUID->"f6a731d0-2312-46c7-8c54-ae9b7dafccb3",
+   CellTags->"ExtendedExamples",
+   CellID->73402941]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 25004, 692}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 114, 1, 91, "ObjectName",ExpressionUUID->"bbe64141-d12e-4ab6-ad0e-dfda777a0ef4",
+ CellID->356105422],
+Cell[697, 25, 584, 14, 96, "Usage",ExpressionUUID->"28ce2201-4de5-4d2f-a890-909873ff8361",
+ CellID->185124296],
+Cell[1284, 41, 96, 1, 33, "Notes",ExpressionUUID->"b6e23794-5849-4fe7-953b-b1612d63e89e",
+ CellID->518639667]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1417, 47, 435, 12, 56, "TechNotesSection",ExpressionUUID->"9fad7f42-2867-43d8-8d39-2b084c2d57ca",
+ CellID->658406727],
+Cell[1855, 61, 98, 1, 23, "Tutorials",ExpressionUUID->"3900b871-8c09-498e-ab50-dbe2249f45b0",
+ CellID->5225773]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1990, 67, 471, 13, 40, "RelatedLinksSection",ExpressionUUID->"bad9f1b0-246e-4366-8ea6-466b1463d42d",
+ CellID->97699975],
+Cell[2464, 82, 103, 1, 23, "RelatedLinks",ExpressionUUID->"8aeac4ee-e334-4bf6-a3f4-2c7056f32418",
+ CellID->269707729]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2604, 88, 586, 15, 40, "SeeAlsoSection",ExpressionUUID->"416f752a-7c63-481f-a062-46a243b4158a",
+ CellID->159596719],
+Cell[3193, 105, 96, 1, 23, "SeeAlso",ExpressionUUID->"1207c5d8-6f44-4da7-9177-ad6bf5980e33",
+ CellID->3769216]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3326, 111, 183, 2, 40, "MoreAboutSection",ExpressionUUID->"bcafdd97-c66d-4e59-a141-1fe242111219",
+ CellID->654781124],
+Cell[3512, 115, 100, 1, 23, "MoreAbout",ExpressionUUID->"117a8629-6f4d-4009-932d-34e2f650d873",
+ CellID->177125224]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3649, 121, 530, 14, 86, "ExamplesInitializationSection",ExpressionUUID->"44b5d3bf-cd12-4dc7-bc9a-fa1b00fd2b85",
+ CellID->430284331],
+Cell[4182, 137, 189, 3, 56, "ExampleInitialization",ExpressionUUID->"79891b3a-2636-4d1c-aebb-1124843ba554",
+ CellID->875406565]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4408, 145, 442, 12, 88, "PrimaryExamplesSection",ExpressionUUID->"f02a3da2-94f8-45b8-8873-d3ec7ba82630",
+ CellID->173385700],
+Cell[CellGroupData[{
+Cell[4875, 161, 227, 4, 31, "Input",ExpressionUUID->"ab557f2b-a0fb-4d72-9bf5-d02340844536",
+ CellID->2198733],
+Cell[5105, 167, 13984, 345, 353, "Output",ExpressionUUID->"fbc489a6-5e66-4afa-94ab-0dbba8079546",
+ CellID->576005781]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19138, 518, 486, 13, 71, "ExtendedExamplesSection",ExpressionUUID->"f6a731d0-2312-46c7-8c54-ae9b7dafccb3",
+ CellTags->"ExtendedExamples",
+ CellID->73402941],
+Cell[19627, 533, 241, 5, 43, "ExampleSection",ExpressionUUID->"f0cef5e0-ce58-4c2a-91e2-12b038769240",
+ CellID->338479796],
+Cell[19871, 540, 263, 5, 27, "ExampleSection",ExpressionUUID->"a5c4ed6a-6b91-43a8-a350-cb4aaff6ef9c",
+ CellID->55989765],
+Cell[CellGroupData[{
+Cell[20159, 549, 243, 5, 27, "ExampleSection",ExpressionUUID->"42f23def-c10b-4a19-a05c-2fdc8a6afbbc",
+ CellID->657683998],
+Cell[20405, 556, 245, 5, 32, "ExampleSubsection",ExpressionUUID->"bd73d979-ebc4-4f13-b71d-ee42bb0cf7dd",
+ CellID->84862453],
+Cell[20653, 563, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"905f9222-4704-4844-a4ef-f8f935be0c7a",
+ CellID->260905657]
+}, Open  ]],
+Cell[20914, 571, 248, 5, 43, "ExampleSection",ExpressionUUID->"8eb2a635-8772-48aa-a969-55d5f6e01a4e",
+ CellID->575275353],
+Cell[21165, 578, 257, 5, 27, "ExampleSection",ExpressionUUID->"7a530547-44f4-4a96-aad2-ce8090555bdd",
+ CellID->67430813],
+Cell[21425, 585, 251, 5, 27, "ExampleSection",ExpressionUUID->"8db04a3b-1057-407c-8d53-b2ed3b13d309",
+ CellID->189409451],
+Cell[21679, 592, 256, 5, 27, "ExampleSection",ExpressionUUID->"7c40122a-6132-494c-960e-94db07e58884",
+ CellID->127793018],
+Cell[21938, 599, 247, 5, 27, "ExampleSection",ExpressionUUID->"aecbe0c6-a951-4547-a72a-5eadd1378ff8",
+ CellID->5239937]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22222, 609, 110, 1, 77, "MetadataSection",ExpressionUUID->"18f98db7-5e03-4477-a561-e010f4352861",
+ CellID->524976813],
+Cell[CellGroupData[{
+Cell[22357, 614, 484, 13, 38, "CategorizationSection",ExpressionUUID->"b7cfe451-8650-4199-827b-af00f65d75c3",
+ CellID->576199175],
+Cell[22844, 629, 133, 2, 43, "Categorization",ExpressionUUID->"54fe1657-2d7c-46bf-88ce-faf119cacb61",
+ CellID->63968186],
+Cell[22980, 633, 157, 2, 43, "Categorization",ExpressionUUID->"fcf3b47b-f6a6-4a28-95d6-071edbee4c78",
+ CellID->460077748],
+Cell[23140, 637, 154, 2, 43, "Categorization",ExpressionUUID->"43cc4d16-ff68-4f8c-b480-3538fd22cd9a",
+ CellID->219764047],
+Cell[23297, 641, 171, 2, 43, "Categorization",ExpressionUUID->"95877266-1d88-46a4-beb5-d2c8e3cd373e",
+ CellID->141608878]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[23505, 648, 110, 1, 25, "KeywordsSection",ExpressionUUID->"d77d27aa-72be-4609-ae53-1f078b4a42b8",
+ CellID->235692487],
+Cell[23618, 651, 98, 1, 70, "Keywords",ExpressionUUID->"79f17d40-40a6-4e6a-9c20-ceca90fe77c0",
+ CellID->31391699]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[23753, 657, 118, 1, 25, "TemplatesSection",ExpressionUUID->"f84b37a5-0ca9-47f4-b3e3-f426948755c3",
+ CellID->89838564],
+Cell[23874, 660, 148, 2, 70, "Template",ExpressionUUID->"e1d4083c-80d9-47d2-8b78-55449f9b4127",
+ CellID->184834792],
+Cell[24025, 664, 136, 2, 70, "Template",ExpressionUUID->"a7b2d81a-3088-4ae0-8820-516eb3d225dc",
+ CellID->22122535],
+Cell[24164, 668, 134, 2, 70, "Template",ExpressionUUID->"60528df5-4ff6-4866-8a59-ef3bf03273ed",
+ CellID->28989643],
+Cell[24301, 672, 137, 2, 70, "Template",ExpressionUUID->"4cb9aa38-4261-487f-b244-46faace0857e",
+ CellID->665207435]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
