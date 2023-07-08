@@ -1,0 +1,225 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8485,        215]
+NotebookOptionsPosition[      6148,        163]
+NotebookOutlinePosition[      7915,        206]
+CellTagsIndexPosition[      7872,        203]
+WindowTitle->Graph Operations and Modifications
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ UNDIRECTED GRAPHS GUIDE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "24d83b05-4ed4-4391-a57c-e8c58ea73c5f"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "29884b1f-42f9-44c4-b6a0-9dd06a098cba"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "c58b66ed-8754-4f20-90cf-fe7508c7b266"]
+         }],ExpressionUUID->"d7f5b1bb-4d72-4325-811f-00cbd7ea0b5e"],
+         StripOnInput->False],{
+        "\"VertexInsert\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Undirected Graphs/ref/VertexInsert"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "450912e3-4a17-48cb-9142-b8034b36a596"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "2e025cc2-0f1d-424f-a09e-86dd48df4840"]
+         }],ExpressionUUID->"c2aab053-2012-4d39-bfee-19fe9030ef46"],
+         StripOnInput->False],{
+        "\"PeterBurbery/UndirectedGraphs\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["PeterBurbery/UndirectedGraphs"]}, Visible -> 
+               False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+UndirectedGraphs.html"], StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$349718], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/UndirectedGraphs" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "b05310ed-1f39-44d5-a8dd-0952afec22db"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "bcb00e81-c734-4af8-9e0d-1c42ac6bf0d3"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"2e0d5017-cdff-46e8-b273-77180de262cd"],
+
+Cell[CellGroupData[{
+
+Cell["Graph Operations and Modifications", "GuideTitle",
+ CellID->225900045,ExpressionUUID->"4ca84dce-7e8b-4e90-9b93-1484d4a54923"],
+
+Cell["\<\
+The paclet contains function to perform operations on graphs and apply \
+modifications to graphs.\
+\>", "GuideAbstract",
+ CellID->11372659,ExpressionUUID->"92ae02c2-03e2-4229-bfa9-971d0e884c6b"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"fe29472e-ef8d-4632-82a7-6b0e15e5f894"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["VertexInsert"]], "paclet:Undirected Graphs/ref/VertexInsert", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "af9fdaa5-dc16-4f37-845b-f829a2c51cfa"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " insert a vertex into an edge"
+}], "GuideText",
+ CellID->451326835,ExpressionUUID->"64dd7b81-6049-4003-9ce5-b690bda7daab"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"33dab994-1a7d-489c-a0f8-c1a8ea39268a"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Graph Operations and Modifications",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 8, 12, 1, 30.9293396}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Undirected Graphs Guide", "language" -> "en", 
+    "paclet" -> "PeterBurbery/UndirectedGraphs", "status" -> "None", 
+    "summary" -> 
+    "The paclet contains function to perform operations on graphs and apply \
+modifications to graphs.", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$349689, "title" -> 
+    "Graph Operations and Modifications", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> 
+    "Graph Operations and Modifications", "type" -> "Guide", "uri" -> 
+    "PeterBurbery/UndirectedGraphs"}},
+CacheGraphics->False,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"659b597e-87a1-4d7a-97bb-dfb563ce37c8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[606, 21, 4447, 108, 70, "AnchorBarGrid",ExpressionUUID->"2e0d5017-cdff-46e8-b273-77180de262cd",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5078, 133, 131, 1, 70, "GuideTitle",ExpressionUUID->"4ca84dce-7e8b-4e90-9b93-1484d4a54923",
+ CellID->225900045],
+Cell[5212, 136, 204, 4, 70, "GuideAbstract",ExpressionUUID->"92ae02c2-03e2-4229-bfa9-971d0e884c6b",
+ CellID->11372659],
+Cell[5419, 142, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"fe29472e-ef8d-4632-82a7-6b0e15e5f894"],
+Cell[5515, 144, 536, 14, 70, "GuideText",ExpressionUUID->"64dd7b81-6049-4003-9ce5-b690bda7daab",
+ CellID->451326835]
+}, Open  ]],
+Cell[6066, 161, 78, 0, 70, "FooterCell",ExpressionUUID->"33dab994-1a7d-489c-a0f8-c1a8ea39268a"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,817 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27690,        807]
+NotebookOptionsPosition[     23329,        715]
+NotebookOutlinePosition[     25623,        772]
+CellTagsIndexPosition[     25538,        767]
+WindowTitle->VertexCoordinateList
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ UNDIRECTED GRAPHS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "d9f2e269-0e6b-41fb-b71a-c2abf657a0bf"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "c8c1271e-d670-42ca-a8a8-e9812a233c9f"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "b639693e-dae8-4e6d-9911-70e2bece9596"]
+         }],ExpressionUUID->"e35b15c9-1bab-4500-813a-1b0d308e6df3"],
+         StripOnInput->False],{
+        "\"GraphEmbedding\"" :> 
+         Documentation`HelpLookup["paclet:ref/GraphEmbedding"], 
+         "\"GraphLayout\"" :> 
+         Documentation`HelpLookup["paclet:ref/GraphLayout"], 
+         "\"VertexCoordinates\"" :> 
+         Documentation`HelpLookup["paclet:ref/VertexCoordinates"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "c17c5446-f2b2-4cbd-9765-1f9f32748034"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "6e5fde3f-9ca2-42b6-9ed1-f8e22ee6c29d"]
+         }],ExpressionUUID->"e44621b7-2e56-4661-a686-69c949474401"],
+         StripOnInput->False],{
+        "\"Graph Visualization\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/guide/GraphVisualization"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "f2a0fe5a-e912-47ad-980a-b1a58622c765"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "69a70ce5-64c7-436b-bbd0-0b1057525be2"]
+         }],ExpressionUUID->"0f74f1f1-c504-4bc0-963e-12c063d50f34"],
+         StripOnInput->False],{
+        "\"PeterBurbery/UndirectedGraphs/ref/VertexCoordinateList\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/UndirectedGraphs/ref/VertexCoordinateList"]}\
+, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+UndirectedGraphs/ref/VertexCoordinateList.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$449810], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/UndirectedGraphs/ref/VertexCoordinateList" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "2b24ae6c-81a5-4c76-8585-47b45c40ca0c"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "5dbb51ea-5c37-4768-bca6-b50060859e58"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"4319f211-2ab3-4677-a462-3a5715a1ae55"],
+
+Cell["PeterBurbery`UndirectedGraphs`", "ContextNameCell",ExpressionUUID->"35a4bba7-e627-4619-b78f-42526535be88"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "VertexCoordinateList", "ObjectName",ExpressionUUID->
+      "53662fc4-c722-4947-ba03-66e1058ff504"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"774ac97d-d9a2-479a-93c8-2d1785ad78c7"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "3bd48eab-4dba-425b-830d-c1d6b2256161"]
+    }],ExpressionUUID->"adf4fbef-c25c-47d5-8bfd-6759e9d8bdc2"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"71cdf5c3-ccc6-4cc0-b962-\
+57344a763e31"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["VertexCoordinateList"]], 
+         "paclet:PeterBurberyUndirectedGraphs/ref/VertexCoordinateList", 
+         "PeterBurberyUndirectedGraphs Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["g", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6fe4d366-b883-4aef-9128-a0ee25a8deb7"],
+     "\[LineSeparator]returns a list of vertex coordinates for the graph ",
+     Cell[BoxData[
+      StyleBox["g", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5414af0f-92c2-4b8e-b1e9-0e3f17b560f7"],
+     ". The coordinates are in the same order as the vertices in ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["VertexList"]], "paclet:ref/VertexList"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "27477eb9-4334-45a0-b53b-8f241d3aefd3"],
+     "[",
+     Cell[BoxData[
+      StyleBox["g", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8810a842-ae0c-48ed-add6-b0e7364cab31"],
+     "]."
+    }],ExpressionUUID->"b32b1c74-3830-4c46-a364-18430f8fa6aa"]}
+  }]], "Usage",
+ CellID->46396297,ExpressionUUID->"15b929e7-e6d5-4331-8278-cfe579c63471"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"1e532331-b385-4c90-b2e2-da991bf0cad9"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"dba18ab7-9b02-4cd4-a0b2-387849726f41"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "707dd45a-de6f-493d-bc58-26151f1a98e7"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->900502773,ExpressionUUID->"2f35d4e9-7f05-4d00-a644-eaebc89e69f5"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`UndirectedGraphs`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->365039354,ExpressionUUID->"9f59c548-a34c-4fc3-b319-4a9a8a248437"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"409bfd31-837d-480b-a8a6-f7e472fbfed4"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"ae70b459-8231-479d-ac22-3b3c02b3999c"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "62994785-042d-4794-879a-1da639c82599"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->28281212,ExpressionUUID->"4e24f6f2-3596-4dbd-a38a-97197010e457"],
+
+Cell["Find the coordinates of the vertices in the Petersen graph:", \
+"ExampleText",
+ CellID->139107254,ExpressionUUID->"9143d515-4ff9-479f-8d92-345384d53ac1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VertexCoordinateList", "[", 
+  RowBox[{"PetersenGraph", "[", "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
+ CellLabel->"In[1]:=",
+ CellID->184286413,ExpressionUUID->"cdd7824b-3f3c-4984-a564-4e266e4a5e69"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.9510565162951535`", ",", "0.30901699437494745`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.5877852522924732`", ",", 
+     RowBox[{"-", "0.8090169943749473`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.587785252292473`"}], ",", 
+     RowBox[{"-", "0.8090169943749475`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.9510565162951536`"}], ",", "0.30901699437494723`"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "2.4492935982947064`*^-16"}], ",", "1.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1.902113032590307`", ",", "0.6180339887498949`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1.1755705045849465`", ",", 
+     RowBox[{"-", "1.6180339887498947`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1.175570504584946`"}], ",", 
+     RowBox[{"-", "1.618033988749895`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1.9021130325903073`"}], ",", "0.6180339887498945`"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "4.898587196589413`*^-16"}], ",", "2.`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->53539468,ExpressionUUID->"982b9b3e-daeb-4798-b40c-4094f0c6155f"]
+}, Open  ]],
+
+Cell["\<\
+Find the coordinates of the vertices in a generalized triangular grid graph \
+of size 7 by 7:\
+\>", "ExampleText",
+ CellID->783193158,ExpressionUUID->"2ccd18de-7f42-494b-90b5-bfd2f9656ed9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VertexCoordinateList", "[", 
+  RowBox[{"GeneralizedTriangularGridGraph", "[", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
+ CellLabel->"In[2]:=",
+ CellID->105753,ExpressionUUID->"d683001b-85d7-4bed-a792-e310f714ac2a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     SqrtBox["3"], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", " ", 
+      SqrtBox["3"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", " ", 
+      SqrtBox["3"]}], ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"3", " ", 
+      SqrtBox["3"]}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"4", " ", 
+      SqrtBox["3"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"3", " ", 
+      SqrtBox["3"]}], ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"4", " ", 
+      SqrtBox["3"]}], ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"5", " ", 
+      SqrtBox["3"]}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"4", " ", 
+      SqrtBox["3"]}], ",", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"5", " ", 
+      SqrtBox["3"]}], ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"6", " ", 
+      SqrtBox["3"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"6", " ", 
+      SqrtBox["3"]}], ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"5", " ", 
+      SqrtBox["3"]}], ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"6", " ", 
+      SqrtBox["3"]}], ",", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"7", " ", 
+      SqrtBox["3"]}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"7", " ", 
+      SqrtBox["3"]}], ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"6", " ", 
+      SqrtBox["3"]}], ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"7", " ", 
+      SqrtBox["3"]}], ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"8", " ", 
+      SqrtBox["3"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"8", " ", 
+      SqrtBox["3"]}], ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"8", " ", 
+      SqrtBox["3"]}], ",", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"7", " ", 
+      SqrtBox["3"]}], ",", "21"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"8", " ", 
+      SqrtBox["3"]}], ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"9", " ", 
+      SqrtBox["3"]}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"9", " ", 
+      SqrtBox["3"]}], ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"9", " ", 
+      SqrtBox["3"]}], ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"9", " ", 
+      SqrtBox["3"]}], ",", "21"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"10", " ", 
+      SqrtBox["3"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"10", " ", 
+      SqrtBox["3"]}], ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"10", " ", 
+      SqrtBox["3"]}], ",", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"10", " ", 
+      SqrtBox["3"]}], ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"11", " ", 
+      SqrtBox["3"]}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"11", " ", 
+      SqrtBox["3"]}], ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"11", " ", 
+      SqrtBox["3"]}], ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"11", " ", 
+      SqrtBox["3"]}], ",", "21"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"12", " ", 
+      SqrtBox["3"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"12", " ", 
+      SqrtBox["3"]}], ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"12", " ", 
+      SqrtBox["3"]}], ",", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"12", " ", 
+      SqrtBox["3"]}], ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"13", " ", 
+      SqrtBox["3"]}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"13", " ", 
+      SqrtBox["3"]}], ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"13", " ", 
+      SqrtBox["3"]}], ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"13", " ", 
+      SqrtBox["3"]}], ",", "21"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"14", " ", 
+      SqrtBox["3"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"14", " ", 
+      SqrtBox["3"]}], ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"14", " ", 
+      SqrtBox["3"]}], ",", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"14", " ", 
+      SqrtBox["3"]}], ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"15", " ", 
+      SqrtBox["3"]}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"15", " ", 
+      SqrtBox["3"]}], ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"15", " ", 
+      SqrtBox["3"]}], ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"15", " ", 
+      SqrtBox["3"]}], ",", "21"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"16", " ", 
+      SqrtBox["3"]}], ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"16", " ", 
+      SqrtBox["3"]}], ",", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"16", " ", 
+      SqrtBox["3"]}], ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"17", " ", 
+      SqrtBox["3"]}], ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"17", " ", 
+      SqrtBox["3"]}], ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"17", " ", 
+      SqrtBox["3"]}], ",", "21"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"18", " ", 
+      SqrtBox["3"]}], ",", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"18", " ", 
+      SqrtBox["3"]}], ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"19", " ", 
+      SqrtBox["3"]}], ",", "15"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"19", " ", 
+      SqrtBox["3"]}], ",", "21"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"20", " ", 
+      SqrtBox["3"]}], ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"21", " ", 
+      SqrtBox["3"]}], ",", "21"}], "}"}]}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->217758680,ExpressionUUID->"1ff0c052-f417-4edb-981e-a968f278fde5"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["GraphEmbedding"]], "paclet:ref/GraphEmbedding"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "234bded2-3c65-4fc0-a84a-b3e2607b8fd4"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["GraphLayout"]], "paclet:ref/GraphLayout"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"f9417d66-b690-4d3c-8bb3-23fdc6592ff0",ExpressionUUID->
+         "2670eda6-1e50-4a4c-b9f9-20d2e3841784"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["VertexCoordinates"]], "paclet:ref/VertexCoordinates"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"dd87bbe6-26a7-4895-be1b-86be73eed9e5",ExpressionUUID->
+         "0e3a32d7-02ef-4745-87ab-e6f9871739c9"]
+       }], "SeeAlso",ExpressionUUID->"48108a1a-811e-412f-a20c-58f7ea71e383"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"d990c9b7-2061-45e8-8a14-\
+6270f12ef9e0"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Graph Visualization"]], 
+           "paclet:PeterBurbery/UndirectedGraphs/guide/GraphVisualization"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "62b4218d-2257-43aa-912e-3c2b0f848497"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"3c03d9b8-0599-4a29-b4d0-\
+cbbe15d713ce"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"e5248530-2541-4890-8006-4f0e74d0f47d"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"VertexCoordinateList",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 8, 13, 10, 6.6164627}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Undirected Graphs Symbol", "language" -> "en",
+     "paclet" -> "PeterBurbery/UndirectedGraphs", "status" -> "None", 
+    "summary" -> 
+    "VertexCoordinateList[g] returns a list of vertex coordinates for the \
+graph g. The coordinates are in the same order as the vertices in \
+VertexList[g].", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "VertexCoordinateList", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "VertexCoordinateList", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/UndirectedGraphs/ref/VertexCoordinateList"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"7e74a92b-5c29-43e2-b1d1-c9805e1e062a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8379, 220, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"2f35d4e9-7f05-4d00-a644-eaebc89e69f5",
+   CellTags->"PrimaryExamplesSection",
+   CellID->900502773]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 25339, 760}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[592, 21, 5599, 136, 56, "AnchorBarGrid",ExpressionUUID->"4319f211-2ab3-4677-a462-3a5715a1ae55",
+ CellID->1],
+Cell[6194, 159, 112, 0, 23, "ContextNameCell",ExpressionUUID->"35a4bba7-e627-4619-b78f-42526535be88"],
+Cell[CellGroupData[{
+Cell[6331, 163, 563, 14, 56, "ObjectNameGrid",ExpressionUUID->"71cdf5c3-ccc6-4cc0-b962-57344a763e31"],
+Cell[6897, 179, 1445, 36, 113, "Usage",ExpressionUUID->"15b929e7-e6d5-4331-8278-cfe579c63471",
+ CellID->46396297]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8379, 220, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"2f35d4e9-7f05-4d00-a644-eaebc89e69f5",
+ CellTags->"PrimaryExamplesSection",
+ CellID->900502773],
+Cell[9802, 259, 221, 4, 26, "Input",ExpressionUUID->"9f59c548-a34c-4fc3-b319-4a9a8a248437",
+ CellID->365039354],
+Cell[CellGroupData[{
+Cell[10048, 267, 1397, 36, 30, "ExampleSection",ExpressionUUID->"4e24f6f2-3596-4dbd-a38a-97197010e457",
+ CellID->28281212],
+Cell[11448, 305, 159, 2, 38, "ExampleText",ExpressionUUID->"9143d515-4ff9-479f-8d92-345384d53ac1",
+ CellID->139107254],
+Cell[CellGroupData[{
+Cell[11632, 311, 260, 5, 26, "Input",ExpressionUUID->"cdd7824b-3f3c-4984-a564-4e266e4a5e69",
+ CellID->184286413],
+Cell[11895, 318, 1298, 37, 56, "Output",ExpressionUUID->"982b9b3e-daeb-4798-b40c-4094f0c6155f",
+ CellID->53539468]
+}, Open  ]],
+Cell[13208, 358, 199, 4, 38, "ExampleText",ExpressionUUID->"2ccd18de-7f42-494b-90b5-bfd2f9656ed9",
+ CellID->783193158],
+Cell[CellGroupData[{
+Cell[13432, 366, 328, 7, 26, "Input",ExpressionUUID->"d683001b-85d7-4bed-a792-e310f714ac2a",
+ CellID->105753],
+Cell[13763, 375, 6614, 257, 159, "Output",ExpressionUUID->"1ff0c052-f417-4edb-981e-a968f278fde5",
+ CellID->217758680]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[20619, 641, 1868, 49, 70, "SeeAlsoSection",ExpressionUUID->"d990c9b7-2061-45e8-8a14-6270f12ef9e0"],
+Cell[22490, 692, 754, 19, 70, "MoreAboutSection",ExpressionUUID->"3c03d9b8-0599-4a29-b4d0-cbbe15d713ce"],
+Cell[23247, 713, 78, 0, 70, "FooterCell",ExpressionUUID->"e5248530-2541-4890-8006-4f0e74d0f47d"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,618 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23974,        608]
+NotebookOptionsPosition[     19788,        527]
+NotebookOutlinePosition[     21872,        574]
+CellTagsIndexPosition[     21829,        571]
+WindowTitle->Graph Construction and Representation
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ UNDIRECTED GRAPHS GUIDE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "bcc4ff90-08f7-4b8c-b1d3-9ec132a52e9f"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "515beeab-ea11-4489-af7f-99aba0d0961c"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "c7aa11b2-b670-42e3-ae0d-e9fcc57aa76a"]
+         }],ExpressionUUID->"d32bfb12-b76a-43f1-bb0c-911b6025d76c"],
+         StripOnInput->False],{
+        "\"AlternatingTreeGraph\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Undirected Graphs/ref/AlternatingTreeGraph"], 
+         "\"BananaTreeGraph\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Undirected Graphs/ref/BananaTreeGraph"], "\"BookGraph\"" :> 
+         Documentation`HelpLookup["paclet:Undirected Graphs/ref/BookGraph"], 
+         "\"CombGraph\"" :> 
+         Documentation`HelpLookup["paclet:Undirected Graphs/ref/CombGraph"], 
+         "\"FirecrackerGraph\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Undirected Graphs/ref/FirecrackerGraph"], "\"GearGraph\"" :> 
+         Documentation`HelpLookup["paclet:Undirected Graphs/ref/GearGraph"], 
+         "\"GeneralizedTriangularGridGraph\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Undirected Graphs/ref/GeneralizedTriangularGridGraph"], 
+         "\"HelmGraph\"" :> 
+         Documentation`HelpLookup["paclet:Undirected Graphs/ref/HelmGraph"], 
+         "\"KayakPaddleGraph\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Undirected Graphs/ref/KayakPaddleGraph"], 
+         "\"LadderRungGraph\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Undirected Graphs/ref/LadderRungGraph"], "\"PanGraph\"" :> 
+         Documentation`HelpLookup["paclet:Undirected Graphs/ref/PanGraph"], 
+         "\"SunletGraph\"" :> 
+         Documentation`HelpLookup["paclet:Undirected Graphs/ref/SunletGraph"],
+          "\"TadpoleGraph\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Undirected Graphs/ref/TadpoleGraph"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "b0591bd3-8642-4e71-b7d9-712d27b3697b"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "1462f383-4063-407e-ada8-c82b5076e009"]
+         }],ExpressionUUID->"ee4b4ee6-bfa3-4410-95f5-aa1a067de2db"],
+         StripOnInput->False],{
+        "\"Computation on Graphs\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/guide/ComputationonGraphs"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideMoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "06333a63-214e-4bde-a6d5-154c4f483aea"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "c38ba70f-1b5f-494e-a2b7-016ff580849a"]
+         }],ExpressionUUID->"ff93928b-98a4-4ce2-b885-f79e917acc3c"],
+         StripOnInput->False],{
+        "\"PeterBurbery/UndirectedGraphs\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["PeterBurbery/UndirectedGraphs"]}, Visible -> 
+               False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+UndirectedGraphs.html"], StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$348833], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/UndirectedGraphs" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "a9774fa5-35ff-4984-a270-d4ec5c426f43"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "2cd4b21a-c09e-4ac8-98d4-85aa28a66217"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"495aa8a7-02a8-4f44-abda-7ed0384c2524"],
+
+Cell[CellGroupData[{
+
+Cell["Graph Construction and Representation", "GuideTitle",
+ CellID->93145636,ExpressionUUID->"12f30172-0298-4847-b943-692ed3fd2078"],
+
+Cell["\<\
+GraphData supports many graphs, but some families do not have dedicated \
+functions. The goal of this paclet is to fill the gap for certain graph \
+families. Some of these graph functions support custom graph embeddings and \
+layouts that calculate the vertex coordinates instead of using a specific \
+GraphLayout option to highlight features of the graph. All graph functions \
+support all graph options.\
+\>", "GuideAbstract",
+ CellID->291710020,ExpressionUUID->"72059bbc-d277-49ea-a791-4afad9b82270"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"ae5a061f-b043-4211-ab12-a8adc0c5d359"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["AlternatingTreeGraph"]], 
+    "paclet:Undirected Graphs/ref/AlternatingTreeGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "c90faf17-dad4-4c5d-955d-d39704a5ec50"],
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"an", " ", "alternating", " ", "tree", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "77b9978e-df51-47b1-94ee-b4b6b6527091"]
+}], "GuideText",
+ CellID->3450567,ExpressionUUID->"d551e76a-cb53-486f-bfa0-b6bf0a982689"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["BananaTreeGraph"]], 
+    "paclet:Undirected Graphs/ref/BananaTreeGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c5c6736a-1ff4-4e4e-8fcf-2d9846cbae62",ExpressionUUID->
+  "6e626652-c7ad-4544-9323-328648c05ad5"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "banana", " ", "tree", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "9c844595-b266-480c-b835-9e5074b1be56"]
+}], "GuideText",
+ CellID->9848065,ExpressionUUID->"db4b611f-da79-44af-bc10-20efcea85724"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["BookGraph"]], "paclet:Undirected Graphs/ref/BookGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "a63de77c-6dc2-443a-927b-eb5cc2b37841"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "book", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "c5b93f08-6d43-488f-a5a5-bdb93eefcdbd"]
+}], "GuideText",
+ CellID->594853579,ExpressionUUID->"9996c131-f59d-41da-ba57-da4188fcb805"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["CombGraph"]], "paclet:Undirected Graphs/ref/CombGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "01f3b9d9-4454-423a-b52b-1e038a87b47a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "comb", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "db80a7bb-fe33-4a7b-85cd-21ad5cdea3ed"]
+}], "GuideText",
+ CellID->221374989,ExpressionUUID->"b1770a05-29af-44e5-bddc-e634324cadc0"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FirecrackerGraph"]], 
+    "paclet:Undirected Graphs/ref/FirecrackerGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "698f0ca2-056c-4fc2-86b2-71982dce0ebf"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "firecracker", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "de4711ca-19e8-4b94-b908-2104ec49fbf5"]
+}], "GuideText",
+ CellID->70251640,ExpressionUUID->"84d3b11d-657e-4e00-8cd1-970992ffb698"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["GearGraph"]], "paclet:Undirected Graphs/ref/GearGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "41dc3ac3-556c-4741-81fe-5cbe04d8247c"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "gear", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "2f940a92-f8f8-496f-84e1-e96f870ae665"]
+}], "GuideText",
+ CellID->161431230,ExpressionUUID->"28ec36e7-0740-4a5e-94c6-49ff9384fe14"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["GeneralizedTriangularGridGraph"]], 
+    "paclet:Undirected Graphs/ref/GeneralizedTriangularGridGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "ced9f033-d818-429f-a4c6-a15d150a7ed0"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{
+   "a", " ", "generalized", " ", "triangular", " ", "grid", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "2b76bacf-90b9-4531-8f21-9df9ab51ea50"]
+}], "GuideText",
+ CellID->486506445,ExpressionUUID->"15527653-0664-459c-a696-64331dc2c9ae"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["HelmGraph"]], "paclet:Undirected Graphs/ref/HelmGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "bf9ab130-8d9d-445a-b883-d7722c615c08"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "helm", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "3c6bd8b1-303d-4fe7-b375-1be4c0149bfc"]
+}], "GuideText",
+ CellID->687111662,ExpressionUUID->"525b6fae-b2f7-4da0-8314-0a7744261030"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["KayakPaddleGraph"]], 
+    "paclet:Undirected Graphs/ref/KayakPaddleGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "d09d49b3-dd66-4e29-aac9-a6a9b0d0f7f3"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "kayak", " ", "paddle", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "fbaf1f76-04d2-428f-9ebd-f7c983f121b0"]
+}], "GuideText",
+ CellID->198992146,ExpressionUUID->"eeca8517-c879-459f-821c-2417578ada68"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["LadderRungGraph"]], 
+    "paclet:Undirected Graphs/ref/LadderRungGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "ab402797-786a-4c63-8017-480115512b9f"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "ladder", " ", "rung", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "265b288b-eeaa-4c8b-80e8-dd8215cd4de7"]
+}], "GuideText",
+ CellID->582017019,ExpressionUUID->"076d8be0-ea1b-4dc2-8733-0674a6af6a84"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PanGraph"]], "paclet:Undirected Graphs/ref/PanGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "df2d95c7-ea4b-4b7d-95e8-7c23c76d65e7"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "pan", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "25585e83-fe07-4e6f-b836-248c666a6151"]
+}], "GuideText",
+ CellID->108180055,ExpressionUUID->"3953cad8-ad18-4043-834e-1570742f3a4f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SunletGraph"]], "paclet:Undirected Graphs/ref/SunletGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "093806f0-32c8-42ac-aade-054890c99b44"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "sunlet", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "535fd54d-bd71-4ef4-90d4-ecfdcc3727ee"]
+}], "GuideText",
+ CellID->35998732,ExpressionUUID->"db927c0c-b378-48fb-a97c-f2bdcfb915db"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TadpoleGraph"]], "paclet:Undirected Graphs/ref/TadpoleGraph", 
+    "Undirected Graphs Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9c587233-d106-4828-820a-331966232d5d",ExpressionUUID->
+  "99793d99-6f94-4c9a-bc2e-d2e82d4eb059"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{"a", " ", "tadpole", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "920f28e5-81de-4b96-bea0-6ed5e79ace1f"]
+}], "GuideText",
+ CellID->979622823,ExpressionUUID->"1c48c2f9-5db9-46ac-8d6b-01ef893343b6"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "GuideMoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Computation on Graphs"]], 
+           "paclet:PeterBurbery/UndirectedGraphs/guide/ComputationonGraphs"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideMoreAbout"}]], "GuideMoreAbout",ExpressionUUID->
+         "478e5fbf-d40a-4603-ba8f-254f4a4b1653"]}]}
+     }]}
+  }]], "GuideMoreAboutSection",ExpressionUUID->"0df66f76-12ca-4baa-a8a5-\
+14b48e5ad67a"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"706f0a0a-79cb-4a06-ad56-ae64f0a1edf5"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Graph Construction and Representation",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 8, 12, 1, 29.3083380}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Undirected Graphs Guide", "language" -> "en", 
+    "paclet" -> "PeterBurbery/UndirectedGraphs", "status" -> "None", 
+    "summary" -> 
+    "GraphData supports many graphs, but some families do not have dedicated \
+functions. The goal of this paclet is to fill the gap for certain graph \
+families. Some of these graph functions support custom graph embeddings and \
+layouts that calculate the vertex coordinates instead of using a specific \
+GraphLayout option to highlight features of the graph. All graph functions \
+support all graph options.", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$348791, "title" -> 
+    "Graph Construction and Representation", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> 
+    "Graph Construction and Representation", "type" -> "Guide", "uri" -> 
+    "PeterBurbery/UndirectedGraphs"}},
+CacheGraphics->False,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"57c5d60e-2699-4655-996e-a913aa7ec922"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[609, 21, 6752, 158, 70, "AnchorBarGrid",ExpressionUUID->"495aa8a7-02a8-4f44-abda-7ed0384c2524",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[7386, 183, 133, 1, 70, "GuideTitle",ExpressionUUID->"12f30172-0298-4847-b943-692ed3fd2078",
+ CellID->93145636],
+Cell[7522, 186, 513, 8, 70, "GuideAbstract",ExpressionUUID->"72059bbc-d277-49ea-a791-4afad9b82270",
+ CellID->291710020],
+Cell[8038, 196, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"ae5a061f-b043-4211-ab12-a8adc0c5d359"],
+Cell[8134, 198, 846, 21, 70, "GuideText",ExpressionUUID->"d551e76a-cb53-486f-bfa0-b6bf0a982689",
+ CellID->3450567],
+Cell[8983, 221, 836, 22, 70, "GuideText",ExpressionUUID->"db4b611f-da79-44af-bc10-20efcea85724",
+ CellID->9848065],
+Cell[9822, 245, 806, 21, 70, "GuideText",ExpressionUUID->"9996c131-f59d-41da-ba57-da4188fcb805",
+ CellID->594853579],
+Cell[10631, 268, 806, 21, 70, "GuideText",ExpressionUUID->"b1770a05-29af-44e5-bddc-e634324cadc0",
+ CellID->221374989],
+Cell[11440, 291, 831, 22, 70, "GuideText",ExpressionUUID->"84d3b11d-657e-4e00-8cd1-970992ffb698",
+ CellID->70251640],
+Cell[12274, 315, 806, 21, 70, "GuideText",ExpressionUUID->"28ec36e7-0740-4a5e-94c6-49ff9384fe14",
+ CellID->161431230],
+Cell[13083, 338, 896, 23, 70, "GuideText",ExpressionUUID->"15527653-0664-459c-a696-64331dc2c9ae",
+ CellID->486506445],
+Cell[13982, 363, 806, 21, 70, "GuideText",ExpressionUUID->"525b6fae-b2f7-4da0-8314-0a7744261030",
+ CellID->687111662],
+Cell[14791, 386, 841, 22, 70, "GuideText",ExpressionUUID->"eeca8517-c879-459f-821c-2417578ada68",
+ CellID->198992146],
+Cell[15635, 410, 838, 22, 70, "GuideText",ExpressionUUID->"076d8be0-ea1b-4dc2-8733-0674a6af6a84",
+ CellID->582017019],
+Cell[16476, 434, 803, 21, 70, "GuideText",ExpressionUUID->"3953cad8-ad18-4043-834e-1570742f3a4f",
+ CellID->108180055],
+Cell[17282, 457, 811, 21, 70, "GuideText",ExpressionUUID->"db927c0c-b378-48fb-a97c-f2bdcfb915db",
+ CellID->35998732],
+Cell[18096, 480, 815, 21, 70, "GuideText",ExpressionUUID->"1c48c2f9-5db9-46ac-8d6b-01ef893343b6",
+ CellID->979622823]
+}, Open  ]],
+Cell[18926, 504, 777, 19, 70, "GuideMoreAboutSection",ExpressionUUID->"0df66f76-12ca-4baa-a8a5-14b48e5ad67a"],
+Cell[19706, 525, 78, 0, 70, "FooterCell",ExpressionUUID->"706f0a0a-79cb-4a06-ad56-ae64f0a1edf5"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

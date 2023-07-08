@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Cullen Burbery",
     "License" -> "MIT",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "1.9.0",
+    "Version" -> "1.9.5",
     "WolframVersion" -> "13.1+",
     "Extensions" -> {
       {
@@ -20,16 +20,26 @@ PacletObject[
           }
         },
         "Symbols" -> {
-          "PeterBurbery`UndirectedGraphs`FindBlossomInequalities",
-          "PeterBurbery`UndirectedGraphs`GeneralizedGraphData",
+          "PeterBurbery`UndirectedGraphs`AlternatingTreeGraph",
+          "PeterBurbery`UndirectedGraphs`BananaTreeGraph",
+          "PeterBurbery`UndirectedGraphs`BookGraph",
+          "PeterBurbery`UndirectedGraphs`CombGraph",
+          "PeterBurbery`UndirectedGraphs`FirecrackerGraph",
+          "PeterBurbery`UndirectedGraphs`GearGraph",
+          "PeterBurbery`UndirectedGraphs`GeneralizedTriangularGridGraph",
           "PeterBurbery`UndirectedGraphs`Girth",
-          "PeterBurbery`UndirectedGraphs`GraphConvexHull",
           "PeterBurbery`UndirectedGraphs`GraphicalDegreeSequenceQ",
-          "PeterBurbery`UndirectedGraphs`GraphPredicateData",
-          "PeterBurbery`UndirectedGraphs`OddNodes",
-          "PeterBurbery`UndirectedGraphs`RandomCustomGraph",
+          "PeterBurbery`UndirectedGraphs`HelmGraph",
+          "PeterBurbery`UndirectedGraphs`KayakPaddleGraph",
+          "PeterBurbery`UndirectedGraphs`LadderRungGraph",
+          "PeterBurbery`UndirectedGraphs`PanGraph",
+          "PeterBurbery`UndirectedGraphs`PositiveIntegerQ",
+          "PeterBurbery`UndirectedGraphs`RankPolynomial",
           "PeterBurbery`UndirectedGraphs`ResistanceMatrix",
-          "PeterBurbery`UndirectedGraphs`TakeLargestGraphComponentBy"
+          "PeterBurbery`UndirectedGraphs`SunletGraph",
+          "PeterBurbery`UndirectedGraphs`TadpoleGraph",
+          "PeterBurbery`UndirectedGraphs`VertexCoordinateList",
+          "PeterBurbery`UndirectedGraphs`VertexInsert"
         }
       },
       {"Documentation", "Language" -> "English"}

@@ -1,0 +1,221 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8411,        211]
+NotebookOptionsPosition[      6184,        162]
+NotebookOutlinePosition[      7840,        202]
+CellTagsIndexPosition[      7797,        199]
+WindowTitle->Paths, Cycles, and Flows
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ UNDIRECTED GRAPHS GUIDE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "142d2e57-2cbf-45f6-9230-6e7589243f5b"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "e8e6765e-ea73-487b-a091-3bc299786a2e"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "022025bf-47c8-48b8-b1f9-e6b2ce6eb2ba"]
+         }],ExpressionUUID->"f22d0aa5-8bfe-4528-8c74-4bf3c236e2ef"],
+         StripOnInput->False],{
+        "\"Girth\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/ref/Girth"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "97a4caa1-5e8f-41fa-b35b-963c054d8710"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "4979a7e4-0e0b-499d-bf71-0aa1686c19b4"]
+         }],ExpressionUUID->"7f774543-ca48-434e-b1b3-561b8ad000ab"],
+         StripOnInput->False],{
+        "\"PeterBurbery/UndirectedGraphs/guide/PathsCyclesandFlows\"" :> None,
+          "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/UndirectedGraphs/guide/PathsCyclesandFlows"]\
+}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+UndirectedGraphs/guide/PathsCyclesandFlows.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$350721], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/UndirectedGraphs/guide/PathsCyclesandFlows" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "4b2d6944-226d-45c8-ba9e-2981070b59cb"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "4fa44724-2e76-445c-a843-e1d9c0a404e5"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"0ed50516-4a7e-4149-a5c6-e8520c93cff9"],
+
+Cell[CellGroupData[{
+
+Cell["Paths, Cycles, and Flows", "GuideTitle",
+ CellID->123671896,ExpressionUUID->"a4cba374-47d5-40e8-a37a-fea62272cff5"],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->106336748,ExpressionUUID->"388c90e7-ee4e-485b-b56d-481f1705a6c7"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"3311dd40-56b2-4700-b0f7-35b6c110ca9c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["Girth"]], "paclet:PeterBurbery/UndirectedGraphs/ref/Girth", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "e1bbe23f-9090-4af7-bc84-0ae2fb3e77e7"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " the length of the shortest cycle in a graph is the girth"
+}], "GuideText",
+ CellID->819840326,ExpressionUUID->"46949e1b-7d54-4ad0-9c69-597931d4464c"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"975e1a75-1fdb-4671-b076-614b9d818a24"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Paths, Cycles, and Flows",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 8, 12, 1, 33.2423383}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Undirected Graphs Guide", "language" -> "en", 
+    "paclet" -> "PeterBurbery/UndirectedGraphs", "status" -> "None", 
+    "summary" -> "", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$350692, "title" -> 
+    "Paths, Cycles, and Flows", "titlemodifier" -> "", "metadescription" -> 
+    "", "windowtitle" -> "Paths, Cycles, and Flows", "type" -> "Guide", "uri" -> 
+    "PeterBurbery/UndirectedGraphs/guide/PathsCyclesandFlows"}},
+CacheGraphics->False,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"f1c8620a-3045-4d33-8385-0d01bf0dda2d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[596, 21, 4567, 110, 70, "AnchorBarGrid",ExpressionUUID->"0ed50516-4a7e-4149-a5c6-e8520c93cff9",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5188, 135, 121, 1, 70, "GuideTitle",ExpressionUUID->"a4cba374-47d5-40e8-a37a-fea62272cff5",
+ CellID->123671896],
+Cell[5312, 138, 119, 1, 70, "GuideAbstract",ExpressionUUID->"388c90e7-ee4e-485b-b56d-481f1705a6c7",
+ CellID->106336748],
+Cell[5434, 141, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"3311dd40-56b2-4700-b0f7-35b6c110ca9c"],
+Cell[5530, 143, 557, 14, 70, "GuideText",ExpressionUUID->"46949e1b-7d54-4ad0-9c69-597931d4464c",
+ CellID->819840326]
+}, Open  ]],
+Cell[6102, 160, 78, 0, 70, "FooterCell",ExpressionUUID->"975e1a75-1fdb-4671-b076-614b9d818a24"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

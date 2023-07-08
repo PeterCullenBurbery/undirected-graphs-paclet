@@ -1,0 +1,424 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15903,        414]
+NotebookOptionsPosition[     11577,        320]
+NotebookOutlinePosition[     13808,        376]
+CellTagsIndexPosition[     13723,        371]
+WindowTitle->PositiveIntegerQ
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ UNDIRECTED GRAPHS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "d494bbf8-a7f9-4967-9d22-b61fffe7d1b4"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "a35e3438-7cbd-4025-aea0-e99046f36992"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "6eb74516-632b-49f0-a621-6aa6b36284b1"]
+        }],ExpressionUUID->"3c24f5f0-b304-467f-957e-c561a9e24ab2"],
+        StripOnInput->False],{
+       "\"PeterBurbery/UndirectedGraphs/ref/PositiveIntegerQ\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell["PeterBurbery/UndirectedGraphs/ref/PositiveIntegerQ"]}, 
+              Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+        "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/PeterBurbery/\
+UndirectedGraphs/ref/PositiveIntegerQ.html"], StandardForm]], "Input", 
+                TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$187034], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "PeterBurbery/UndirectedGraphs/ref/PositiveIntegerQ" <> 
+              ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "68141b2f-f839-4e46-8762-1d9a5bdf925e"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "ae92fb20-b86a-47d9-b19e-d436000ad4f2"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"52efb144-bab2-47f1-b979-349ddd0e8bf1"],
+
+Cell["PeterBurbery`UndirectedGraphs`", "ContextNameCell",ExpressionUUID->"87de3acb-dc99-4f9b-a6cc-c49fdddc4b80"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "PositiveIntegerQ", "ObjectName",ExpressionUUID->
+      "89a0c8a0-777c-4126-9160-1e85cc5e8d8e"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"f34ef194-58a7-44fc-ad07-4b3d52853dae"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "fbdb4ae7-3e33-4c1f-b902-cd1efd9c2b52"]
+    }],ExpressionUUID->"6f27853b-7511-4ba1-a8f9-f6bf14e04ce6"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"d6909486-9680-4cd3-a704-\
+24fc1816d813"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["PositiveIntegerQ"]], 
+         "paclet:PeterBurberyUndirectedGraphs/ref/PositiveIntegerQ", 
+         "PeterBurberyUndirectedGraphs Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["n", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7d61ec88-7eb5-4b2f-997d-2d2e66275068"],
+     "\[LineSeparator]yields ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["True"]], "paclet:ref/True"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b9360476-1412-43ec-ab3d-ff1a6cc1c138"],
+     " when n is a strictly positive integer. PositiveInteger[0] returns ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["False"]], "paclet:ref/False"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8a2ce887-9cee-443d-b7eb-69c282a84f9a"],
+     "."
+    }],ExpressionUUID->"d8bcc52c-c292-434e-9e87-ea5c98b05a5b"]}
+  }]], "Usage",
+ CellID->15822509,ExpressionUUID->"3fa7f1af-251a-4c55-b5e6-7261230b384f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"6750df38-545e-4d21-aa59-f512c8bdba71"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"4a3cb626-03be-4429-bb3a-0f2668db4961"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "ac483b25-666a-47ce-b359-3a381127f40f"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->625121461,ExpressionUUID->"9d8adf93-1f15-4739-a4ce-b431209b31d8"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`UndirectedGraphs`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->362002287,ExpressionUUID->"44c489f2-f5db-4664-a229-3331121a4bfb"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"434a9706-10eb-44e3-8fa5-c406d1e4d92d"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"c03701cf-7919-4d16-8787-f04ff809921e"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "9640f67e-2937-4815-98cd-b26eb8dbd853"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->103851040,ExpressionUUID->"10aa99cd-e0af-4186-a427-ff32f27e4d96"],
+
+Cell["Check if a number is a positive integer:", "ExampleText",
+ CellID->199150020,ExpressionUUID->"77aed80e-329f-4175-afba-537044caa472"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PositiveIntegerQ", "[", "1", "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
+ CellLabel->"In[1]:=",
+ CellID->250519681,ExpressionUUID->"8f60fbca-c03e-4d51-8d45-7bfba33836a5"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->101039543,ExpressionUUID->"886866bf-3118-4125-9c5a-26b787ff5b0c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PositiveIntegerQ", "[", "0", "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
+ CellLabel->"In[2]:=",
+ CellID->623220548,ExpressionUUID->"6975f331-e5b2-47ee-9a51-91f0c646020e"],
+
+Cell[BoxData["False"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->231947291,ExpressionUUID->"bccf9db9-7ca4-4898-b9f3-876391f9cb3f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PositiveIntegerQ", "[", 
+  RowBox[{"-", "1"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
+ CellLabel->"In[3]:=",
+ CellID->275676597,ExpressionUUID->"2cfb3a29-5fb5-4c5e-9995-33adac844a8c"],
+
+Cell[BoxData["False"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->68181768,ExpressionUUID->"19359203-a702-4a07-bced-39cb4168c754"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TagBox[
+         FrameBox["\"\<XXXX\>\""],
+         "FunctionPlaceholder"]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "122d7b61-f592-4286-8dff-58c133bfd56f"]], "SeeAlso",ExpressionUUID->
+        "50e1d192-8e3c-4ff8-bb4b-e9296cb63d6b"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"1946e031-4bf6-4214-8cd2-\
+c5d75f0aa393"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"28e54170-5d04-439e-83c1-e09f96779c54"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"PositiveIntegerQ",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 7, 21, 41, 5.7598051}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Undirected Graphs Symbol", "language" -> "en",
+     "paclet" -> "PeterBurbery/UndirectedGraphs", "status" -> "None", 
+    "summary" -> 
+    "PositiveIntegerQ[n] yields True when n is a strictly positive integer. \
+PositiveInteger[0] returns False.", "synonyms" -> {}, "tabletags" -> {}, 
+    "title" -> "PositiveIntegerQ", "titlemodifier" -> "", "metadescription" -> 
+    "", "windowtitle" -> "PositiveIntegerQ", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/UndirectedGraphs/ref/PositiveIntegerQ"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"a360c26c-b5fe-4173-aabf-30fa6da7db6f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[6166, 164, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"9d8adf93-1f15-4739-a4ce-b431209b31d8",
+   CellTags->"PrimaryExamplesSection",
+   CellID->625121461]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13524, 364}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[588, 21, 3512, 81, 56, "AnchorBarGrid",ExpressionUUID->"52efb144-bab2-47f1-b979-349ddd0e8bf1",
+ CellID->1],
+Cell[4103, 104, 112, 0, 23, "ContextNameCell",ExpressionUUID->"87de3acb-dc99-4f9b-a6cc-c49fdddc4b80"],
+Cell[CellGroupData[{
+Cell[4240, 108, 559, 14, 56, "ObjectNameGrid",ExpressionUUID->"d6909486-9680-4cd3-a704-24fc1816d813"],
+Cell[4802, 124, 1327, 35, 113, "Usage",ExpressionUUID->"3fa7f1af-251a-4c55-b5e6-7261230b384f",
+ CellID->15822509]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6166, 164, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"9d8adf93-1f15-4739-a4ce-b431209b31d8",
+ CellTags->"PrimaryExamplesSection",
+ CellID->625121461],
+Cell[7589, 203, 221, 4, 26, "Input",ExpressionUUID->"44c489f2-f5db-4664-a229-3331121a4bfb",
+ CellID->362002287],
+Cell[CellGroupData[{
+Cell[7835, 211, 1398, 36, 30, "ExampleSection",ExpressionUUID->"10aa99cd-e0af-4186-a427-ff32f27e4d96",
+ CellID->103851040],
+Cell[9236, 249, 138, 1, 38, "ExampleText",ExpressionUUID->"77aed80e-329f-4175-afba-537044caa472",
+ CellID->199150020],
+Cell[CellGroupData[{
+Cell[9399, 254, 221, 4, 26, "Input",ExpressionUUID->"8f60fbca-c03e-4d51-8d45-7bfba33836a5",
+ CellID->250519681],
+Cell[9623, 260, 129, 2, 35, "Output",ExpressionUUID->"886866bf-3118-4125-9c5a-26b787ff5b0c",
+ CellID->101039543]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9789, 267, 221, 4, 26, "Input",ExpressionUUID->"6975f331-e5b2-47ee-9a51-91f0c646020e",
+ CellID->623220548],
+Cell[10013, 273, 130, 2, 35, "Output",ExpressionUUID->"bccf9db9-7ca4-4898-b9f3-876391f9cb3f",
+ CellID->231947291]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10180, 280, 239, 5, 26, "Input",ExpressionUUID->"2cfb3a29-5fb5-4c5e-9995-33adac844a8c",
+ CellID->275676597],
+Cell[10422, 287, 129, 2, 35, "Output",ExpressionUUID->"19359203-a702-4a07-bced-39cb4168c754",
+ CellID->68181768]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[10793, 298, 699, 18, 114, "SeeAlsoSection",ExpressionUUID->"1946e031-4bf6-4214-8cd2-c5d75f0aa393"],
+Cell[11495, 318, 78, 0, 70, "FooterCell",ExpressionUUID->"28e54170-5d04-439e-83c1-e09f96779c54"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

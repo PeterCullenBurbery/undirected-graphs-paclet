@@ -3,17 +3,17 @@
 (*** Wolfram Notebook File ***)
 (* http://www.wolfram.com/nb *)
 
-(* CreatedBy='Mathematica 13.1' *)
+(* CreatedBy='Mathematica 13.3' *)
 
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16781,        475]
-NotebookOptionsPosition[     11918,        373]
-NotebookOutlinePosition[     13980,        426]
-CellTagsIndexPosition[     13895,        421]
+NotebookDataLength[     20311,        516]
+NotebookOptionsPosition[     15967,        423]
+NotebookOutlinePosition[     18136,        479]
+CellTagsIndexPosition[     18051,        474]
 WindowTitle->Girth
 WindowFrame->Normal*)
 
@@ -27,16 +27,43 @@ Cell[BoxData[GridBox[{
           TemplateBox[{12},
            "Spacer1"], Cell[
           "PETER BURBERY/ UNDIRECTED GRAPHS SYMBOL", "PacletNameCell",
-           TextAlignment->Center], 
+           TextAlignment->Center,ExpressionUUID->
+           "c9e1f7fa-354e-4d06-a171-641a31830ece"], 
           TemplateBox[{8},
            "Spacer1"]}]],
-         TextAlignment->Center],
+         TextAlignment->Center,ExpressionUUID->
+         "e7f844d1-9377-4346-ad86-50f2988e9dda"],
         Background->RGBColor[0.490196, 0.576471, 0.690196],
         ItemSize->Full], ""}
      },
      GridBoxAlignment->{"Rows" -> {{Center}}},
      GridBoxItemSize->{"Columns" -> {Full, 
          Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "a238405c-3d91-4b78-b400-0d4504662ba5"]
+         }],ExpressionUUID->"9dec4630-1b98-46a0-91af-f0d0989d1805"],
+         StripOnInput->False],{
+        "\"FindCycle\"" :> Documentation`HelpLookup["paclet:ref/FindCycle"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "7da6d929-4bf4-4527-adb5-44e57994b1bf"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
      Cell[BoxData[
       TagBox[
        ActionMenuBox[
@@ -49,16 +76,22 @@ Cell[BoxData[GridBox[{
              LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
             AspectRatio->1,
             ImageSize->20,
-            PlotRange->{{-3, 4}, {-1, 1}}]]]
-         }]],
-         StripOnInput->False], {"\<\"Graph Functions\"\>":>
-        Documentation`HelpLookup[
-        "paclet:PeterBurbery/UndirectedGraphs/guide/GraphFunctions"]},
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "3d6ea969-b0f9-49ff-ba97-ec078e52d283"]
+         }],ExpressionUUID->"f3014109-769d-44c8-b5dd-644625df9a10"],
+         StripOnInput->False],{
+        "\"Graph Functions\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/guide/GraphFunctions"], 
+         "\"Paths, Cycles, and Flows\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/guide/PathsCyclesandFlows"]},
         Appearance->None,
         MenuAppearance->Automatic,
         MenuStyle->"MoreAbout"],
        MouseAppearanceTag["LinkHand"]]],
-      LineSpacing->{1.4, 0}],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "4bf24c4a-2cf0-444f-8894-7ccb5be22d8a"],
      "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
 \[ThickSpace]",
      Cell[BoxData[
@@ -73,68 +106,73 @@ Cell[BoxData[GridBox[{
              LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
             AspectRatio->1,
             ImageSize->20,
-            PlotRange->{{-3, 4}, {-1, 1}}]]]
-         }]],
-         StripOnInput->
-          False], {"\<\"PeterBurbery/UndirectedGraphs/ref/Girth\"\>":>
-        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
-        Module[{DocumentationSearch`Private`nb$}, 
-         DocumentationSearch`Private`nb$ = NotebookPut[
-            Notebook[{
-              Cell["PeterBurbery/UndirectedGraphs/ref/Girth"]}, Visible -> 
-             False]]; SelectionMove[
-          DocumentationSearch`Private`nb$, All, Notebook]; 
-         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
-         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
-        Delimiter, "\<\"Copy web URL\"\>":>
-        Module[{DocumentationSearch`Private`nb$}, 
-         DocumentationSearch`Private`nb$ = NotebookPut[
-            Notebook[{
-              Cell[
-               BoxData[
-                MakeBoxes[
-                 Hyperlink[
-                 "http://reference.wolfram.com/language/PeterBurbery/\
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "ea94cbc9-0a81-4f56-b22b-dcace47b59d2"]
+         }],ExpressionUUID->"bcc8d1b1-7354-4646-97b1-4324b9393c0a"],
+         StripOnInput->False],{
+        "\"PeterBurbery/UndirectedGraphs/ref/Girth\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["PeterBurbery/UndirectedGraphs/ref/Girth"]}, 
+               Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
 UndirectedGraphs/ref/Girth.html"], StandardForm]], "Input", TextClipboardType -> 
-               "PlainText"]}, Visible -> False]]; 
-         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
-         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
-         NotebookClose[DocumentationSearch`Private`nb$]; 
-         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
-          NotebookLocate[{
-            URL[(If[
-                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$813601], 
-                "http://reference.wolfram.com/system-modeler/", 
-                "http://reference.wolfram.com/language/"] <> 
-              "PeterBurbery/UndirectedGraphs/ref/Girth") <> ".html"], 
-            None}]}]},
+                 "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$446049], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/UndirectedGraphs/ref/Girth" <> ".html"], 
+              None}]}]},
         Appearance->None,
         MenuAppearance->Automatic,
         MenuStyle->"URLMenu"],
        MouseAppearanceTag["LinkHand"]]],
-      LineSpacing->{1.4, 0}]
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "1ebdac59-8ff2-4afc-9900-2b6e5333e7a6"]
     }], "AnchorBar",
-     CacheGraphics->False]}
+     CacheGraphics->False,ExpressionUUID->
+     "bae95f20-8f6d-4623-b8eb-f98d1b83b713"]}
   }]], "AnchorBarGrid",
- GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
-     Scaled[0.65], {
-      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-   "RowsIndexed" -> {}}},
- CellID->1],
+ CellID->1,ExpressionUUID->"3759796c-04a8-444d-9e29-9da4c195e7b7"],
 
-Cell["PeterBurbery`UndirectedGraphs`", "ContextNameCell"],
+Cell["PeterBurbery`UndirectedGraphs`", "ContextNameCell",ExpressionUUID->"c929b93f-0a7d-42b6-9457-16ae19c4fc85"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[GridBox[{
    {Cell[TextData[{
-     Cell["Girth", "ObjectName"],
+     Cell[
+     "Girth", "ObjectName",ExpressionUUID->
+      "16a83d12-fae6-426f-aece-bcebdf659a28"],
      Cell[BoxData[
       TemplateBox[{8},
-       "Spacer1"]]],
-     Cell[BoxData[""], "ObjectNameTranslation"]
-    }]], "\[SpanFromLeft]"}
-  }]], "ObjectNameGrid"],
+       "Spacer1"]],ExpressionUUID->"e4d90e6c-538c-4993-9eb3-8b13fd00a792"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "dfe0b39d-f4df-4017-a6ad-9962c3ec5e3c"]
+    }],ExpressionUUID->"185380c8-f7ae-498e-8d83-ad0cebf2d379"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"2f7c2471-da57-48ef-9bbd-\
+64c304dddb97"],
 
 Cell[BoxData[GridBox[{
    {"", Cell[TextData[{
@@ -146,86 +184,24 @@ Cell[BoxData[GridBox[{
           "PeterBurberyUndirectedGraphs Package Symbol"},
         "PackageLink",
         BaseStyle->"InlineFormula"], "[", 
-       StyleBox["graph", "TI"], "]"}]], "InlineFormula",
-      FontFamily->"Source Sans Pro"],
-     "\[LineSeparator]find the girth of ",
+       StyleBox["g", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "58fad812-5899-49ae-9c5f-dc1f192eb618"],
+     "\[LineSeparator]returns the girth of the graph ",
      Cell[BoxData[
-      StyleBox["graph", "TI"]], "InlineFormula",
-      FontFamily->"Source Sans Pro"]
-    }]]}
+      StyleBox["g", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "397fb95d-16af-4030-95b0-b15a06695afd"],
+     ", i.e. the length of the shortest cycle in ",
+     Cell[BoxData[
+      StyleBox["g", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "51d552ed-32b3-4cbf-ad45-7a6bc85579c2"],
+     "."
+    }],ExpressionUUID->"0f54132d-1edb-4c84-b5b5-1c5210eadf5f"]}
   }]], "Usage",
- CellID->187635743]
+ CellID->974557269,ExpressionUUID->"273e8967-b423-44e9-9928-fbcd0cac4b3a"]
 }, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[TextData[Cell[BoxData[
- ButtonBox[Cell[TextData[{
-   Cell[BoxData[
-    DynamicBox[ToBoxes[
-      If[
-       MatchQ[
-        CurrentValue[
-         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
-         Closed], 
-        Alternatives[Open, True]], 
-       Style[
-        Graphics[{
-          Thickness[0.18], 
-          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
-          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
-         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
-        0.68 Inherited], 
-       Rotate[
-        Style[
-         Graphics[{
-           Thickness[0.18], 
-           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
-           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
-          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
-         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
-     ImageSizeCache->{17., {0.47500000000000053`, 16.525}}]]],
-   Cell[BoxData[
-    TemplateBox[{1},
-     "Spacer1"]]],
-   "Details and Options"
-  }], "NotesFrameText"],
-  Appearance->{Automatic, None, "Normal", Automatic},
-  BaseStyle->None,
-  ButtonFunction:>(FrontEndExecute[{
-     FrontEnd`SelectionMove[
-      FrontEnd`SelectedNotebook[], All, ButtonCell], 
-     FrontEndToken["OpenCloseGroup"], 
-     FrontEnd`SelectionMove[
-      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
-  Evaluator->None,
-  Method->"Preemptive"]]]], "NotesSection",
- WholeCellGroupOpener->True,
- CellGroupingRules->{"SectionGrouping", 50},
- CacheGraphics->False,
- CellID->456344253],
-
-Cell["The girth is the length of the shortest cycle in a graph.", "Notes",
- CellID->39564733],
-
-Cell["An acyclic graph with no cycles has a girth of \[Infinity].", "Notes",
- CellID->509339527],
-
-Cell["\<\
-A k-cage is a graph with the smallest number of nodes that has girth k.\
-\>", "Notes",
- CellID->333637280],
-
-Cell["\<\
-A cage must also be regular. This means all the nodes must have the same \
-degree.\
-\>", "Notes",
- CellID->177140162],
-
-Cell["For example, the Petersen graph is the unique 5 cage.", "Notes",
- CellID->646736689]
-}, Dynamic[CurrentValue[
- EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
 
 Cell[CellGroupData[{
 
@@ -253,24 +229,26 @@ Cell[TextData[{
          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
        0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
-   ImageSizeCache->{17., {7., 10.}}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"14a7f986-440f-4d03-95c2-3d82e411c6c0"],
  Cell[BoxData[
   TemplateBox[{1},
-   "Spacer1"]]],
+   "Spacer1"]],ExpressionUUID->"f8826423-3a00-4b53-9a1e-94b511777c81"],
  "Examples",
  "\[NonBreakingSpace]\[NonBreakingSpace]",
- Cell["(1)", "ExampleCount"]
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "24288ba0-c309-478a-96ee-282c4ef7dcc0"]
 }], "PrimaryExamplesSection",
  WholeCellGroupOpener->True,
  CacheGraphics->False,
  CellTags->"PrimaryExamplesSection",
- CellID->708716521],
+ CellID->620528395,ExpressionUUID->"8cee18cb-b383-4c79-a4b8-dcc873ee41af"],
 
 Cell[BoxData[
  RowBox[{"Needs", "[", "\"\<PeterBurbery`UndirectedGraphs`\>\"", 
   "]"}]], "Input", "ExampleInitialization",
  CellLabel->"In[1]:=",
- CellID->283974840],
+ CellID->33153588,ExpressionUUID->"39db7d1d-eb1b-468f-922e-2e647bea920a"],
 
 Cell[CellGroupData[{
 
@@ -298,20 +276,22 @@ Cell[TextData[{
          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
        0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
-   ImageSizeCache->{17., {1.4750000000000005`, 15.524999999999999`}}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"cd49c697-ce2d-4fb7-98b6-b439fbc57f9b"],
  Cell[BoxData[
   TemplateBox[{1},
-   "Spacer1"]]],
+   "Spacer1"]],ExpressionUUID->"7af4a83e-b22b-4451-9783-5e5801663513"],
  "Basic Examples",
  "\[NonBreakingSpace]\[NonBreakingSpace]",
- Cell["(1)", "ExampleCount"]
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "67e07b68-206a-4dc3-a5f1-900cfde91523"]
 }], "ExampleSection", "ExampleSection",
  WholeCellGroupOpener->True,
  CacheGraphics->False,
- CellID->133757135],
+ CellID->658508849,ExpressionUUID->"6c981ff0-79d8-46d3-85cb-ea686706d4a9"],
 
-Cell["Find the girth of the Petersen graph:", "ExampleText",
- CellID->297846961],
+Cell["The girth of the Petersen graph:", "ExampleText",
+ CellID->89185335,ExpressionUUID->"bb860b5f-3f26-4699-92f3-8083481db1e7"],
 
 Cell[CellGroupData[{
 
@@ -320,28 +300,65 @@ Cell[BoxData[
   RowBox[{"PetersenGraph", "[", "]"}], "]"}]], "Input",
  CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
  CellLabel->"In[1]:=",
- CellID->28784465],
+ CellID->246182427,ExpressionUUID->"89ddd677-b15c-4a12-a1aa-8834b03ff301"],
 
 Cell[BoxData["5"], "Output",
  CellLabel->"Out[1]=",
- CellID->529786624]
+ CellID->170781837,ExpressionUUID->"4f593f75-4f94-46ca-b388-8e5f59eee14d"]
 }, Open  ]],
 
-Cell["Compare to the computed GraphData value:", "ExampleText",
- CellID->405016270],
+Cell["The girth of a generalized Petersen graph:", "ExampleText",
+ CellID->68437473,ExpressionUUID->"e92247a4-da08-44ee-96cc-d288bffd0ca9"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"GraphData", "[", 
-  RowBox[{"\"\<PetersenGraph\>\"", ",", "\"\<Girth\>\""}], "]"}]], "Input",
+ RowBox[{"Girth", "[", 
+  RowBox[{"Echo", "@", 
+   RowBox[{"PetersenGraph", "[", 
+    RowBox[{"3", ",", "4"}], "]"}]}], "]"}]], "Input",
  CellProlog:>Needs["PeterBurbery`UndirectedGraphs`"],
  CellLabel->"In[2]:=",
- CellID->387089288],
+ CellID->646599646,ExpressionUUID->"993b4d60-ad8f-4c0d-a0bc-62b3d03bd337"],
 
-Cell[BoxData["5"], "Output",
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6}, {
+      Null, {{1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 5}, {3, 6}, {4, 5}, {4, 6}, {
+       5, 6}}}, {
+      VertexLabels -> {None}, 
+       VertexCoordinates -> {{
+        0.8660254037844387, -0.4999999999999998}, {-0.8660254037844385, \
+-0.5000000000000004}, {-2.4492935982947064`*^-16, 1.}, {
+        1.7320508075688774`, -0.9999999999999996}, {-1.732050807568877, \
+-1.0000000000000009`}, {-4.898587196589413*^-16, 2.}}}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{
+       0.8660254037844387, -0.4999999999999998}, {-0.8660254037844385, \
+-0.5000000000000004}, {-2.4492935982947064`*^-16, 1.}, {
+       1.7320508075688774`, -0.9999999999999996}, {-1.732050807568877, \
+-1.0000000000000009`}, {-4.898587196589413*^-16, 2.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[0.], 
+         ArrowBox[{{1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 5}, {3, 6}, {4, 5}, {4,
+           6}, {5, 6}}, 0.03347773481857537]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.03347773481857537], DiskBox[2, 0.03347773481857537], 
+         DiskBox[3, 0.03347773481857537], DiskBox[4, 0.03347773481857537], 
+         DiskBox[5, 0.03347773481857537], DiskBox[6, 0.03347773481857537]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{215.40000000000003`, Automatic}]], "Echo",
+ CellID->41025266,ExpressionUUID->"dd246a0a-f782-4d9b-aa4e-6d7ece3ce208"],
+
+Cell[BoxData["3"], "Output",
  CellLabel->"Out[2]=",
- CellID->139939028]
+ CellID->978753,ExpressionUUID->"67e0f996-21e6-4049-96f8-9c7a2b5fbc7f"]
 }, Open  ]]
 }, Dynamic[CurrentValue[
  EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
@@ -353,8 +370,30 @@ Cell[BoxData["5"], "Output",
 Cell[BoxData[GridBox[{
    {
     DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData["FindCycle"]], "paclet:ref/FindCycle"},
+         "RefLink",
+         BaseStyle->{"InlineFormula"}]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "e3998927-6604-4174-a4fa-f347ba9ab541"]], "SeeAlso",ExpressionUUID->
+        "d7cf2382-bcfd-43d9-91c5-bf386db5dc93"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"36d5ce17-5bdd-405e-808f-\
+a67da05e0ef0"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
       FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
-     ImageSizeCache->{62.5, {34., 41.}}], GridBox[{
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
       {
        StyleBox[
         RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
@@ -365,37 +404,50 @@ Cell[BoxData[GridBox[{
             TextData["Graph Functions"]], 
            "paclet:PeterBurbery/UndirectedGraphs/guide/GraphFunctions"},
           "RefLinkPlain",
-          BaseStyle->{"MoreAbout"}]], "MoreAbout"]}]}
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "ab577875-f317-4abb-97ad-f432d4ffcfc3"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Paths, Cycles, and Flows"]], 
+           "paclet:PeterBurbery/UndirectedGraphs/guide/PathsCyclesandFlows"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "2ada67eb-1d9a-458c-87d0-0ada3e2561b0"]}]}
      }]}
-  }]], "MoreAboutSection"],
+  }]], "MoreAboutSection",ExpressionUUID->"6577e636-f10f-43b7-af2b-\
+178b823cc7bc"],
 
-Cell[" ", "FooterCell"]
+Cell[" ", "FooterCell",ExpressionUUID->"8b1f4a8c-a54e-4e03-b430-0faff92e68ec"]
 },
 Saveable->False,
 ScreenStyleEnvironment->"Working",
-WindowSize->{900., 604.8},
+WindowSize->{900, 604.8},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 WindowTitle->"Girth",
 TaggingRules->{
  "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
   "HasOptions" -> True, "ExampleCounter" -> 1, 
   "Openers" -> {
-   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
-    "NotesSection" -> Closed}, "NewStyles" -> True, 
-  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
-  "", "Metadata" -> {
-   "built" -> "{2022, 7, 21, 20, 45, 26.4326742}", 
-    "history" -> {"", "", "", ""}, "context" -> 
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 8, 13, 9, 56.7928075}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
     "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
      "label" -> "Peter Burbery/ Undirected Graphs Symbol", "language" -> "en",
      "paclet" -> "PeterBurbery/UndirectedGraphs", "status" -> "None", 
-    "summary" -> "Girth[graph] find the girth of graph", "synonyms" -> {}, 
-    "tabletags" -> {}, "title" -> "Girth", "titlemodifier" -> "", 
-    "windowtitle" -> "Girth", "type" -> "Symbol", "uri" -> 
+    "summary" -> 
+    "Girth[g] returns the girth of the graph g, i.e. the length of the \
+shortest cycle in g.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "Girth", "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "Girth", "type" -> "Symbol", "uri" -> 
     "PeterBurbery/UndirectedGraphs/ref/Girth"}},
 CellContext->"Global`",
-FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[
@@ -404,8 +456,9 @@ StyleDefinitions->Notebook[{
     StyleData["Input"], CellContext -> "Global`"], 
    Cell[
     StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
-  FrontEndVersion -> "13.1 for Microsoft Windows (64-bit) (June 16, 2022)", 
-  StyleDefinitions -> "Default.nb"]
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"7e897b6f-76aa-4f26-8142-0d2407beb221"
 ]
 (* End of Notebook Content *)
 
@@ -413,72 +466,61 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "PrimaryExamplesSection"->{
-  Cell[7706, 231, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"7e013da6-14dd-4b3b-ac10-99d98d16a7c6",
+  Cell[7844, 207, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"8cee18cb-b383-4c79-a4b8-dcc873ee41af",
    CellTags->"PrimaryExamplesSection",
-   CellID->708716521]}
+   CellID->620528395]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PrimaryExamplesSection", 13696, 414}
+ {"PrimaryExamplesSection", 17852, 467}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[577, 21, 3894, 101, 70, "AnchorBarGrid",ExpressionUUID->"40fdb22d-98e2-4391-ac4e-4f4e65068fc0",
+Cell[577, 21, 5467, 133, 56, "AnchorBarGrid",ExpressionUUID->"3759796c-04a8-444d-9e29-9da4c195e7b7",
  CellID->1],
-Cell[4474, 124, 57, 0, 70, "ContextNameCell",ExpressionUUID->"c522a60e-2aa7-4551-89f2-c23abe0fe576"],
+Cell[6047, 156, 112, 0, 23, "ContextNameCell",ExpressionUUID->"c929b93f-0a7d-42b6-9457-16ae19c4fc85"],
 Cell[CellGroupData[{
-Cell[4556, 128, 240, 8, 70, "ObjectNameGrid",ExpressionUUID->"fb5a0bfc-6e38-48fd-b317-e044b08127a1"],
-Cell[4799, 138, 607, 18, 70, "Usage",ExpressionUUID->"45afba4c-9664-4963-a701-5fee27f2edeb",
- CellID->187635743]
+Cell[6184, 160, 548, 14, 56, "ObjectNameGrid",ExpressionUUID->"2f7c2471-da57-48ef-9bbd-64c304dddb97"],
+Cell[6735, 176, 1072, 26, 111, "Usage",ExpressionUUID->"273e8967-b423-44e9-9928-fbcd0cac4b3a",
+ CellID->974557269]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5443, 161, 1599, 44, 70, "NotesSection",ExpressionUUID->"67320321-584a-48d0-a568-fcf291af4fdf",
- CellGroupingRules->{"SectionGrouping", 50},
- CellID->456344253],
-Cell[7045, 207, 93, 1, 70, "Notes",ExpressionUUID->"9be016bc-999d-498c-a012-27c4324ead54",
- CellID->39564733],
-Cell[7141, 210, 96, 1, 70, "Notes",ExpressionUUID->"d675ea49-d320-4ccd-9436-a9ceae80b14e",
- CellID->509339527],
-Cell[7240, 213, 116, 3, 70, "Notes",ExpressionUUID->"a8931ad9-8500-489e-9934-491f042f2897",
- CellID->333637280],
-Cell[7359, 218, 127, 4, 70, "Notes",ExpressionUUID->"616e134b-6a52-4a50-8239-9bc305bd7623",
- CellID->177140162],
-Cell[7489, 224, 90, 1, 70, "Notes",ExpressionUUID->"8898e84b-fc42-41e2-80f5-12b7d186e666",
- CellID->646736689]
-}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
-Cell[CellGroupData[{
-Cell[7706, 231, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"7e013da6-14dd-4b3b-ac10-99d98d16a7c6",
+Cell[7844, 207, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"8cee18cb-b383-4c79-a4b8-dcc873ee41af",
  CellTags->"PrimaryExamplesSection",
- CellID->708716521],
-Cell[8873, 268, 166, 4, 70, "Input",ExpressionUUID->"b0699397-6be4-45a3-88aa-9c90789a25e9",
- CellID->283974840],
+ CellID->620528395],
+Cell[9267, 246, 220, 4, 26, "Input",ExpressionUUID->"39db7d1d-eb1b-468f-922e-2e647bea920a",
+ CellID->33153588],
 Cell[CellGroupData[{
-Cell[9064, 276, 1175, 34, 70, "ExampleSection",ExpressionUUID->"a5085035-f8f0-4dca-ac87-490f75db4450",
- CellID->133757135],
-Cell[10242, 312, 80, 1, 70, "ExampleText",ExpressionUUID->"f43f859d-2fbb-4016-a726-c4ffb1d8d782",
- CellID->297846961],
+Cell[9512, 254, 1398, 36, 30, "ExampleSection",ExpressionUUID->"6c981ff0-79d8-46d3-85cb-ea686706d4a9",
+ CellID->658508849],
+Cell[10913, 292, 129, 1, 38, "ExampleText",ExpressionUUID->"bb860b5f-3f26-4699-92f3-8083481db1e7",
+ CellID->89185335],
 Cell[CellGroupData[{
-Cell[10347, 317, 189, 5, 70, "Input",ExpressionUUID->"9e575b93-0a9d-4eae-acac-916c3ae60121",
- CellID->28784465],
-Cell[10539, 324, 71, 2, 70, "Output",ExpressionUUID->"c67661d8-2ca1-4860-b522-805ffcf9d8e1",
- CellID->529786624]
+Cell[11067, 297, 245, 5, 26, "Input",ExpressionUUID->"89ddd677-b15c-4a12-a1aa-8834b03ff301",
+ CellID->246182427],
+Cell[11315, 304, 126, 2, 35, "Output",ExpressionUUID->"4f593f75-4f94-46ca-b388-8e5f59eee14d",
+ CellID->170781837]
 }, Open  ]],
-Cell[10625, 329, 83, 1, 70, "ExampleText",ExpressionUUID->"2d082a2e-ec15-4285-80cd-cc5847925496",
- CellID->405016270],
+Cell[11456, 309, 139, 1, 38, "ExampleText",ExpressionUUID->"e92247a4-da08-44ee-96cc-d288bffd0ca9",
+ CellID->68437473],
 Cell[CellGroupData[{
-Cell[10733, 334, 214, 5, 70, "Input",ExpressionUUID->"c4ec2c16-726b-40a5-8b67-c82a1242b4cc",
- CellID->387089288],
-Cell[10950, 341, 71, 2, 70, "Output",ExpressionUUID->"fcdf2914-998e-41bb-8edc-ef0346693037",
- CellID->139939028]
+Cell[11620, 314, 302, 7, 26, "Input",ExpressionUUID->"993b4d60-ad8f-4c0d-a0bc-62b3d03bd337",
+ CellID->646599646],
+Cell[11925, 323, 1686, 33, 195, "Echo",ExpressionUUID->"dd246a0a-f782-4d9b-aa4e-6d7ece3ce208",
+ CellID->41025266],
+Cell[13614, 358, 123, 2, 35, "Output",ExpressionUUID->"67e0f996-21e6-4049-96f8-9c7a2b5fbc7f",
+ CellID->978753]
 }, Open  ]]
 }, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
 }, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
-Cell[11263, 352, 625, 17, 70, "MoreAboutSection",ExpressionUUID->"3b20163c-f65f-4896-aa15-08c486e69b8c"],
-Cell[11891, 371, 23, 0, 70, "FooterCell",ExpressionUUID->"2d98b972-3ac9-4936-958a-18a9c83b35d9"]
+Cell[13979, 369, 773, 20, 70, "SeeAlsoSection",ExpressionUUID->"36d5ce17-5bdd-405e-808f-a67da05e0ef0"],
+Cell[14755, 391, 1127, 28, 70, "MoreAboutSection",ExpressionUUID->"6577e636-f10f-43b7-af2b-178b823cc7bc"],
+Cell[15885, 421, 78, 0, 70, "FooterCell",ExpressionUUID->"8b1f4a8c-a54e-4e03-b430-0faff92e68ec"]
 }
 ]
 *)
 
 (* End of internal cache information *)
+
