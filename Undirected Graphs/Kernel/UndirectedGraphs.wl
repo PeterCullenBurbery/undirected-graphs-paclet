@@ -24,6 +24,8 @@
 
 <<PeterBurbery`UndirectedGraphs`PanGraph`;
 
+<<PeterBurbery`UndirectedGraphs`ReliabilityPolynomial`;
+
 <<PeterBurbery`UndirectedGraphs`SunletGraph`;
 
 <<PeterBurbery`UndirectedGraphs`TadpoleGraph`;

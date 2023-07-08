@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     31944,        890]
+NotebookDataLength[     31909,        889]
 NotebookOptionsPosition[     25009,        739]
-NotebookOutlinePosition[     25840,        766]
-CellTagsIndexPosition[     25761,        761]
+NotebookOutlinePosition[     25805,        765]
+CellTagsIndexPosition[     25726,        760]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -108,10 +108,10 @@ Cell[TextData[{
     "22a5e135-d4e8-4986-b313-e3cfad5aa0e3"], 
    DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
     "4d879f9e-c9fd-4e9f-b1d1-74c03bffae3d", 
-     "ecfd9d36-c029-42b0-b56a-b913fb525974"], $CellContext`cellobj$$ = 
+     "24930c9f-ee0a-4270-b00e-a601068a597c"], $CellContext`cellobj$$ = 
     CellObject[
     "6ccd71b2-7722-4ecc-b3a5-0e74751e5b0d", 
-     "5b3c0404-4171-428c-a198-2dff9807c309"]}, 
+     "48adff0b-8502-40cf-b7f3-b1a442db72b6"]}, 
     TemplateBox[{
       GraphicsBox[{{
          Thickness[0.06], 
@@ -737,9 +737,8 @@ Cell[BoxData[""], "Template",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{1152, 585.6},
-WindowMargins->{{
-  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+WindowSize->{1141.2, 579.6},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 TaggingRules-><|"Paclet" -> "PeterBurbery/UndirectedGraphs"|>,
 CellContext->"Global`",
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
@@ -760,7 +759,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 25568, 754}
+ {"ExtendedExamples", 25533, 753}
  }
 *)
 (*NotebookFileOutline
