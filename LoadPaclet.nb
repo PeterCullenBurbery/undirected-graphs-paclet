@@ -10,14 +10,823 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    245633,       5024]
-NotebookOptionsPosition[    237334,       4875]
-NotebookOutlinePosition[    237769,       4892]
-CellTagsIndexPosition[    237726,       4889]
+NotebookDataLength[    328366,       7018]
+NotebookOptionsPosition[    317571,       6826]
+NotebookOutlinePosition[    317971,       6842]
+CellTagsIndexPosition[    317928,       6839]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{"Remove", "[", 
+  "PeterBurbery`UndirectedGraphs`IndependencePolynomial", "]"}]], "Input",
+ CellChangeTimes->{{3.897835909295829*^9, 3.8978359149999757`*^9}, 
+   3.89783608464806*^9},
+ CellLabel->
+  "In[551]:=",ExpressionUUID->"f6ff2263-e0d5-47b7-9b8d-bd76655588bc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IndependencePolynomial", "[", 
+  RowBox[{"PetersenGraph", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8978359159810243`*^9, 3.8978359281037865`*^9}},
+ CellLabel->
+  "In[506]:=",ExpressionUUID->"0dee8097-dec0-419a-a315-eb925b8319cb"],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  RowBox[{"10", " ", "\[FormalX]"}], "+", 
+  RowBox[{"30", " ", 
+   SuperscriptBox["\[FormalX]", "2"]}], "+", 
+  RowBox[{"30", " ", 
+   SuperscriptBox["\[FormalX]", "3"]}], "+", 
+  RowBox[{"5", " ", 
+   SuperscriptBox["\[FormalX]", "4"]}]}]], "Output",
+ CellChangeTimes->{3.8978359284983006`*^9},
+ CellLabel->
+  "Out[506]=",ExpressionUUID->"c98cb84c-f3a8-4efe-8fa6-df66444e3235"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IndependencePolynomial", "[", 
+  RowBox[{"PetersenGraph", "[", 
+   RowBox[{"10", ",", "12"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8978359159810243`*^9, 3.897835940158489*^9}},
+ CellLabel->
+  "In[507]:=",ExpressionUUID->"962990cd-6936-4b22-b201-2b5c43fc4a7a"],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  RowBox[{"20", " ", "\[FormalX]"}], "+", 
+  RowBox[{"160", " ", 
+   SuperscriptBox["\[FormalX]", "2"]}], "+", 
+  RowBox[{"660", " ", 
+   SuperscriptBox["\[FormalX]", "3"]}], "+", 
+  RowBox[{"1510", " ", 
+   SuperscriptBox["\[FormalX]", "4"]}], "+", 
+  RowBox[{"1912", " ", 
+   SuperscriptBox["\[FormalX]", "5"]}], "+", 
+  RowBox[{"1240", " ", 
+   SuperscriptBox["\[FormalX]", "6"]}], "+", 
+  RowBox[{"320", " ", 
+   SuperscriptBox["\[FormalX]", "7"]}], "+", 
+  RowBox[{"5", " ", 
+   SuperscriptBox["\[FormalX]", "8"]}]}]], "Output",
+ CellChangeTimes->{3.897835940594488*^9},
+ CellLabel->
+  "Out[507]=",ExpressionUUID->"1890fec4-b1c7-415d-a800-86af6ff27633"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "CoboundaryPolynomial"}]], "Input",
+ CellChangeTimes->{{3.8978370157595067`*^9, 3.897837020564398*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"74886dfb-2841-48ab-85f1-8b1d7bc2862a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"CoboundaryPolynomial[graph] returns the coboundary \
+polynomial of \
+graph.\\nCoboundaryPolynomial[graph,{indeterminate1,indeterminate2}] returns \
+the bivariate coboundary polynomial of graph with the indeterminates \
+indeterminatei.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"CoboundaryPolynomial", "[", 
+                    RowBox[{
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`graph_", "?", 
+                    "GraphQ"}], ",", 
+                    RowBox[{"Optional", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`firstIndeterminate_\
+", ",", "PeterBurbery`UndirectedGraphs`Private`secondIndeterminate_"}], "}"}],
+                     ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\[FormalQ]", ",", "\[FormalT]"}], "}"}]}], 
+                    "]"}]}], "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`tuttePolynomial", 
+                    ",", "PeterBurbery`UndirectedGraphs`Private`vertexCount", 
+                    ",", "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponents", ",", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponentsCount"}], "}"}], ",", 
+                    RowBox[{
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`tuttePolynomial", 
+                    "=", 
+                    RowBox[{"TuttePolynomial", "[", 
+                    
+                    RowBox[{"PeterBurbery`UndirectedGraphs`Private`graph", 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox[
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+firstIndeterminate", "+", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+secondIndeterminate", "-", "1"}], 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+secondIndeterminate", "-", "1"}]], ",", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+secondIndeterminate"}], "}"}]}], "]"}]}], ";", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponents", "=", 
+                    
+                    RowBox[{"ConnectedGraphComponents", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`graph", "]"}]}], 
+                    ";", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponentsCount", "=", 
+                    
+                    RowBox[{"Length", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponents", "]"}]}], ";", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`vertexCount", "=", 
+                    
+                    RowBox[{"VertexCount", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`graph", "]"}]}], 
+                    ";", 
+                    RowBox[{"Simplify", "[", 
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+secondIndeterminate", "-", "1"}], ")"}], 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`vertexCount", "-", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponentsCount"}]], " ", 
+                    "PeterBurbery`UndirectedGraphs`Private`tuttePolynomial"}],
+                     "]"}]}]}], "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], \
+"\<\"PeterBurbery`UndirectedGraphs`CoboundaryPolynomial\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"CoboundaryPolynomial[graph] returns the coboundary \
+polynomial of \
+graph.\\nCoboundaryPolynomial[graph,{indeterminate1,indeterminate2}] returns \
+the bivariate coboundary polynomial of graph with the indeterminates \
+indeterminatei.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "CoboundaryPolynomial[graph] returns the coboundary polynomial of graph.\n\
+CoboundaryPolynomial[graph,{indeterminate1,indeterminate2}] returns the \
+bivariate coboundary polynomial of graph with the indeterminates \
+indeterminatei.", "Documentation" -> None, "OwnValues" -> None, "UpValues" -> 
+    None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, PeterBurbery`UndirectedGraphs`CoboundaryPolynomial, {
+      PeterBurbery`UndirectedGraphs`CoboundaryPolynomial[
+         PatternTest[
+          Pattern[PeterBurbery`UndirectedGraphs`Private`graph, 
+           Blank[]], GraphQ], 
+         Optional[{
+           Pattern[PeterBurbery`UndirectedGraphs`Private`firstIndeterminate, 
+            Blank[]], 
+           Pattern[PeterBurbery`UndirectedGraphs`Private`secondIndeterminate, 
+            Blank[]]}, {\[FormalQ], \[FormalT]}]] :> 
+       Module[{PeterBurbery`UndirectedGraphs`Private`tuttePolynomial, 
+          PeterBurbery`UndirectedGraphs`Private`vertexCount, 
+          PeterBurbery`UndirectedGraphs`Private`connectedComponents, 
+          PeterBurbery`UndirectedGraphs`Private`connectedComponentsCount}, 
+         PeterBurbery`UndirectedGraphs`Private`tuttePolynomial = 
+          TuttePolynomial[
+           PeterBurbery`UndirectedGraphs`Private`graph, {(
+              PeterBurbery`UndirectedGraphs`Private`firstIndeterminate + 
+              PeterBurbery`UndirectedGraphs`Private`secondIndeterminate - 1)/(
+             PeterBurbery`UndirectedGraphs`Private`secondIndeterminate - 1), 
+             PeterBurbery`UndirectedGraphs`Private`secondIndeterminate}]; 
+         PeterBurbery`UndirectedGraphs`Private`connectedComponents = 
+          ConnectedGraphComponents[
+           PeterBurbery`UndirectedGraphs`Private`graph]; 
+         PeterBurbery`UndirectedGraphs`Private`connectedComponentsCount = 
+          Length[PeterBurbery`UndirectedGraphs`Private`connectedComponents]; 
+         PeterBurbery`UndirectedGraphs`Private`vertexCount = 
+          VertexCount[PeterBurbery`UndirectedGraphs`Private`graph]; 
+         Simplify[(PeterBurbery`UndirectedGraphs`Private`secondIndeterminate - 
+             1)^(PeterBurbery`UndirectedGraphs`Private`vertexCount - 
+             PeterBurbery`UndirectedGraphs`Private`connectedComponentsCount) 
+           PeterBurbery`UndirectedGraphs`Private`tuttePolynomial]]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "PeterBurbery`UndirectedGraphs`CoboundaryPolynomial"|>, False]]], "Output",
+ CellChangeTimes->{3.897837021039503*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"cec24e47-8a3d-49e5-b279-1ff1f0f150f0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", 
+  "PeterBurbery`UndirectedGraphs`IndependencePolynomial"}]], "Input",
+ CellChangeTimes->{{3.8978360025209937`*^9, 3.8978360058072047`*^9}, {
+  3.89783612736652*^9, 3.897836144841358*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"07961401-70b3-46a8-97d2-d9226d7e20d1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"IndependencePolynomial[g] computes the independence \
+polynomial of graph.\\nIndependencePolynomial[g, indeterminate] computes the \
+independence polynomial of graph with indeterminate.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"IndependencePolynomial", "[", 
+                    RowBox[{
+                    RowBox[{
+                    
+                    RowBox[{"PeterBurbery`UndirectedGraphs`Private`graph_", 
+                    "?", "GraphQ"}], "/;", 
+                    RowBox[{"Quiet", "[", 
+                    RowBox[{
+                    RowBox[{"MatchQ", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"ToEntity", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`graph", "]"}], ",",
+                     "_Entity"}], "]"}], ",", 
+                    StyleBox[
+                    RowBox[{"ToEntity", "::", "noentp"}], "MessageName"]}], 
+                    "]"}]}], ",", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`indeterminate_", 
+                    ":", "\[FormalX]"}]}], "]"}], ":=", 
+                    RowBox[{
+                    RowBox[{"GraphData", "[", 
+                    RowBox[{
+                    RowBox[{"CanonicalName", "[", 
+                    
+                    RowBox[{"ToEntity", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`graph", "]"}], 
+                    "]"}], ",", "\"IndependencePolynomial\""}], "]"}], "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`indeterminate", 
+                    "]"}]}]}, {" "}, {
+                    RowBox[{
+                    RowBox[{"IndependencePolynomial", "[", 
+                    RowBox[{
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`graph_", "?", 
+                    "GraphQ"}], ",", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`indeterminate_", 
+                    ":", "\[FormalX]"}]}], "]"}], ":=", 
+                    RowBox[{"Total", "[", 
+                    RowBox[{"KeyValueMap", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox[
+                    "PeterBurbery`UndirectedGraphs`Private`indeterminate", 
+                    "#1"], " ", 
+                    RowBox[{"Length", "[", "#2", "]"}]}], "&"}], ",", 
+                    RowBox[{
+                    RowBox[{"GroupBy", "[", "Length", "]"}], "[", 
+                    RowBox[{
+                    RowBox[{"Select", "[", 
+                    RowBox[{
+                    RowBox[{"IndependentVertexSetQ", "[", 
+                    
+                    RowBox[{"PeterBurbery`UndirectedGraphs`Private`graph", 
+                    ",", "#1"}], "]"}], "&"}], "]"}], "[", 
+                    RowBox[{"Subsets", "[", 
+                    
+                    RowBox[{"VertexList", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`graph", "]"}], 
+                    "]"}], "]"}], "]"}]}], "]"}], "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], \
+"\<\"PeterBurbery`UndirectedGraphs`IndependencePolynomial\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"IndependencePolynomial[g] computes the independence \
+polynomial of graph.\\nIndependencePolynomial[g, indeterminate] computes the \
+independence polynomial of graph with indeterminate.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "IndependencePolynomial[g] computes the independence polynomial of graph.\
+\nIndependencePolynomial[g, indeterminate] computes the independence \
+polynomial of graph with indeterminate.", "Documentation" -> None, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, PeterBurbery`UndirectedGraphs`IndependencePolynomial, {
+      PeterBurbery`UndirectedGraphs`IndependencePolynomial[
+         Condition[
+          PatternTest[
+           Pattern[PeterBurbery`UndirectedGraphs`Private`graph, 
+            Blank[]], GraphQ], 
+          Quiet[
+           MatchQ[
+            ToEntity[PeterBurbery`UndirectedGraphs`Private`graph], 
+            Blank[Entity]], 
+           MessageName[ToEntity, "noentp"]]], 
+         Optional[
+          Pattern[PeterBurbery`UndirectedGraphs`Private`indeterminate, 
+           Blank[]], \[FormalX]]] :> GraphData[
+         CanonicalName[
+          ToEntity[PeterBurbery`UndirectedGraphs`Private`graph]], 
+         "IndependencePolynomial"][
+        PeterBurbery`UndirectedGraphs`Private`indeterminate], 
+       PeterBurbery`UndirectedGraphs`IndependencePolynomial[
+         PatternTest[
+          Pattern[PeterBurbery`UndirectedGraphs`Private`graph, 
+           Blank[]], GraphQ], 
+         Optional[
+          Pattern[PeterBurbery`UndirectedGraphs`Private`indeterminate, 
+           Blank[]], \[FormalX]]] :> Total[
+         KeyValueMap[
+         PeterBurbery`UndirectedGraphs`Private`indeterminate^# Length[#2]& , 
+          GroupBy[Length][
+           Select[
+           IndependentVertexSetQ[
+            PeterBurbery`UndirectedGraphs`Private`graph, #]& ][
+            Subsets[
+             VertexList[PeterBurbery`UndirectedGraphs`Private`graph]]]]]]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "PeterBurbery`UndirectedGraphs`IndependencePolynomial"|>, 
+   True]]], "Output",
+ CellChangeTimes->{{3.897836006257202*^9, 3.8978360234887247`*^9}, {
+   3.89783606677693*^9, 3.8978360945235443`*^9}, {3.8978361283939004`*^9, 
+   3.8978361579535155`*^9}, {3.8978361924114904`*^9, 3.8978361985136967`*^9}, 
+   3.897836913688572*^9, {3.897836948102193*^9, 3.897836975234758*^9}, 
+   3.8978370512796717`*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"09a1727b-58d5-4e84-92d1-4ee49ee3792e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Do", "[", 
   RowBox[{
@@ -34,8 +843,1150 @@ Graphs\\\\Kernel\>\""}], "]"}]}], ";"}], ",",
      RowBox[{"Get", "::", "noopen"}]}], "]"}], ",", "4"}], "]"}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.8977612224879866`*^9, 3.897761222490975*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"012f0977-11ca-456a-8350-e1208854b29c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "AlternatingTreeGraph", "shdw", 
+   "\"Symbol \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"AlternatingTreeGraph\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"PeterBurbery`UndirectedGraphs`\\\\\\\"\\\", \\\",\\\", \\\
+\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"PeterBurbery`UndirectedGraphs`\\\\\\\"\\\"}]\\) \
+may shadow or be shadowed by other definitions.\"", 2, 1, 1, 
+   34154715513992585659, "Local", 
+   "PeterBurbery`UndirectedGraphs`AlternatingTreeGraph"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.897837541303009*^9},
  CellLabel->
-  "In[286]:=",ExpressionUUID->"012f0977-11ca-456a-8350-e1208854b29c"],
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"4e81752e-96fa-4789-8032-8691d3afdea7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "CoboundaryPolynomial"}]], "Input",
+ CellChangeTimes->{{3.897830393091735*^9, 3.8978303980917425`*^9}},
+ CellLabel->
+  "In[342]:=",ExpressionUUID->"726ac5cd-54d1-478b-9eb7-d90e6983de08"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"CoboundaryPolynomial[graph] returns the coboundary \
+polynomial of graph. \
+CoboundaryPolynomial[graph,{indeterminate1,indeterminate2}] returns the \
+bivariate coboundary polynomial of graph with the indeterminates \
+indeterminatei.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"CoboundaryPolynomial", "[", 
+                    RowBox[{
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`graph_", "?", 
+                    "GraphQ"}], ",", 
+                    RowBox[{"Optional", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`firstIndeterminate_\
+", ",", "PeterBurbery`UndirectedGraphs`Private`secondIndeterminate_"}], "}"}],
+                     ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\[FormalQ]", ",", "\[FormalT]"}], "}"}]}], 
+                    "]"}]}], "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`tuttePolynomial", 
+                    ",", "PeterBurbery`UndirectedGraphs`Private`vertexCount", 
+                    ",", "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponents", ",", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponentsCount"}], "}"}], ",", 
+                    RowBox[{
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`tuttePolynomial", 
+                    "=", 
+                    RowBox[{"TuttePolynomial", "[", 
+                    
+                    RowBox[{"PeterBurbery`UndirectedGraphs`Private`graph", 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox[
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+firstIndeterminate", "+", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+secondIndeterminate", "-", "1"}], 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+secondIndeterminate", "-", "1"}]], ",", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+secondIndeterminate"}], "}"}]}], "]"}]}], ";", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponents", "=", 
+                    
+                    RowBox[{"ConnectedGraphComponents", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`graph", "]"}]}], 
+                    ";", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponentsCount", "=", 
+                    
+                    RowBox[{"Length", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponents", "]"}]}], ";", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`vertexCount", "=", 
+                    
+                    RowBox[{"VertexCount", "[", 
+                    "PeterBurbery`UndirectedGraphs`Private`graph", "]"}]}], 
+                    ";", 
+                    RowBox[{"Simplify", "[", 
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`\
+secondIndeterminate", "-", "1"}], ")"}], 
+                    
+                    RowBox[{
+                    "PeterBurbery`UndirectedGraphs`Private`vertexCount", "-", 
+                    "PeterBurbery`UndirectedGraphs`Private`\
+connectedComponentsCount"}]], " ", 
+                    "PeterBurbery`UndirectedGraphs`Private`tuttePolynomial"}],
+                     "]"}]}]}], "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], \
+"\<\"PeterBurbery`UndirectedGraphs`CoboundaryPolynomial\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"CoboundaryPolynomial[graph] returns the coboundary \
+polynomial of graph. \
+CoboundaryPolynomial[graph,{indeterminate1,indeterminate2}] returns the \
+bivariate coboundary polynomial of graph with the indeterminates \
+indeterminatei.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "CoboundaryPolynomial[graph] returns the coboundary polynomial of graph. \
+CoboundaryPolynomial[graph,{indeterminate1,indeterminate2}] returns the \
+bivariate coboundary polynomial of graph with the indeterminates \
+indeterminatei.", "Documentation" -> None, "OwnValues" -> None, "UpValues" -> 
+    None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, PeterBurbery`UndirectedGraphs`CoboundaryPolynomial, {
+      PeterBurbery`UndirectedGraphs`CoboundaryPolynomial[
+         PatternTest[
+          Pattern[PeterBurbery`UndirectedGraphs`Private`graph, 
+           Blank[]], GraphQ], 
+         Optional[{
+           Pattern[PeterBurbery`UndirectedGraphs`Private`firstIndeterminate, 
+            Blank[]], 
+           Pattern[PeterBurbery`UndirectedGraphs`Private`secondIndeterminate, 
+            Blank[]]}, {\[FormalQ], \[FormalT]}]] :> 
+       Module[{PeterBurbery`UndirectedGraphs`Private`tuttePolynomial, 
+          PeterBurbery`UndirectedGraphs`Private`vertexCount, 
+          PeterBurbery`UndirectedGraphs`Private`connectedComponents, 
+          PeterBurbery`UndirectedGraphs`Private`connectedComponentsCount}, 
+         PeterBurbery`UndirectedGraphs`Private`tuttePolynomial = 
+          TuttePolynomial[
+           PeterBurbery`UndirectedGraphs`Private`graph, {(
+              PeterBurbery`UndirectedGraphs`Private`firstIndeterminate + 
+              PeterBurbery`UndirectedGraphs`Private`secondIndeterminate - 1)/(
+             PeterBurbery`UndirectedGraphs`Private`secondIndeterminate - 1), 
+             PeterBurbery`UndirectedGraphs`Private`secondIndeterminate}]; 
+         PeterBurbery`UndirectedGraphs`Private`connectedComponents = 
+          ConnectedGraphComponents[
+           PeterBurbery`UndirectedGraphs`Private`graph]; 
+         PeterBurbery`UndirectedGraphs`Private`connectedComponentsCount = 
+          Length[PeterBurbery`UndirectedGraphs`Private`connectedComponents]; 
+         PeterBurbery`UndirectedGraphs`Private`vertexCount = 
+          VertexCount[PeterBurbery`UndirectedGraphs`Private`graph]; 
+         Simplify[(PeterBurbery`UndirectedGraphs`Private`secondIndeterminate - 
+             1)^(PeterBurbery`UndirectedGraphs`Private`vertexCount - 
+             PeterBurbery`UndirectedGraphs`Private`connectedComponentsCount) 
+           PeterBurbery`UndirectedGraphs`Private`tuttePolynomial]]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "PeterBurbery`UndirectedGraphs`CoboundaryPolynomial"|>, False]]], "Output",
+ CellChangeTimes->{3.897830398562778*^9},
+ CellLabel->
+  "Out[342]=",ExpressionUUID->"d8be2e93-80cf-4ae7-b315-f888a3f35195"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CoboundaryPolynomial", "[", 
+  RowBox[{"PetersenGraph", "[", "]"}], "]"}]], "Input",
+ CellLabel->
+  "In[314]:=",ExpressionUUID->"26d0b84a-059f-4912-a64e-562438051191"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[FormalQ]", "9"], "+", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "8"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}]}], "+", 
+  RowBox[{"105", " ", 
+   SuperscriptBox["\[FormalQ]", "7"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}], "2"]}], "+", 
+  RowBox[{"455", " ", 
+   SuperscriptBox["\[FormalQ]", "6"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}], "3"]}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}], "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{"451", "+", 
+     RowBox[{"4", " ", "\[FormalT]"}]}], ")"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}], "5"], " ", 
+   RowBox[{"(", 
+    RowBox[{"2861", "+", 
+     RowBox[{"130", " ", "\[FormalT]"}]}], ")"}]}], "+", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}], "6"], " ", 
+   RowBox[{"(", 
+    RowBox[{"285", "+", 
+     RowBox[{"38", " ", "\[FormalT]"}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["\[FormalT]", "2"]}]}], ")"}]}], "+", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}], "7"], " ", 
+   RowBox[{"(", 
+    RowBox[{"287", "+", 
+     RowBox[{"86", " ", "\[FormalT]"}], "+", 
+     RowBox[{"13", " ", 
+      SuperscriptBox["\[FormalT]", "2"]}], "+", 
+     SuperscriptBox["\[FormalT]", "3"]}], ")"}]}], "+", 
+  RowBox[{"\[FormalQ]", " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}], "8"], " ", 
+   RowBox[{"(", 
+    RowBox[{"2606", "+", 
+     RowBox[{"1498", " ", "\[FormalT]"}], "+", 
+     RowBox[{"471", " ", 
+      SuperscriptBox["\[FormalT]", "2"]}], "+", 
+     RowBox[{"95", " ", 
+      SuperscriptBox["\[FormalT]", "3"]}], "+", 
+     RowBox[{"10", " ", 
+      SuperscriptBox["\[FormalT]", "4"]}]}], ")"}]}], "+", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[FormalT]"}], ")"}], "9"], " ", 
+   RowBox[{"(", 
+    RowBox[{"704", "+", 
+     RowBox[{"696", " ", "\[FormalT]"}], "+", 
+     RowBox[{"390", " ", 
+      SuperscriptBox["\[FormalT]", "2"]}], "+", 
+     RowBox[{"155", " ", 
+      SuperscriptBox["\[FormalT]", "3"]}], "+", 
+     RowBox[{"45", " ", 
+      SuperscriptBox["\[FormalT]", "4"]}], "+", 
+     RowBox[{"9", " ", 
+      SuperscriptBox["\[FormalT]", "5"]}], "+", 
+     SuperscriptBox["\[FormalT]", "6"]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.8978281083242264`*^9},
+ CellLabel->
+  "Out[314]=",ExpressionUUID->"9b97c809-271e-4198-84fe-829365146d2e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "@", 
+  RowBox[{"CoboundaryPolynomial", "[", 
+   RowBox[{"PetersenGraph", "[", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8978280136542606`*^9, 3.8978280225285416`*^9}, {
+  3.8978280764329157`*^9, 3.8978280778465033`*^9}},
+ CellLabel->
+  "In[311]:=",ExpressionUUID->"878074f4-8b3c-4a9a-93ee-bec0e86681d6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "704"}], "+", 
+  RowBox[{"2606", " ", "\[FormalQ]"}], "-", 
+  RowBox[{"4305", " ", 
+   SuperscriptBox["\[FormalQ]", "2"]}], "+", 
+  RowBox[{"4275", " ", 
+   SuperscriptBox["\[FormalQ]", "3"]}], "-", 
+  RowBox[{"2861", " ", 
+   SuperscriptBox["\[FormalQ]", "4"]}], "+", 
+  RowBox[{"1353", " ", 
+   SuperscriptBox["\[FormalQ]", "5"]}], "-", 
+  RowBox[{"455", " ", 
+   SuperscriptBox["\[FormalQ]", "6"]}], "+", 
+  RowBox[{"105", " ", 
+   SuperscriptBox["\[FormalQ]", "7"]}], "-", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "8"]}], "+", 
+  SuperscriptBox["\[FormalQ]", "9"], "+", 
+  RowBox[{"5640", " ", "\[FormalT]"}], "-", 
+  RowBox[{"19350", " ", "\[FormalQ]", " ", "\[FormalT]"}], "+", 
+  RowBox[{"28845", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", "\[FormalT]"}], "-", 
+  RowBox[{"25080", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", "\[FormalT]"}], "+", 
+  RowBox[{"14175", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", "\[FormalT]"}], "-", 
+  RowBox[{"5400", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", "\[FormalT]"}], "+", 
+  RowBox[{"1365", " ", 
+   SuperscriptBox["\[FormalQ]", "6"], " ", "\[FormalT]"}], "-", 
+  RowBox[{"210", " ", 
+   SuperscriptBox["\[FormalQ]", "7"], " ", "\[FormalT]"}], "+", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "8"], " ", "\[FormalT]"}], "-", 
+  RowBox[{"19470", " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"61455", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "-", 
+  RowBox[{"81570", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"60735", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "-", 
+  RowBox[{"27960", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"8070", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "-", 
+  RowBox[{"1365", " ", 
+   SuperscriptBox["\[FormalQ]", "6"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"105", " ", 
+   SuperscriptBox["\[FormalQ]", "7"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"37435", " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "-", 
+  RowBox[{"107665", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "+", 
+  RowBox[{"124935", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "-", 
+  RowBox[{"77130", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "+", 
+  RowBox[{"27310", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "-", 
+  RowBox[{"5340", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "+", 
+  RowBox[{"455", " ", 
+   SuperscriptBox["\[FormalQ]", "6"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "-", 
+  RowBox[{"42930", " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "+", 
+  RowBox[{"110970", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "-", 
+  RowBox[{"109515", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "+", 
+  RowBox[{"53175", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "-", 
+  RowBox[{"13005", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "+", 
+  RowBox[{"1305", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "+", 
+  RowBox[{"28584", " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "-", 
+  RowBox[{"64872", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "+", 
+  RowBox[{"51765", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "-", 
+  RowBox[{"17700", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "+", 
+  RowBox[{"2211", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "+", 
+  RowBox[{"12", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "-", 
+  RowBox[{"9100", " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "+", 
+  RowBox[{"17010", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "-", 
+  RowBox[{"9345", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "+", 
+  RowBox[{"1305", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "+", 
+  RowBox[{"130", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "-", 
+  RowBox[{"45", " ", 
+   SuperscriptBox["\[FormalT]", "7"]}], "+", 
+  RowBox[{"810", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "7"]}], "-", 
+  RowBox[{"1155", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "7"]}], "+", 
+  RowBox[{"390", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "7"]}], "+", 
+  RowBox[{"540", " ", 
+   SuperscriptBox["\[FormalT]", "8"]}], "-", 
+  RowBox[{"810", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "8"]}], "+", 
+  RowBox[{"240", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "8"]}], "+", 
+  RowBox[{"30", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "8"]}], "+", 
+  RowBox[{"80", " ", 
+   SuperscriptBox["\[FormalT]", "9"]}], "-", 
+  RowBox[{"170", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "9"]}], "+", 
+  RowBox[{"90", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "9"]}], "-", 
+  RowBox[{"6", " ", 
+   SuperscriptBox["\[FormalT]", "10"]}], "-", 
+  RowBox[{"9", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "10"]}], "+", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "10"]}], "-", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalT]", "11"]}], "+", 
+  RowBox[{"15", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "11"]}], "-", 
+  RowBox[{"10", " ", 
+   SuperscriptBox["\[FormalT]", "12"]}], "+", 
+  RowBox[{"10", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "12"]}], "+", 
+  SuperscriptBox["\[FormalT]", "15"]}]], "Output",
+ CellChangeTimes->{3.8978280230131445`*^9, 3.897828078025469*^9},
+ CellLabel->
+  "Out[311]=",ExpressionUUID->"1909c8f4-ea23-40da-b72b-bcdf4331ae4b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GraphData", "[", 
+   RowBox[{"\"\<PetersenGraph\>\"", ",", "\"\<CoboundaryPolynomial\>\""}], 
+   "]"}], "[", 
+  RowBox[{"\[FormalQ]", ",", "\[FormalT]"}], "]"}]], "Input",
+ CellLabel->
+  "In[310]:=",ExpressionUUID->"2e4b3607-fe6d-44a8-a63f-5e3eca50150a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "704"}], "+", 
+  RowBox[{"2606", " ", "\[FormalQ]"}], "-", 
+  RowBox[{"4305", " ", 
+   SuperscriptBox["\[FormalQ]", "2"]}], "+", 
+  RowBox[{"4275", " ", 
+   SuperscriptBox["\[FormalQ]", "3"]}], "-", 
+  RowBox[{"2861", " ", 
+   SuperscriptBox["\[FormalQ]", "4"]}], "+", 
+  RowBox[{"1353", " ", 
+   SuperscriptBox["\[FormalQ]", "5"]}], "-", 
+  RowBox[{"455", " ", 
+   SuperscriptBox["\[FormalQ]", "6"]}], "+", 
+  RowBox[{"105", " ", 
+   SuperscriptBox["\[FormalQ]", "7"]}], "-", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "8"]}], "+", 
+  SuperscriptBox["\[FormalQ]", "9"], "+", 
+  RowBox[{"5640", " ", "\[FormalT]"}], "-", 
+  RowBox[{"19350", " ", "\[FormalQ]", " ", "\[FormalT]"}], "+", 
+  RowBox[{"28845", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", "\[FormalT]"}], "-", 
+  RowBox[{"25080", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", "\[FormalT]"}], "+", 
+  RowBox[{"14175", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", "\[FormalT]"}], "-", 
+  RowBox[{"5400", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", "\[FormalT]"}], "+", 
+  RowBox[{"1365", " ", 
+   SuperscriptBox["\[FormalQ]", "6"], " ", "\[FormalT]"}], "-", 
+  RowBox[{"210", " ", 
+   SuperscriptBox["\[FormalQ]", "7"], " ", "\[FormalT]"}], "+", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "8"], " ", "\[FormalT]"}], "-", 
+  RowBox[{"19470", " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"61455", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "-", 
+  RowBox[{"81570", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"60735", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "-", 
+  RowBox[{"27960", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"8070", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "-", 
+  RowBox[{"1365", " ", 
+   SuperscriptBox["\[FormalQ]", "6"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"105", " ", 
+   SuperscriptBox["\[FormalQ]", "7"], " ", 
+   SuperscriptBox["\[FormalT]", "2"]}], "+", 
+  RowBox[{"37435", " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "-", 
+  RowBox[{"107665", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "+", 
+  RowBox[{"124935", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "-", 
+  RowBox[{"77130", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "+", 
+  RowBox[{"27310", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "-", 
+  RowBox[{"5340", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "+", 
+  RowBox[{"455", " ", 
+   SuperscriptBox["\[FormalQ]", "6"], " ", 
+   SuperscriptBox["\[FormalT]", "3"]}], "-", 
+  RowBox[{"42930", " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "+", 
+  RowBox[{"110970", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "-", 
+  RowBox[{"109515", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "+", 
+  RowBox[{"53175", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "-", 
+  RowBox[{"13005", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "+", 
+  RowBox[{"1305", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox["\[FormalT]", "4"]}], "+", 
+  RowBox[{"28584", " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "-", 
+  RowBox[{"64872", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "+", 
+  RowBox[{"51765", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "-", 
+  RowBox[{"17700", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "+", 
+  RowBox[{"2211", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "+", 
+  RowBox[{"12", " ", 
+   SuperscriptBox["\[FormalQ]", "5"], " ", 
+   SuperscriptBox["\[FormalT]", "5"]}], "-", 
+  RowBox[{"9100", " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "+", 
+  RowBox[{"17010", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "-", 
+  RowBox[{"9345", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "+", 
+  RowBox[{"1305", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "+", 
+  RowBox[{"130", " ", 
+   SuperscriptBox["\[FormalQ]", "4"], " ", 
+   SuperscriptBox["\[FormalT]", "6"]}], "-", 
+  RowBox[{"45", " ", 
+   SuperscriptBox["\[FormalT]", "7"]}], "+", 
+  RowBox[{"810", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "7"]}], "-", 
+  RowBox[{"1155", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "7"]}], "+", 
+  RowBox[{"390", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "7"]}], "+", 
+  RowBox[{"540", " ", 
+   SuperscriptBox["\[FormalT]", "8"]}], "-", 
+  RowBox[{"810", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "8"]}], "+", 
+  RowBox[{"240", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "8"]}], "+", 
+  RowBox[{"30", " ", 
+   SuperscriptBox["\[FormalQ]", "3"], " ", 
+   SuperscriptBox["\[FormalT]", "8"]}], "+", 
+  RowBox[{"80", " ", 
+   SuperscriptBox["\[FormalT]", "9"]}], "-", 
+  RowBox[{"170", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "9"]}], "+", 
+  RowBox[{"90", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "9"]}], "-", 
+  RowBox[{"6", " ", 
+   SuperscriptBox["\[FormalT]", "10"]}], "-", 
+  RowBox[{"9", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "10"]}], "+", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalQ]", "2"], " ", 
+   SuperscriptBox["\[FormalT]", "10"]}], "-", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["\[FormalT]", "11"]}], "+", 
+  RowBox[{"15", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "11"]}], "-", 
+  RowBox[{"10", " ", 
+   SuperscriptBox["\[FormalT]", "12"]}], "+", 
+  RowBox[{"10", " ", "\[FormalQ]", " ", 
+   SuperscriptBox["\[FormalT]", "12"]}], "+", 
+  SuperscriptBox["\[FormalT]", "15"]}]], "Output",
+ CellChangeTimes->{3.897828063561372*^9},
+ CellLabel->
+  "Out[310]=",ExpressionUUID->"c927d637-de57-4dd7-95da-9e0451d01ede"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CodeEquivalentQ", "[", 
+  RowBox[{
+   RowBox[{"Expand", "@", 
+    RowBox[{"CoboundaryPolynomial", "[", 
+     RowBox[{"PetersenGraph", "[", "]"}], "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"GraphData", "[", 
+     RowBox[{"\"\<PetersenGraph\>\"", ",", "\"\<CoboundaryPolynomial\>\""}], 
+     "]"}], "[", 
+    RowBox[{"\[FormalQ]", ",", "\[FormalT]"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8978280337269697`*^9, 3.8978280512653437`*^9}, {
+  3.8978280918687844`*^9, 3.8978280969100904`*^9}},
+ CellLabel->
+  "In[313]:=",ExpressionUUID->"16c0dc19-f452-4067-997b-243c48803f82"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.8978280531415887`*^9, 3.8978280979902925`*^9},
+ CellLabel->
+  "Out[313]=",ExpressionUUID->"bc5b2f24-ee6e-44b5-90e3-4149fcd0f502"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ResistanceMatrix", "[", 
+  RowBox[{"PetersenGraph", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.897827942589837*^9, 3.8978279477153997`*^9}},
+ CellLabel->
+  "In[299]:=",ExpressionUUID->"1dad777a-b0d1-4cb1-83d6-5ef94f7a02c2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["SparseArray",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[
+             RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDggmIQe2e3gevOLS/sb7gvX1cz7a39yYjcf/Ff39tTS1xq
+/wevSc9v2ju6ObQqezy3v6BlvPRrOG5xaplvVb47bpbSOfs5xou2mP+4Yv9i
+keLjwFWvaO4vWpuPy1+0Ds9Rf41Mf+ESH2z+olY5Q+tyg1ruH+r+opZ6Uv01
+VPIdtfxF6/Af9Rd+cQBOfC3Z
+              "], {{0, 0}, {10, 10}}, {0, 1}], AspectRatio -> 1, Axes -> 
+             False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+             Directive[
+               Opacity[0.5], 
+               Thickness[Tiny], 
+               RGBColor[0.368417, 0.506779, 0.709798]], 
+             FrameTicks -> {{None, None}, {None, None}}, GridLinesStyle -> 
+             Directive[
+               GrayLevel[0.5, 0.4]], ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], 
+             Method -> {
+              "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+               "DefaultBoundaryStyle" -> Automatic, 
+               "DefaultGraphicsInteraction" -> {
+                "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+                 "Effects" -> {
+                  "Highlight" -> {"ratio" -> 2}, 
+                   "HighlightPoint" -> {"ratio" -> 2}, 
+                   "Droplines" -> {
+                    "freeformCursorMode" -> True, 
+                    "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+               "DefaultPlotStyle" -> Automatic, "DomainPadding" -> 
+               Scaled[0.02], "RangePadding" -> Scaled[0.05]}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Specified elements: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["90", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Dimensions: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{"{", 
+                    RowBox[{"10", ",", "10"}], "}"}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[
+             RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDggmIQe2e3gevOLS/sb7gvX1cz7a39yYjcf/Ff39tTS1xq
+/wevSc9v2ju6ObQqezy3v6BlvPRrOG5xaplvVb47bpbSOfs5xou2mP+4Yv9i
+keLjwFWvaO4vWpuPy1+0Ds9Rf41Mf+ESH2z+olY5Q+tyg1ruH+r+opZ6Uv01
+VPIdtfxF6/Af9Rd+cQBOfC3Z
+              "], {{0, 0}, {10, 10}}, {0, 1}], AspectRatio -> 1, Axes -> 
+             False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+             Directive[
+               Opacity[0.5], 
+               Thickness[Tiny], 
+               RGBColor[0.368417, 0.506779, 0.709798]], 
+             FrameTicks -> {{None, None}, {None, None}}, GridLinesStyle -> 
+             Directive[
+               GrayLevel[0.5, 0.4]], ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], 
+             Method -> {
+              "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+               "DefaultBoundaryStyle" -> Automatic, 
+               "DefaultGraphicsInteraction" -> {
+                "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+                 "Effects" -> {
+                  "Highlight" -> {"ratio" -> 2}, 
+                   "HighlightPoint" -> {"ratio" -> 2}, 
+                   "Droplines" -> {
+                    "freeformCursorMode" -> True, 
+                    "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+               "DefaultPlotStyle" -> Automatic, "DomainPadding" -> 
+               Scaled[0.02], "RangePadding" -> Scaled[0.05]}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Specified elements: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["90", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Dimensions: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{"{", 
+                    RowBox[{"10", ",", "10"}], "}"}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Default: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Density: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0.9`", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Elements:\"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"\"", "SummaryItem"]}]}, {
+               TagBox[
+                TagBox[
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "2"}], "}"}], "\[Rule]", 
+                    StyleBox[
+                    PaneBox[
+                    FractionBox["4", "5"], ContentPadding -> False, 
+                    FrameMargins -> 0, StripOnInput -> True, BaselinePosition -> 
+                    Baseline, ImageSize -> {{1, 300}, Automatic}], 
+                    LineBreakWithin -> False]}]}, {
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "3"}], "}"}], "\[Rule]", 
+                    StyleBox[
+                    PaneBox[
+                    FractionBox["3", "5"], ContentPadding -> False, 
+                    FrameMargins -> 0, StripOnInput -> True, BaselinePosition -> 
+                    Baseline, ImageSize -> {{1, 300}, Automatic}], 
+                    LineBreakWithin -> False]}]}, {
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "4"}], "}"}], "\[Rule]", 
+                    StyleBox[
+                    PaneBox[
+                    FractionBox["3", "5"], ContentPadding -> False, 
+                    FrameMargins -> 0, StripOnInput -> True, BaselinePosition -> 
+                    Baseline, ImageSize -> {{1, 300}, Automatic}], 
+                    LineBreakWithin -> False]}]}, {
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "5"}], "}"}], "\[Rule]", 
+                    StyleBox[
+                    PaneBox[
+                    FractionBox["4", "5"], ContentPadding -> False, 
+                    FrameMargins -> 0, StripOnInput -> True, BaselinePosition -> 
+                    Baseline, ImageSize -> {{1, 300}, Automatic}], 
+                    LineBreakWithin -> False]}]}, {
+                    ItemBox[
+                    "\"\[VerticalEllipsis]\"", Alignment -> Center, 
+                    StripOnInput -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"], "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  SparseArray[
+  Automatic, {10, 10}, 0, {
+   1, {{0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90}, {{2}, {3}, {4}, {5}, {6}, {
+     7}, {8}, {9}, {10}, {1}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {1}, {
+     2}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {1}, {2}, {3}, {5}, {6}, {7}, {
+     8}, {9}, {10}, {1}, {2}, {3}, {4}, {6}, {7}, {8}, {9}, {10}, {1}, {2}, {
+     3}, {4}, {5}, {7}, {8}, {9}, {10}, {1}, {2}, {3}, {4}, {5}, {6}, {8}, {
+     9}, {10}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {9}, {10}, {1}, {2}, {3}, {
+     4}, {5}, {6}, {7}, {8}, {10}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {
+     9}}}, {Rational[4, 5], Rational[3, 5], Rational[3, 5], Rational[4, 5], 
+     Rational[3, 5], Rational[4, 5], Rational[4, 5], Rational[4, 5], Rational[
+     4, 5], Rational[4, 5], Rational[4, 5], Rational[3, 5], Rational[3, 5], 
+     Rational[4, 5], Rational[3, 5], Rational[4, 5], Rational[4, 5], Rational[
+     4, 5], Rational[3, 5], Rational[4, 5], Rational[4, 5], Rational[3, 5], 
+     Rational[4, 5], Rational[4, 5], Rational[3, 5], Rational[4, 5], Rational[
+     4, 5], Rational[3, 5], Rational[3, 5], Rational[4, 5], Rational[4, 5], 
+     Rational[4, 5], Rational[4, 5], Rational[4, 5], Rational[3, 5], Rational[
+     4, 5], Rational[4, 5], Rational[3, 5], Rational[3, 5], Rational[4, 5], 
+     Rational[4, 5], Rational[4, 5], Rational[4, 5], Rational[4, 5], Rational[
+     3, 5], Rational[3, 5], Rational[4, 5], Rational[4, 5], Rational[4, 5], 
+     Rational[4, 5], Rational[3, 5], Rational[4, 5], Rational[4, 5], Rational[
+     3, 5], Rational[4, 5], Rational[3, 5], Rational[4, 5], Rational[4, 5], 
+     Rational[4, 5], Rational[3, 5], Rational[3, 5], Rational[4, 5], Rational[
+     4, 5], Rational[4, 5], Rational[4, 5], Rational[3, 5], Rational[4, 5], 
+     Rational[4, 5], Rational[4, 5], Rational[3, 5], Rational[3, 5], Rational[
+     4, 5], Rational[4, 5], Rational[4, 5], Rational[4, 5], Rational[3, 5], 
+     Rational[4, 5], Rational[4, 5], Rational[4, 5], Rational[3, 5], Rational[
+     3, 5], Rational[4, 5], Rational[4, 5], Rational[4, 5], Rational[4, 5], 
+     Rational[3, 5], Rational[3, 5], Rational[4, 5], Rational[4, 5], Rational[
+     3, 5]}}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.8978279484364424`*^9},
+ CellLabel->
+  "Out[299]=",ExpressionUUID->"99f2f1db-4da3-45bc-a212-ab1d1d1ae4f1"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -4873,9 +6824,8 @@ yDmm316H6Z7QD9PZnYH6HV7O2WwQuMseAIZS44Y=
   "Out[117]=",ExpressionUUID->"5753a3ae-0a19-42dd-bb74-1c433bcf6894"]
 }, Open  ]]
 },
-WindowSize->{1152, 585.6},
-WindowMargins->{{
-  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+WindowSize->{1141.2, 579.6},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"39edba23-f6c3-4d2f-b456-d5e27c5ecd1d"
@@ -4891,140 +6841,184 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 633, 17, 102, "Input",ExpressionUUID->"012f0977-11ca-456a-8350-e1208854b29c",
+Cell[558, 20, 289, 6, 28, "Input",ExpressionUUID->"f6ff2263-e0d5-47b7-9b8d-bd76655588bc"],
+Cell[CellGroupData[{
+Cell[872, 30, 263, 5, 28, "Input",ExpressionUUID->"0dee8097-dec0-419a-a315-eb925b8319cb"],
+Cell[1138, 37, 413, 11, 34, "Output",ExpressionUUID->"c98cb84c-f3a8-4efe-8fa6-df66444e3235"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1588, 53, 292, 6, 28, "Input",ExpressionUUID->"962990cd-6936-4b22-b201-2b5c43fc4a7a"],
+Cell[1883, 61, 692, 19, 34, "Output",ExpressionUUID->"1890fec4-b1c7-415d-a800-86af6ff27633"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2612, 85, 210, 3, 28, "Input",ExpressionUUID->"74886dfb-2841-48ab-85f1-8b1d7bc2862a"],
+Cell[2825, 90, 15813, 372, 117, "Output",ExpressionUUID->"cec24e47-8a3d-49e5-b279-1ff1f0f150f0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18675, 467, 296, 5, 28, "Input",ExpressionUUID->"07961401-70b3-46a8-97d2-d9226d7e20d1"],
+Cell[18974, 474, 14589, 350, 471, "Output",ExpressionUUID->"09a1727b-58d5-4e84-92d1-4ee49ee3792e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33600, 829, 628, 16, 102, "Input",ExpressionUUID->"012f0977-11ca-456a-8350-e1208854b29c",
  InitializationCell->True],
-Cell[CellGroupData[{
-Cell[1216, 41, 262, 5, 28, "Input",ExpressionUUID->"e23abc8a-d70d-4115-82af-be47b0dfb54f"],
-Cell[1481, 48, 747, 22, 36, "Output",ExpressionUUID->"c7e2a889-6c35-4d9b-bc8f-b51816ef7ed3"]
-}, Open  ]],
-Cell[2243, 73, 235, 4, 28, "Input",ExpressionUUID->"c4fd04c0-b5db-4206-9136-b9cb540d4ce4"],
-Cell[2481, 79, 232, 4, 28, "Input",ExpressionUUID->"5d7ee18a-a391-4f32-bd8e-9c25ae6f414e"],
-Cell[2716, 85, 213, 4, 28, "Input",ExpressionUUID->"91b01d24-5f81-405d-bed9-fd1763fcafac"],
-Cell[2932, 91, 347, 7, 28, "Input",ExpressionUUID->"59cc074d-e096-48a6-b9c8-fc03bdf65347"],
-Cell[3282, 100, 398, 8, 28, "Input",ExpressionUUID->"e43f87f8-754b-4819-906b-83d77f610337"],
-Cell[3683, 110, 205, 4, 28, "Input",ExpressionUUID->"3ed54fdb-95e5-4b9e-8661-7098ed97bc49"],
-Cell[CellGroupData[{
-Cell[3913, 118, 216, 3, 28, "Input",ExpressionUUID->"fda4fbcf-b0ef-47cc-a7fd-cde95991a5ee"],
-Cell[4132, 123, 154, 2, 32, "Output",ExpressionUUID->"57334140-d04f-49f2-8110-f53bfbbd8e23"]
+Cell[34231, 847, 781, 16, 46, "Message",ExpressionUUID->"4e81752e-96fa-4789-8032-8691d3afdea7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4323, 130, 216, 3, 28, "Input",ExpressionUUID->"050ffe0c-ef38-4b99-826a-745120cd8025"],
-Cell[4542, 135, 155, 2, 32, "Output",ExpressionUUID->"ffa51e52-30be-43a8-bac8-17337953a875"]
-}, Open  ]],
-Cell[4712, 140, 348, 7, 28, "Input",ExpressionUUID->"cf05a495-98e6-4302-9808-bf4796bd0948"],
-Cell[CellGroupData[{
-Cell[5085, 151, 260, 5, 28, "Input",ExpressionUUID->"9cc8a86c-cfe0-40a7-8d6b-c3fd366d17bc"],
-Cell[5348, 158, 2506, 48, 131, "Output",ExpressionUUID->"936a08b0-4c25-4f2b-9681-9c08206702fb"]
+Cell[35049, 868, 214, 4, 28, "Input",ExpressionUUID->"726ac5cd-54d1-478b-9eb7-d90e6983de08"],
+Cell[35266, 874, 15812, 373, 117, "Output",ExpressionUUID->"d8be2e93-80cf-4ae7-b315-f888a3f35195"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7891, 211, 326, 7, 28, "Input",ExpressionUUID->"dd698384-2a72-44e3-973f-764ca6ede2b1"],
-Cell[8220, 220, 16342, 324, 301, "Output",ExpressionUUID->"946d95de-aee4-4b03-93f1-0eebbace7fa2"]
+Cell[51115, 1252, 191, 4, 28, "Input",ExpressionUUID->"26d0b84a-059f-4912-a64e-562438051191"],
+Cell[51309, 1258, 3082, 94, 60, "Output",ExpressionUUID->"9b97c809-271e-4198-84fe-829365146d2e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24599, 549, 184, 2, 28, "Input",ExpressionUUID->"3f3569c5-13e3-4040-b7b7-ea8226ca9b9e"],
-Cell[24786, 553, 3271, 50, 242, "Output",ExpressionUUID->"c6c96c64-0125-439c-9e4a-dfbb4fb6dd21"]
+Cell[54428, 1357, 343, 7, 28, "Input",ExpressionUUID->"878074f4-8b3c-4a9a-93ee-bec0e86681d6"],
+Cell[54774, 1366, 6497, 166, 130, "Output",ExpressionUUID->"1909c8f4-ea23-40da-b72b-bcdf4331ae4b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28094, 608, 252, 4, 28, "Input",ExpressionUUID->"d9fdbb51-4e36-4a9d-9029-2206681d4030"],
-Cell[28349, 614, 15895, 356, 224, "Output",ExpressionUUID->"224a9a60-2b90-47c6-80bf-401517bbf5ba"]
+Cell[61308, 1537, 289, 7, 33, "Input",ExpressionUUID->"2e4b3607-fe6d-44a8-a63f-5e3eca50150a"],
+Cell[61600, 1546, 6473, 166, 130, "Output",ExpressionUUID->"c927d637-de57-4dd7-95da-9e0451d01ede"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44281, 975, 212, 3, 28, "Input",ExpressionUUID->"222a2153-a8b7-47bd-9e11-4aaad4ba40e0"],
-Cell[44496, 980, 4805, 77, 367, "Output",ExpressionUUID->"0ea0c0a7-b3b9-49bc-a440-809b96fac07e"]
+Cell[68110, 1717, 602, 14, 33, "Input",ExpressionUUID->"16c0dc19-f452-4067-997b-243c48803f82"],
+Cell[68715, 1733, 182, 3, 32, "Output",ExpressionUUID->"bc5b2f24-ee6e-44b5-90e3-4149fcd0f502"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[49338, 1062, 330, 6, 28, "Input",ExpressionUUID->"14fd1f4d-559c-4575-841d-f0d48494bc5c"],
-Cell[49671, 1070, 45340, 722, 230, "Output",ExpressionUUID->"3e7411b9-eba4-4bcc-8ad2-611acc573508"]
+Cell[68934, 1741, 255, 5, 28, "Input",ExpressionUUID->"1dad777a-b0d1-4cb1-83d6-5ef94f7a02c2"],
+Cell[69192, 1748, 12224, 239, 62, "Output",ExpressionUUID->"99f2f1db-4da3-45bc-a212-ab1d1d1ae4f1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[95048, 1797, 261, 5, 28, "Input",ExpressionUUID->"e4e59536-5d0a-4ea3-b8a4-9a6172e2ef66"],
-Cell[95312, 1804, 3524, 60, 80, "Output",ExpressionUUID->"01fa050c-1eab-478b-941f-d97b1fa4dd01"]
+Cell[81453, 1992, 262, 5, 28, "Input",ExpressionUUID->"e23abc8a-d70d-4115-82af-be47b0dfb54f"],
+Cell[81718, 1999, 747, 22, 36, "Output",ExpressionUUID->"c7e2a889-6c35-4d9b-bc8f-b51816ef7ed3"]
+}, Open  ]],
+Cell[82480, 2024, 235, 4, 28, "Input",ExpressionUUID->"c4fd04c0-b5db-4206-9136-b9cb540d4ce4"],
+Cell[82718, 2030, 232, 4, 28, "Input",ExpressionUUID->"5d7ee18a-a391-4f32-bd8e-9c25ae6f414e"],
+Cell[82953, 2036, 213, 4, 28, "Input",ExpressionUUID->"91b01d24-5f81-405d-bed9-fd1763fcafac"],
+Cell[83169, 2042, 347, 7, 28, "Input",ExpressionUUID->"59cc074d-e096-48a6-b9c8-fc03bdf65347"],
+Cell[83519, 2051, 398, 8, 28, "Input",ExpressionUUID->"e43f87f8-754b-4819-906b-83d77f610337"],
+Cell[83920, 2061, 205, 4, 28, "Input",ExpressionUUID->"3ed54fdb-95e5-4b9e-8661-7098ed97bc49"],
+Cell[CellGroupData[{
+Cell[84150, 2069, 216, 3, 28, "Input",ExpressionUUID->"fda4fbcf-b0ef-47cc-a7fd-cde95991a5ee"],
+Cell[84369, 2074, 154, 2, 32, "Output",ExpressionUUID->"57334140-d04f-49f2-8110-f53bfbbd8e23"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[98873, 1869, 210, 3, 28, "Input",ExpressionUUID->"ba0364cd-2ead-40bc-b192-dda9e38cec29"],
-Cell[99086, 1874, 6053, 98, 359, "Output",ExpressionUUID->"9cc8eb58-f218-46ae-84fd-c8ac8f30d5cd"]
+Cell[84560, 2081, 216, 3, 28, "Input",ExpressionUUID->"050ffe0c-ef38-4b99-826a-745120cd8025"],
+Cell[84779, 2086, 155, 2, 32, "Output",ExpressionUUID->"ffa51e52-30be-43a8-bac8-17337953a875"]
+}, Open  ]],
+Cell[84949, 2091, 348, 7, 28, "Input",ExpressionUUID->"cf05a495-98e6-4302-9808-bf4796bd0948"],
+Cell[CellGroupData[{
+Cell[85322, 2102, 260, 5, 28, "Input",ExpressionUUID->"9cc8a86c-cfe0-40a7-8d6b-c3fd366d17bc"],
+Cell[85585, 2109, 2506, 48, 131, "Output",ExpressionUUID->"936a08b0-4c25-4f2b-9681-9c08206702fb"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[105176, 1977, 372, 7, 28, "Input",ExpressionUUID->"98b9f914-577a-43f3-abf1-7a9a3dafbb3e"],
-Cell[105551, 1986, 3336, 92, 83, "Output",ExpressionUUID->"45b9a804-553a-4f96-b71b-4f1117d00f90"]
+Cell[88128, 2162, 326, 7, 28, "Input",ExpressionUUID->"dd698384-2a72-44e3-973f-764ca6ede2b1"],
+Cell[88457, 2171, 16342, 324, 301, "Output",ExpressionUUID->"946d95de-aee4-4b03-93f1-0eebbace7fa2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[108924, 2083, 209, 3, 28, "Input",ExpressionUUID->"690c6b58-7684-4678-83a4-da9800610c00"],
-Cell[109136, 2088, 3400, 62, 257, "Output",ExpressionUUID->"055fd7ca-9ea5-4295-913e-1e24e8c5f6fc"]
+Cell[104836, 2500, 184, 2, 28, "Input",ExpressionUUID->"3f3569c5-13e3-4040-b7b7-ea8226ca9b9e"],
+Cell[105023, 2504, 3271, 50, 242, "Output",ExpressionUUID->"c6c96c64-0125-439c-9e4a-dfbb4fb6dd21"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[112573, 2155, 213, 3, 28, "Input",ExpressionUUID->"82e7268e-f2e6-47ac-9a7f-c7a28d9861b6"],
-Cell[112789, 2160, 2554, 43, 338, "Output",ExpressionUUID->"d44d961b-e75a-4d68-897f-efb0769bd8a0"]
+Cell[108331, 2559, 252, 4, 28, "Input",ExpressionUUID->"d9fdbb51-4e36-4a9d-9029-2206681d4030"],
+Cell[108586, 2565, 15895, 356, 224, "Output",ExpressionUUID->"224a9a60-2b90-47c6-80bf-401517bbf5ba"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[115380, 2208, 276, 5, 28, "Input",ExpressionUUID->"eb99207f-9350-4aa9-b84e-37cfc4ae12ab"],
-Cell[115659, 2215, 5514, 89, 72, "Output",ExpressionUUID->"7e1a2310-c7b2-456f-959b-029e7df86b3a"]
+Cell[124518, 2926, 212, 3, 28, "Input",ExpressionUUID->"222a2153-a8b7-47bd-9e11-4aaad4ba40e0"],
+Cell[124733, 2931, 4805, 77, 367, "Output",ExpressionUUID->"0ea0c0a7-b3b9-49bc-a440-809b96fac07e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[121210, 2309, 263, 5, 28, "Input",ExpressionUUID->"a98eb2a3-2b00-49ac-ba44-58afc12aa6db"],
-Cell[121476, 2316, 7531, 138, 61, "Output",ExpressionUUID->"746a1fda-e331-4149-93d3-66eef7d1a954"]
+Cell[129575, 3013, 330, 6, 28, "Input",ExpressionUUID->"14fd1f4d-559c-4575-841d-f0d48494bc5c"],
+Cell[129908, 3021, 45340, 722, 230, "Output",ExpressionUUID->"3e7411b9-eba4-4bcc-8ad2-611acc573508"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[129044, 2459, 210, 3, 28, "Input",ExpressionUUID->"a182ef69-3507-4090-a5f1-8a7ed4f17511"],
-Cell[129257, 2464, 5587, 98, 359, "Output",ExpressionUUID->"7282d7bb-067e-4c09-a22d-ed86823b5245"]
+Cell[175285, 3748, 261, 5, 28, "Input",ExpressionUUID->"e4e59536-5d0a-4ea3-b8a4-9a6172e2ef66"],
+Cell[175549, 3755, 3524, 60, 80, "Output",ExpressionUUID->"01fa050c-1eab-478b-941f-d97b1fa4dd01"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[134881, 2567, 212, 3, 28, "Input",ExpressionUUID->"161dd23d-ed4c-41ed-825d-46c5f3f0dbb7"],
-Cell[135096, 2572, 7760, 116, 207, "Output",ExpressionUUID->"2a1bce05-6ac7-4bc7-a338-76700695d0a4"]
+Cell[179110, 3820, 210, 3, 28, "Input",ExpressionUUID->"ba0364cd-2ead-40bc-b192-dda9e38cec29"],
+Cell[179323, 3825, 6053, 98, 359, "Output",ExpressionUUID->"9cc8eb58-f218-46ae-84fd-c8ac8f30d5cd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[142893, 2693, 210, 3, 28, "Input",ExpressionUUID->"faf18dbb-5fc1-4d62-b46f-3f56d1c0cb51"],
-Cell[143106, 2698, 5424, 81, 45, "Output",ExpressionUUID->"b8cd63a8-a876-4f3f-b2f9-816de258a302"]
+Cell[185413, 3928, 372, 7, 28, "Input",ExpressionUUID->"98b9f914-577a-43f3-abf1-7a9a3dafbb3e"],
+Cell[185788, 3937, 3336, 92, 83, "Output",ExpressionUUID->"45b9a804-553a-4f96-b71b-4f1117d00f90"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[148567, 2784, 223, 3, 28, "Input",ExpressionUUID->"0df62310-9b93-42b5-90bb-f6695704b7d1"],
-Cell[148793, 2789, 2966, 48, 75, "Output",ExpressionUUID->"7b4f9d2c-3b8a-44d1-acf3-8ebf69cc5c6d"]
+Cell[189161, 4034, 209, 3, 28, "Input",ExpressionUUID->"690c6b58-7684-4678-83a4-da9800610c00"],
+Cell[189373, 4039, 3400, 62, 257, "Output",ExpressionUUID->"055fd7ca-9ea5-4295-913e-1e24e8c5f6fc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[151796, 2842, 250, 4, 28, "Input",ExpressionUUID->"edc937e2-9c1a-4e06-ab7f-7351fdc28662"],
-Cell[152049, 2848, 411, 10, 28, "Message",ExpressionUUID->"9d19cabc-b263-4d67-b9f2-a3b5b8c9cacf"]
+Cell[192810, 4106, 213, 3, 28, "Input",ExpressionUUID->"82e7268e-f2e6-47ac-9a7f-c7a28d9861b6"],
+Cell[193026, 4111, 2554, 43, 338, "Output",ExpressionUUID->"d44d961b-e75a-4d68-897f-efb0769bd8a0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[152497, 2863, 301, 5, 28, "Input",ExpressionUUID->"4791f48e-c2cd-4d10-9788-f97798dc687a"],
-Cell[152801, 2870, 222, 4, 32, "Output",ExpressionUUID->"5274551c-6696-404f-933e-f0ff2e7d7387"]
-}, Open  ]],
-Cell[153038, 2877, 248, 4, 28, "Input",ExpressionUUID->"c13ff946-83cc-47d2-8316-274929813d4d"],
-Cell[CellGroupData[{
-Cell[153311, 2885, 263, 5, 28, "Input",ExpressionUUID->"150d3039-b133-4c38-ad7c-3e41ca146052"],
-Cell[153577, 2892, 2502, 52, 172, "Output",ExpressionUUID->"c910bb6c-e8a5-4188-8c97-8f0a73be91f5"]
-}, Open  ]],
-Cell[156094, 2947, 301, 6, 28, "Input",ExpressionUUID->"4c4a63f7-55fb-463c-80d4-f09b9e4ca85d"],
-Cell[CellGroupData[{
-Cell[156420, 2957, 208, 3, 28, "Input",ExpressionUUID->"05a2210c-aa50-4363-bfdd-65df119d4a55"],
-Cell[156631, 2962, 2364, 42, 359, "Output",ExpressionUUID->"0ac449db-b2be-48d7-9458-88410c96f323"]
+Cell[195617, 4159, 276, 5, 28, "Input",ExpressionUUID->"eb99207f-9350-4aa9-b84e-37cfc4ae12ab"],
+Cell[195896, 4166, 5514, 89, 72, "Output",ExpressionUUID->"7e1a2310-c7b2-456f-959b-029e7df86b3a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[159032, 3009, 393, 9, 28, "Input",ExpressionUUID->"b99b308b-9d82-4f1b-a453-852d5ce650cf"],
-Cell[159428, 3020, 2543, 45, 359, "Output",ExpressionUUID->"0127949a-ebb3-41ee-92b5-a8d146aad723"]
+Cell[201447, 4260, 263, 5, 28, "Input",ExpressionUUID->"a98eb2a3-2b00-49ac-ba44-58afc12aa6db"],
+Cell[201713, 4267, 7531, 138, 61, "Output",ExpressionUUID->"746a1fda-e331-4149-93d3-66eef7d1a954"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[162008, 3070, 204, 3, 28, "Input",ExpressionUUID->"dc448ecc-5c64-41f0-8738-f99bc765ef3f"],
-Cell[162215, 3075, 20675, 479, 119, "Output",ExpressionUUID->"c8f0e130-ef2e-43d5-8381-2770abd46f09"]
+Cell[209281, 4410, 210, 3, 28, "Input",ExpressionUUID->"a182ef69-3507-4090-a5f1-8a7ed4f17511"],
+Cell[209494, 4415, 5587, 98, 359, "Output",ExpressionUUID->"7282d7bb-067e-4c09-a22d-ed86823b5245"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[182927, 3559, 216, 3, 28, "Input",ExpressionUUID->"6833c6ef-c9fa-47a6-9ef4-7b59459478c5"],
-Cell[183146, 3564, 14938, 354, 93, "Output",ExpressionUUID->"9e3f8ac3-019d-4fb0-a152-97acf53cecd5"]
+Cell[215118, 4518, 212, 3, 28, "Input",ExpressionUUID->"161dd23d-ed4c-41ed-825d-46c5f3f0dbb7"],
+Cell[215333, 4523, 7760, 116, 207, "Output",ExpressionUUID->"2a1bce05-6ac7-4bc7-a338-76700695d0a4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[198121, 3923, 207, 3, 28, "Input",ExpressionUUID->"86bbe39d-4fa3-4c31-987e-9c15c6df7e31"],
-Cell[198331, 3928, 11362, 279, 93, "Output",ExpressionUUID->"a3075526-a5a4-4921-9d50-362e76a9838b"]
+Cell[223130, 4644, 210, 3, 28, "Input",ExpressionUUID->"faf18dbb-5fc1-4d62-b46f-3f56d1c0cb51"],
+Cell[223343, 4649, 5424, 81, 45, "Output",ExpressionUUID->"b8cd63a8-a876-4f3f-b2f9-816de258a302"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[209730, 4212, 198, 4, 28, "Input",ExpressionUUID->"f1b18a02-4069-4821-98e5-26b12a1871ec"],
-Cell[209931, 4218, 10599, 265, 93, "Output",ExpressionUUID->"d19559bc-0295-4bc3-9721-1253e6c17ad0"]
+Cell[228804, 4735, 223, 3, 28, "Input",ExpressionUUID->"0df62310-9b93-42b5-90bb-f6695704b7d1"],
+Cell[229030, 4740, 2966, 48, 75, "Output",ExpressionUUID->"7b4f9d2c-3b8a-44d1-acf3-8ebf69cc5c6d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[220567, 4488, 226, 5, 28, "Input",ExpressionUUID->"0e074be4-c8aa-4c3c-b04a-75fc78a2ee70"],
-Cell[220796, 4495, 10443, 262, 93, "Output",ExpressionUUID->"e7494ed4-60f9-488f-b357-1eaabc67138a"]
+Cell[232033, 4793, 250, 4, 28, "Input",ExpressionUUID->"edc937e2-9c1a-4e06-ab7f-7351fdc28662"],
+Cell[232286, 4799, 411, 10, 28, "Message",ExpressionUUID->"9d19cabc-b263-4d67-b9f2-a3b5b8c9cacf"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[231276, 4762, 289, 6, 28, "Input",ExpressionUUID->"a0489534-b358-4a40-833c-93b3ade9c177"],
-Cell[231568, 4770, 5750, 102, 113, "Output",ExpressionUUID->"5753a3ae-0a19-42dd-bb74-1c433bcf6894"]
+Cell[232734, 4814, 301, 5, 28, "Input",ExpressionUUID->"4791f48e-c2cd-4d10-9788-f97798dc687a"],
+Cell[233038, 4821, 222, 4, 32, "Output",ExpressionUUID->"5274551c-6696-404f-933e-f0ff2e7d7387"]
+}, Open  ]],
+Cell[233275, 4828, 248, 4, 28, "Input",ExpressionUUID->"c13ff946-83cc-47d2-8316-274929813d4d"],
+Cell[CellGroupData[{
+Cell[233548, 4836, 263, 5, 28, "Input",ExpressionUUID->"150d3039-b133-4c38-ad7c-3e41ca146052"],
+Cell[233814, 4843, 2502, 52, 172, "Output",ExpressionUUID->"c910bb6c-e8a5-4188-8c97-8f0a73be91f5"]
+}, Open  ]],
+Cell[236331, 4898, 301, 6, 28, "Input",ExpressionUUID->"4c4a63f7-55fb-463c-80d4-f09b9e4ca85d"],
+Cell[CellGroupData[{
+Cell[236657, 4908, 208, 3, 28, "Input",ExpressionUUID->"05a2210c-aa50-4363-bfdd-65df119d4a55"],
+Cell[236868, 4913, 2364, 42, 359, "Output",ExpressionUUID->"0ac449db-b2be-48d7-9458-88410c96f323"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[239269, 4960, 393, 9, 28, "Input",ExpressionUUID->"b99b308b-9d82-4f1b-a453-852d5ce650cf"],
+Cell[239665, 4971, 2543, 45, 359, "Output",ExpressionUUID->"0127949a-ebb3-41ee-92b5-a8d146aad723"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[242245, 5021, 204, 3, 28, "Input",ExpressionUUID->"dc448ecc-5c64-41f0-8738-f99bc765ef3f"],
+Cell[242452, 5026, 20675, 479, 119, "Output",ExpressionUUID->"c8f0e130-ef2e-43d5-8381-2770abd46f09"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[263164, 5510, 216, 3, 28, "Input",ExpressionUUID->"6833c6ef-c9fa-47a6-9ef4-7b59459478c5"],
+Cell[263383, 5515, 14938, 354, 93, "Output",ExpressionUUID->"9e3f8ac3-019d-4fb0-a152-97acf53cecd5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[278358, 5874, 207, 3, 28, "Input",ExpressionUUID->"86bbe39d-4fa3-4c31-987e-9c15c6df7e31"],
+Cell[278568, 5879, 11362, 279, 93, "Output",ExpressionUUID->"a3075526-a5a4-4921-9d50-362e76a9838b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[289967, 6163, 198, 4, 28, "Input",ExpressionUUID->"f1b18a02-4069-4821-98e5-26b12a1871ec"],
+Cell[290168, 6169, 10599, 265, 93, "Output",ExpressionUUID->"d19559bc-0295-4bc3-9721-1253e6c17ad0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[300804, 6439, 226, 5, 28, "Input",ExpressionUUID->"0e074be4-c8aa-4c3c-b04a-75fc78a2ee70"],
+Cell[301033, 6446, 10443, 262, 93, "Output",ExpressionUUID->"e7494ed4-60f9-488f-b357-1eaabc67138a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[311513, 6713, 289, 6, 28, "Input",ExpressionUUID->"a0489534-b358-4a40-833c-93b3ade9c177"],
+Cell[311805, 6721, 5750, 102, 113, "Output",ExpressionUUID->"5753a3ae-0a19-42dd-bb74-1c433bcf6894"]
 }, Open  ]]
 }
 ]

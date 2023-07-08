@@ -32,8 +32,8 @@
    "FileHash" -> "JVJ94Aht5AUJtQOBGJTe29mn+LRt4Qdfr0O8QUoyPCU="|>, 
  "English\\ReferencePages\\Symbols\\ResistanceMatrix.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.1494254, "Seconds"]|>], 
-   "FileHash" -> "RKbkF03f4x4qFo2b1A9miCO5za/auXQks0q91dlAUaw="|>, 
+      "Time" -> Quantity[3.5926676, "Seconds"]|>], 
+   "FileHash" -> "BKAfOdPF4FEpfu1buCx/mgASYhnQ5cMp/TGWOfDMzxU="|>, 
  "English\\ReferencePages\\Symbols\\TakeLargestGraphComponentBy.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.7249307, "Seconds"]|>], 
@@ -48,12 +48,12 @@
    "FileHash" -> "brZCj3Y+jTRuDG+TyIwHPtzk8YG3c0qFo018EBpPb8U="|>, 
  "English\\Guides\\ComputationonGraphs.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.3502969, "Seconds"]|>], 
-   "FileHash" -> "6BcNzERTygvaCqfaTRZOcEyKvrWN1DAI6lb2ZXv5ddU="|>, 
+      "Time" -> Quantity[2.7881617, "Seconds"]|>], 
+   "FileHash" -> "qcesAlsMs83lUmMr8pUMnrduMdXScHwNYKzFPR3DEqE="|>, 
  "English\\Guides\\GraphConstructionandRepresentation.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[0.8568553, "Seconds"]|>], 
-   "FileHash" -> "Bm6akt/TmjE5mHyU+4A5mpx3TYOqTRh126ndn96jPnQ="|>, 
+      "Time" -> Quantity[1.1201754, "Seconds"]|>], 
+   "FileHash" -> "9ZKjkBLTHkpTKVegM56oW8PvzRbaFqfS94imQjl3qGo="|>, 
  "English\\Guides\\GraphOperationsandModifications.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[0.7604743, "Seconds"]|>], 
@@ -120,8 +120,8 @@
    "FileHash" -> "00RQySijsbEAx1P38dOJxfrSsuDrCULrN3OiY36RDSY="|>, 
  "English\\ReferencePages\\Symbols\\RankPolynomial.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.9170832, "Seconds"]|>], 
-   "FileHash" -> "fyEa8UYygTdEZR0z7QlMCogSXXxqOjrbh3luUd4rtkU="|>, 
+      "Time" -> Quantity[2.6728358, "Seconds"]|>], 
+   "FileHash" -> "pD5F+vLRcaYc7pLr5BJnJ6LPM3ybY5FMY5BoaU5eRTw="|>, 
  "English\\ReferencePages\\Symbols\\SunletGraph.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.1708527, "Seconds"]|>], 
@@ -137,4 +137,16 @@
  "English\\ReferencePages\\Symbols\\VertexInsert.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.1956066, "Seconds"]|>], 
-   "FileHash" -> "2VCdkYySICWe89j+UetFDUvFYn7eaUTgyx/5fJ4+Psc="|>|>
+   "FileHash" -> "2VCdkYySICWe89j+UetFDUvFYn7eaUTgyx/5fJ4+Psc="|>, 
+ "English\\ReferencePages\\Symbols\\CoboundaryPolynomial.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[3.5488018, "Seconds"]|>], 
+   "FileHash" -> "guwsLB90k0UWStiSKWQHBfd0hFZohDRwPzAXLw/dFg8="|>, 
+ "English\\ReferencePages\\Symbols\\IndependencePolynomial.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[2.3711185, "Seconds"]|>], 
+   "FileHash" -> "uy+vyXzU1yqpvpBRIMRgTI9mtM/w0mbk59ALyENzWn4="|>, 
+ "English\\ReferencePages\\Symbols\\ReliabilityPolynomial.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[2.3195324, "Seconds"]|>], 
+   "FileHash" -> "1rYExCDnAkW9+A3SxxFkESj12XwHBZlEUMgc4fmNJKY="|>|>

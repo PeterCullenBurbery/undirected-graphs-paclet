@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8539,        217]
-NotebookOptionsPosition[      6347,        168]
-NotebookOutlinePosition[      7968,        208]
-CellTagsIndexPosition[      7925,        205]
+NotebookDataLength[     10903,        279]
+NotebookOptionsPosition[      8289,        222]
+NotebookOutlinePosition[      9980,        264]
+CellTagsIndexPosition[      9937,        261]
 WindowTitle->Computation on Graphs
 WindowFrame->Normal*)
 
@@ -28,11 +28,11 @@ Cell[BoxData[GridBox[{
            "Spacer1"], Cell[
           "PETER BURBERY/ UNDIRECTED GRAPHS GUIDE", "PacletNameCell",
            TextAlignment->Center,ExpressionUUID->
-           "4c35dc0e-7569-42d4-a956-a33acf593a7f"], 
+           "efa40cc7-35dc-48bd-b111-e8d4a4d14a83"], 
           TemplateBox[{8},
            "Spacer1"]}]],
          TextAlignment->Center,ExpressionUUID->
-         "3c62fb77-d155-4cc9-bcfe-e51f750644b0"],
+         "050f99c0-02f9-41df-8839-d64c97dfd8da"],
         Background->RGBColor[0.85098, 0.396078, 0],
         ItemSize->Full], ""}
      },
@@ -52,18 +52,27 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "73e1a9cf-0cf8-4b60-94d0-2d55ecc2dd42"]
-         }],ExpressionUUID->"118abc76-9302-4b9e-95c8-d4cc34bf4073"],
+           "8e0308a2-e6c8-4aef-92a5-4f182d30a46a"]
+         }],ExpressionUUID->"a9349757-d484-4bc7-85b2-7db1662f2301"],
          StripOnInput->False],{
-        "\"RankPolynomial\"" :> 
+        "\"CoboundaryPolynomial\"" :> 
          Documentation`HelpLookup[
-          "paclet:Undirected Graphs/ref/RankPolynomial"]},
+          "paclet:PeterBurbery/UndirectedGraphs/ref/CoboundaryPolynomial"], 
+         "\"IndependencePolynomial\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/ref/IndependencePolynomial"], 
+         "\"RankPolynomial\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/ref/RankPolynomial"], 
+         "\"ReliabilityPolynomial\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/ref/ReliabilityPolynomial"]},
         Appearance->None,
         MenuAppearance->Automatic,
         MenuStyle->"GuideFunction"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "6f87a07c-b41a-454a-867f-e802b30c51bd"],
+      "e1c63aec-a2ec-45dc-bf5a-7177638a99b0"],
      "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
 \[ThickSpace]",
      Cell[BoxData[
@@ -79,8 +88,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "db66c06c-36d4-4676-836c-a17d5b05a9aa"]
-         }],ExpressionUUID->"16b44a01-e811-4ee8-80a6-ca23eb120df8"],
+           "93171686-eaef-416a-8558-a862368120fb"]
+         }],ExpressionUUID->"9194b8d7-9360-4c80-a460-ebac04be021e"],
          StripOnInput->False],{
         "\"PeterBurbery/UndirectedGraphs\"" :> None, 
          "\"Copy Wolfram Documentation Center URL\"" :> 
@@ -109,7 +118,7 @@ UndirectedGraphs.html"], StandardForm]], "Input", TextClipboardType ->
          "\"Go to web URL\"" :> 
          FrontEndExecute[{
            NotebookLocate[{
-             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$348484], 
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$516297], 
                  "http://reference.wolfram.com/system-modeler/", 
                  "http://reference.wolfram.com/language/"] <> 
                "PeterBurbery/UndirectedGraphs" <> ".html"], None}]}]},
@@ -118,53 +127,98 @@ UndirectedGraphs.html"], StandardForm]], "Input", TextClipboardType ->
         MenuStyle->"URLMenu"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "f27a292e-4d0f-486b-be1c-a1993c19d4aa"]
+      "9784a057-c36f-4d95-a7ee-2bc210002eef"]
     }], "AnchorBar",
      CacheGraphics->False,ExpressionUUID->
-     "3edd701c-0ff7-4942-9a80-fd8bdf8a6df6"]}
+     "d2b9390b-2f37-4e2f-aeda-a0eaf48ef24e"]}
   }]], "AnchorBarGrid",
  GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
      Scaled[0.65], {
       Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
    "RowsIndexed" -> {}}},
- CellID->1,ExpressionUUID->"33f505be-eebb-4bc1-98f4-281fde6f6743"],
+ CellID->1,ExpressionUUID->"64c179df-89f1-4b36-be04-6625787d187d"],
 
 Cell[CellGroupData[{
 
 Cell["Computation on Graphs", "GuideTitle",
  CellID->153842209,ExpressionUUID->"0fbc7ac0-a41a-4c86-b895-de598c8c1633"],
 
-Cell["\[NonBreakingSpace]", "GuideAbstract",
- CellID->151908600,ExpressionUUID->"020c95fb-4e0f-4e1a-839d-a4b69a0bbcd8"],
+Cell["This paclet has the capability to compute things for graphs.", \
+"GuideAbstract",
+ CellID->255861319,ExpressionUUID->"22696b47-e104-4319-853c-bac3e08013c2"],
 
-Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"06a24488-7cf7-40b0-9e03-8d8a84534488"],
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"4064e94a-4d19-404a-b25d-fe55d07e90aa"],
 
 Cell[TextData[{
  Cell[BoxData[
   TemplateBox[{
     Cell[
      TextData["RankPolynomial"]], 
-    "paclet:Undirected Graphs/ref/RankPolynomial", 
-    "Undirected Graphs Package Symbol"},
+    "paclet:PeterBurbery/UndirectedGraphs/ref/RankPolynomial", 
+    "PeterBurbery Package Symbol"},
    "PackageLink",
    BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
-  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
-  "4c467355-4751-489a-8a5f-3b0914811695"],
+  CellTags->"cab85ade-e1f2-4d43-bbe3-4cab2ae7dc2f",ExpressionUUID->
+  "8856fa4b-2dd7-4a52-a2e9-b18fde545b87"],
  " ",
  StyleBox["\[LongDash]", "GuideEmDash"],
- " ",
- Cell[BoxData[
-  TagBox[
-   RowBox[{"compute", " ", "a", " ", "rank", " ", "polynomial"}],
-   EventHandlerTag[{"MouseClicked" :> SelectionMove[
-       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
-     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
-  "44f829c0-3789-4f25-9876-75a391baf719"]
+ " compute a rank polynomial"
 }], "GuideText",
- CellID->872820711,ExpressionUUID->"d150e84e-0876-4d26-be51-c365a87d5ebb"]
+ CellID->66244135,ExpressionUUID->"552cc175-02ae-4c25-a3df-629ef8d0cdea"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["CoboundaryPolynomial"]], 
+    "paclet:PeterBurbery/UndirectedGraphs/ref/CoboundaryPolynomial", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cab85ade-e1f2-4d43-bbe3-4cab2ae7dc2f",ExpressionUUID->
+  "ae3ebaaa-a3c9-4d7f-adc5-08cc70eb1968"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute a coboundary polynomial"
+}], "GuideText",
+ CellID->494773518,ExpressionUUID->"120aadf9-4014-4c0a-b704-c96ba79bc3ea"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["ReliabilityPolynomial"]], 
+    "paclet:PeterBurbery/UndirectedGraphs/ref/ReliabilityPolynomial", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cab85ade-e1f2-4d43-bbe3-4cab2ae7dc2f",ExpressionUUID->
+  "ee72abbe-74e7-4df6-8684-9c56b378e97b"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute a reliability polynomial"
+}], "GuideText",
+ CellID->40994702,ExpressionUUID->"b974b253-3110-4013-a657-3cce474bb022"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["IndependencePolynomial"]], 
+    "paclet:PeterBurbery/UndirectedGraphs/ref/IndependencePolynomial", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"69e19228-d0ff-4d70-9844-b85a8017694c",ExpressionUUID->
+  "79447ddd-2084-451b-a0af-893f8c7b2714"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute an independence polynomial"
+}], "GuideText",
+ CellID->351564207,ExpressionUUID->"67a2fa6a-8a8e-4bc4-9ac9-4b9cee880ffb"]
 }, Open  ]],
 
-Cell[" ", "FooterCell",ExpressionUUID->"aaad6275-9cd1-477d-a39c-d53d436006f3"]
+Cell[" ", "FooterCell",ExpressionUUID->"e4599957-c7c8-4d33-a761-fb4b6aec940d"]
 },
 Saveable->False,
 ScreenStyleEnvironment->"Working",
@@ -179,14 +233,16 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2023, 7, 8, 12, 1, 28.0013149}", 
+   "built" -> "{2023, 7, 8, 16, 43, 3.9750053}", 
     "history" -> {"XX", "", "", ""}, "context" -> 
     "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
      "label" -> "Peter Burbery/ Undirected Graphs Guide", "language" -> "en", 
     "paclet" -> "PeterBurbery/UndirectedGraphs", "status" -> "None", 
-    "summary" -> "", "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$348455, "title" -> 
+    "summary" -> 
+    "This paclet has the capability to compute things for graphs.", 
+    "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$516262, "title" -> 
     "Computation on Graphs", "titlemodifier" -> "", "metadescription" -> "", 
     "windowtitle" -> "Computation on Graphs", "type" -> "Guide", "uri" -> 
     "PeterBurbery/UndirectedGraphs"}},
@@ -194,7 +250,7 @@ CacheGraphics->False,
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
   CharacterEncoding -> "UTF-8"],
-ExpressionUUID->"fb8129e5-d9b3-44da-a840-48d82d4de216"
+ExpressionUUID->"319a91a7-d8ca-472c-8fc8-67ee62ee748b"
 ]
 (* End of Notebook Content *)
 
@@ -207,18 +263,24 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[593, 21, 4451, 108, 70, "AnchorBarGrid",ExpressionUUID->"33f505be-eebb-4bc1-98f4-281fde6f6743",
+Cell[593, 21, 4925, 117, 70, "AnchorBarGrid",ExpressionUUID->"64c179df-89f1-4b36-be04-6625787d187d",
  CellID->1],
 Cell[CellGroupData[{
-Cell[5069, 133, 118, 1, 70, "GuideTitle",ExpressionUUID->"0fbc7ac0-a41a-4c86-b895-de598c8c1633",
+Cell[5543, 142, 118, 1, 70, "GuideTitle",ExpressionUUID->"0fbc7ac0-a41a-4c86-b895-de598c8c1633",
  CellID->153842209],
-Cell[5190, 136, 119, 1, 70, "GuideAbstract",ExpressionUUID->"020c95fb-4e0f-4e1a-839d-a4b69a0bbcd8",
- CellID->151908600],
-Cell[5312, 139, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"06a24488-7cf7-40b0-9e03-8d8a84534488"],
-Cell[5408, 141, 842, 22, 70, "GuideText",ExpressionUUID->"d150e84e-0876-4d26-be51-c365a87d5ebb",
- CellID->872820711]
+Cell[5664, 145, 162, 2, 70, "GuideAbstract",ExpressionUUID->"22696b47-e104-4319-853c-bac3e08013c2",
+ CellID->255861319],
+Cell[5829, 149, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"4064e94a-4d19-404a-b25d-fe55d07e90aa"],
+Cell[5925, 151, 548, 15, 70, "GuideText",ExpressionUUID->"552cc175-02ae-4c25-a3df-629ef8d0cdea",
+ CellID->66244135],
+Cell[6476, 168, 567, 15, 70, "GuideText",ExpressionUUID->"120aadf9-4014-4c0a-b704-c96ba79bc3ea",
+ CellID->494773518],
+Cell[7046, 185, 569, 15, 70, "GuideText",ExpressionUUID->"b974b253-3110-4013-a657-3cce474bb022",
+ CellID->40994702],
+Cell[7618, 202, 574, 15, 70, "GuideText",ExpressionUUID->"67a2fa6a-8a8e-4bc4-9ac9-4b9cee880ffb",
+ CellID->351564207]
 }, Open  ]],
-Cell[6265, 166, 78, 0, 70, "FooterCell",ExpressionUUID->"aaad6275-9cd1-477d-a39c-d53d436006f3"]
+Cell[8207, 220, 78, 0, 70, "FooterCell",ExpressionUUID->"e4599957-c7c8-4d33-a761-fb4b6aec940d"]
 }
 ]
 *)

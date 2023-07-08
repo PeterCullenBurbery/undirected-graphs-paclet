@@ -18,11 +18,17 @@
 
 <<PeterBurbery`UndirectedGraphs`HelmGraph`;
 
+<<PeterBurbery`UndirectedGraphs`IndependencePolynomial`;
+
 <<PeterBurbery`UndirectedGraphs`KayakPaddleGraph`;
 
 <<PeterBurbery`UndirectedGraphs`LadderRungGraph`;
 
 <<PeterBurbery`UndirectedGraphs`PanGraph`;
+
+<<PeterBurbery`UndirectedGraphs`ReliabilityPolynomial`;
+
+<<PeterBurbery`UndirectedGraphs`ResistanceMatrix`;
 
 <<PeterBurbery`UndirectedGraphs`SunletGraph`;
 

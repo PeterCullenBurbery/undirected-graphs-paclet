@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8330,        228]
-NotebookOptionsPosition[      5130,        156]
-NotebookOutlinePosition[      5692,        175]
-CellTagsIndexPosition[      5649,        172]
+NotebookDataLength[      9383,        250]
+NotebookOptionsPosition[      5961,        175]
+NotebookOutlinePosition[      6505,        193]
+CellTagsIndexPosition[      6462,        190]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,7 +23,10 @@ Cell[CellGroupData[{
 Cell["Computation on Graphs", "GuideTitle",
  CellID->153842209,ExpressionUUID->"0fbc7ac0-a41a-4c86-b895-de598c8c1633"],
 
-Cell["XXXX", "GuideAbstract",
+Cell["This paclet has the capability to compute things for graphs.", \
+"GuideAbstract",
+ CellChangeTimes->{{3.8978323624003105`*^9, 3.897832365910984*^9}, {
+  3.8978326683162527`*^9, 3.897832687191103*^9}},
  CellID->255861319,ExpressionUUID->"22696b47-e104-4319-853c-bac3e08013c2"]
 }, Open  ]],
 
@@ -36,44 +39,60 @@ Cell[TextData[{
  Cell[BoxData[
   ButtonBox["RankPolynomial",
    BaseStyle->"Link",
-   ButtonData->"paclet:Undirected Graphs/ref/RankPolynomial"]], 
+   ButtonData->"paclet:PeterBurbery/UndirectedGraphs/ref/RankPolynomial"]], 
   "InlineGuideFunction",
   TaggingRules->{"PageType" -> "Function"},
-  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
-  "4c467355-4751-489a-8a5f-3b0914811695"],
- " \[LongDash] ",
- Cell[BoxData[
-  TagBox[
-   RowBox[{"compute", " ", "a", " ", "rank", " ", "polynomial"}],
-   EventHandlerTag[{"MouseClicked" :> SelectionMove[
-       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
-     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
-  "44f829c0-3789-4f25-9876-75a391baf719"]
+  CellTags->"cab85ade-e1f2-4d43-bbe3-4cab2ae7dc2f",ExpressionUUID->
+  "8856fa4b-2dd7-4a52-a2e9-b18fde545b87"],
+ " \[LongDash] compute a rank polynomial"
 }], "GuideText",
- CellChangeTimes->{{3.8977673527321143`*^9, 3.897767360507781*^9}, {
-  3.8977675118684916`*^9, 3.8977675118684916`*^9}},
- CellID->872820711,ExpressionUUID->"d150e84e-0876-4d26-be51-c365a87d5ebb"],
+ CellChangeTimes->{{3.8978325126446037`*^9, 3.897832540225582*^9}},
+ CellID->66244135,ExpressionUUID->"552cc175-02ae-4c25-a3df-629ef8d0cdea"],
 
 Cell[TextData[{
  Cell[BoxData[
-  TagBox[
-   FrameBox["\<\"XXXX\"\>"],
-   "FunctionPlaceholder"]], "InlineGuideFunction",
+  ButtonBox["CoboundaryPolynomial",
+   BaseStyle->"Link",
+   ButtonData->
+    "paclet:PeterBurbery/UndirectedGraphs/ref/CoboundaryPolynomial"]], 
+  "InlineGuideFunction",
   TaggingRules->{"PageType" -> "Function"},
-  CellTags->"c5c6736a-1ff4-4e4e-8fcf-2d9846cbae62",ExpressionUUID->
-  "a319c25f-773f-4242-9f13-c6316c03a33e"],
- " \[LongDash] ",
- Cell[BoxData[
-  TagBox[
-   TagBox[
-    FrameBox["description"],
-    "GuideTextPlaceholder"],
-   EventHandlerTag[{"MouseClicked" :> SelectionMove[
-       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
-     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
-  "ac187bfd-0337-48a0-a181-8b71677c9493"]
+  CellTags->"cab85ade-e1f2-4d43-bbe3-4cab2ae7dc2f",ExpressionUUID->
+  "ae3ebaaa-a3c9-4d7f-adc5-08cc70eb1968"],
+ " \[LongDash] compute a coboundary polynomial"
 }], "GuideText",
- CellID->22066545,ExpressionUUID->"8771fd53-15c9-49d7-a129-2743016ac1e2"]
+ CellChangeTimes->{{3.8978326069921827`*^9, 3.8978326265464935`*^9}},
+ CellID->494773518,ExpressionUUID->"120aadf9-4014-4c0a-b704-c96ba79bc3ea"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["ReliabilityPolynomial",
+   BaseStyle->"Link",
+   ButtonData->
+    "paclet:PeterBurbery/UndirectedGraphs/ref/ReliabilityPolynomial"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"cab85ade-e1f2-4d43-bbe3-4cab2ae7dc2f",ExpressionUUID->
+  "ee72abbe-74e7-4df6-8684-9c56b378e97b"],
+ " \[LongDash] compute a reliability polynomial"
+}], "GuideText",
+ CellChangeTimes->{{3.8978325786197453`*^9, 3.897832628691073*^9}},
+ CellID->40994702,ExpressionUUID->"b974b253-3110-4013-a657-3cce474bb022"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["IndependencePolynomial",
+   BaseStyle->"Link",
+   ButtonData->
+    "paclet:PeterBurbery/UndirectedGraphs/ref/IndependencePolynomial"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"69e19228-d0ff-4d70-9844-b85a8017694c",ExpressionUUID->
+  "79447ddd-2084-451b-a0af-893f8c7b2714"],
+ " \[LongDash] compute an independence polynomial"
+}], "GuideText",
+ CellChangeTimes->{{3.897837336723733*^9, 3.897837352348115*^9}},
+ CellID->351564207,ExpressionUUID->"67a2fa6a-8a8e-4bc4-9ac9-4b9cee880ffb"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -154,9 +173,8 @@ Cell["XXXX", "Keywords",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{1152, 585.6},
-WindowMargins->{{
-  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+WindowSize->{574.8, 573.6},
+WindowMargins->{{282.59999999999997`, Automatic}, {0, Automatic}},
 TaggingRules-><|"Paclet" -> "Undirected Graphs"|>,
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStylesExt.nb", 
@@ -177,56 +195,60 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 118, 1, 88, "GuideTitle",ExpressionUUID->"0fbc7ac0-a41a-4c86-b895-de598c8c1633",
  CellID->153842209],
-Cell[701, 25, 104, 1, 29, "GuideAbstract",ExpressionUUID->"22696b47-e104-4319-853c-bac3e08013c2",
+Cell[701, 25, 281, 4, 29, "GuideAbstract",ExpressionUUID->"22696b47-e104-4319-853c-bac3e08013c2",
  CellID->255861319]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[842, 31, 107, 1, 72, "GuideFunctionsSection",ExpressionUUID->"583dfa05-f227-463e-a349-00b85511d614",
+Cell[1019, 34, 107, 1, 72, "GuideFunctionsSection",ExpressionUUID->"583dfa05-f227-463e-a349-00b85511d614",
  CellID->97513109],
-Cell[952, 34, 882, 20, 26, "GuideText",ExpressionUUID->"d150e84e-0876-4d26-be51-c365a87d5ebb",
- CellID->872820711],
-Cell[1837, 56, 711, 19, 28, "GuideText",ExpressionUUID->"8771fd53-15c9-49d7-a129-2743016ac1e2",
- CellID->22066545]
+Cell[1129, 37, 540, 12, 26, "GuideText",ExpressionUUID->"552cc175-02ae-4c25-a3df-629ef8d0cdea",
+ CellID->66244135],
+Cell[1672, 51, 566, 13, 26, "GuideText",ExpressionUUID->"120aadf9-4014-4c0a-b704-c96ba79bc3ea",
+ CellID->494773518],
+Cell[2241, 66, 566, 13, 26, "GuideText",ExpressionUUID->"b974b253-3110-4013-a657-3cce474bb022",
+ CellID->40994702],
+Cell[2810, 81, 569, 13, 26, "GuideText",ExpressionUUID->"67a2fa6a-8a8e-4bc4-9ac9-4b9cee880ffb",
+ CellID->351564207]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2585, 80, 117, 1, 74, "GuideTutorialsSection",ExpressionUUID->"73c09962-cbe3-49aa-b471-1f0846d253f7",
+Cell[3416, 99, 117, 1, 74, "GuideTutorialsSection",ExpressionUUID->"73c09962-cbe3-49aa-b471-1f0846d253f7",
  CellID->12232123],
-Cell[2705, 83, 103, 1, 24, "GuideTutorial",ExpressionUUID->"6c40e492-182d-4f38-bd3b-33f816ddbbba",
+Cell[3536, 102, 103, 1, 24, "GuideTutorial",ExpressionUUID->"6c40e492-182d-4f38-bd3b-33f816ddbbba",
  CellID->19490626],
-Cell[2811, 86, 103, 1, 24, "GuideTutorial",ExpressionUUID->"26bc2b2e-51c5-4eee-b292-a6677434bc14",
+Cell[3642, 105, 103, 1, 24, "GuideTutorial",ExpressionUUID->"26bc2b2e-51c5-4eee-b292-a6677434bc14",
  CellID->13583112]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2951, 92, 190, 2, 74, "GuideMoreAboutSection",ExpressionUUID->"1028f7f8-2dc8-4915-ab0a-e9dc7a6a36a3",
+Cell[3782, 111, 190, 2, 74, "GuideMoreAboutSection",ExpressionUUID->"1028f7f8-2dc8-4915-ab0a-e9dc7a6a36a3",
  CellID->716626246],
-Cell[3144, 96, 104, 1, 24, "GuideMoreAbout",ExpressionUUID->"0c34d20c-16f8-4c98-98ac-8ce89c319b05",
+Cell[3975, 115, 104, 1, 24, "GuideMoreAbout",ExpressionUUID->"0c34d20c-16f8-4c98-98ac-8ce89c319b05",
  CellID->62851793],
-Cell[3251, 99, 105, 1, 24, "GuideMoreAbout",ExpressionUUID->"65dc4210-f6d7-4fb3-81a9-2bffa91060d9",
+Cell[4082, 118, 105, 1, 24, "GuideMoreAbout",ExpressionUUID->"65dc4210-f6d7-4fb3-81a9-2bffa91060d9",
  CellID->150638648]
 }, Open  ]],
-Cell[3371, 103, 123, 1, 74, "GuideRelatedLinksSection",ExpressionUUID->"c751585b-6e04-4f3c-88b9-db726496f41e",
+Cell[4202, 122, 123, 1, 74, "GuideRelatedLinksSection",ExpressionUUID->"c751585b-6e04-4f3c-88b9-db726496f41e",
  CellID->19748468],
 Cell[CellGroupData[{
-Cell[3519, 108, 109, 1, 72, "MetadataSection",ExpressionUUID->"0ffa0f83-1b21-4712-84c8-f5c4e6bfd15c",
+Cell[4350, 127, 109, 1, 72, "MetadataSection",ExpressionUUID->"0ffa0f83-1b21-4712-84c8-f5c4e6bfd15c",
  CellID->31241006],
-Cell[3631, 111, 473, 11, 26, "History",ExpressionUUID->"eb30f4e1-442b-4b8f-82dc-bf4efc67f5e1",
+Cell[4462, 130, 473, 11, 26, "History",ExpressionUUID->"eb30f4e1-442b-4b8f-82dc-bf4efc67f5e1",
  CellID->121043794],
 Cell[CellGroupData[{
-Cell[4129, 126, 121, 1, 21, "CategorizationSection",ExpressionUUID->"21d02a8f-bbe4-42b6-85af-faae6ac8b18f",
+Cell[4960, 145, 121, 1, 21, "CategorizationSection",ExpressionUUID->"21d02a8f-bbe4-42b6-85af-faae6ac8b18f",
  CellID->37673104],
-Cell[4253, 129, 133, 2, 35, "Categorization",ExpressionUUID->"2342c68f-8c39-40df-87c0-5c3c53186efb",
+Cell[5084, 148, 133, 2, 35, "Categorization",ExpressionUUID->"2342c68f-8c39-40df-87c0-5c3c53186efb",
  CellID->828827104],
-Cell[4389, 133, 157, 2, 35, "Categorization",ExpressionUUID->"18d56dfe-5832-487a-9a5e-f9909afc1b31",
+Cell[5220, 152, 157, 2, 35, "Categorization",ExpressionUUID->"18d56dfe-5832-487a-9a5e-f9909afc1b31",
  CellID->149706257],
-Cell[4549, 137, 154, 2, 35, "Categorization",ExpressionUUID->"90e6120d-3959-401e-8e77-4f2c1f5aeea3",
+Cell[5380, 156, 154, 2, 35, "Categorization",ExpressionUUID->"90e6120d-3959-401e-8e77-4f2c1f5aeea3",
  CellID->917268226],
-Cell[4706, 141, 148, 2, 35, "Categorization",ExpressionUUID->"37929f34-405e-4c48-8a90-7362df617105",
+Cell[5537, 160, 148, 2, 35, "Categorization",ExpressionUUID->"37929f34-405e-4c48-8a90-7362df617105",
  CellID->97258555]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4891, 148, 110, 1, 31, "KeywordsSection",ExpressionUUID->"b323a9bd-a353-42ea-8004-c3a483bb0f14",
+Cell[5722, 167, 110, 1, 31, "KeywordsSection",ExpressionUUID->"b323a9bd-a353-42ea-8004-c3a483bb0f14",
  CellID->419411303],
-Cell[5004, 151, 98, 1, 70, "Keywords",ExpressionUUID->"52289f88-74ae-4ecb-b124-651cc5f1e75a",
+Cell[5835, 170, 98, 1, 70, "Keywords",ExpressionUUID->"52289f88-74ae-4ecb-b124-651cc5f1e75a",
  CellID->61699357]
 }, Closed]]
 }, Open  ]]

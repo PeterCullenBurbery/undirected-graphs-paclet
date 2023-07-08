@@ -45,6 +45,19 @@
             "File"
             ->
             File[
+                "Kernel\\CoboundaryPolynomial.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "7f5bc67ab7c1b2aed11519293fc05e7090f9833858647b53b454fc41ef4fa701"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\CombGraph.wl"
             ]
             ,
@@ -136,6 +149,19 @@
             "File"
             ->
             File[
+                "Kernel\\IndependencePolynomial.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "2beea3c05c96a666bb739cfde4728bf607e0a0384c35d6614c0db5d72878e7dd"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\KayakPaddleGraph.wl"
             ]
             ,
@@ -206,7 +232,20 @@
             ,
             "Hash"
             ->
-            "da5921abc93a022582042530d180bbf00c8cd4b1427386fbd8908b94fe659bab"
+            "522060f5cc5c807546fb3f8a68726e616264df306d1d0001e2bec0bff5c24d63"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\ResistanceMatrix.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "f98707a0d991d064feaa5144ac3f1497964235ea8c419a67dfcd13ecd66aec1c"
                 
         |>
         ,
@@ -258,7 +297,7 @@
             ,
             "Hash"
             ->
-            "6efae707f7ef62f183ae5a6059b935344e00ce442bd784d93b173e54bcae1356"
+            "0827a0e476270589bde45a8784e44b9b800d20ebe749893d72f4131a99f83f24"
                 
         |>
         ,
@@ -298,7 +337,7 @@
             ,
             "Hash"
             ->
-            "547fb233b8739405f332d3737b43b946e86596c41a830c7b38724ca286001ffd"
+            "f2c8f817ed91768f9f2d41f9edd7b3a0329105318e2d63213271f8917fccc8d4"
                 
         |>
         ,
@@ -312,7 +351,7 @@
             ,
             "Hash"
             ->
-            "29e3da705c06c406219d3913a0eb9bbb36702ed7801e200925ce6a85bfc60c88"
+            "52c238b61f05787a89274d635d9fde28d034467eafc497ad421cb1e33f0e5a87"
                 
         |>
         ,
@@ -431,6 +470,20 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\CoboundaryPolynomial.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "0a44a8d83c8f739cf026312933d8a8662d10d6ec79f5d65af64fde2f05e3b112"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\CombGraph.nb"
                     
             ]
@@ -522,6 +575,20 @@
             "Hash"
             ->
             "00e846ac6c369cf6908ab8f1ec5df0cf25dab5399d151124204292af84c3b68f"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\IndependencePolynomial.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "615f0bddc45f932bbabb719dde385516c89c8077da71e2a985fbf9e8fdc145a9"
                 
         |>
         ,
@@ -721,7 +788,35 @@
             ,
             "Hash"
             ->
-            "27e15d98d50cd7bc2ce3be988e6d378ef3cf94ae5bc277aedbe26e33eac7f6a7"
+            "28030cee84f613dba159396fb3a70289531d8b7c3e6a909354a74e76de760648"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\ReliabilityPolynomial.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "ac1db0ae014fb913c0b772024128a013e82357319c677ba9a6648cdb6b687e48"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\ResistanceMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "37beb18e065604b893d456965a7f5cbb0d76f3652b4011012327b25c8638f967"
                 
         |>
         ,

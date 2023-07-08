@@ -391,5 +391,20 @@
 		"DeleteStopWords" -> True,
 		"StoreTermVectors" -> False,
 		"BulkRetrievalOptimized" -> False
+	|>,
+	<|
+		"Name" -> "FunctionsSubsection",
+		"Type" -> "Text",
+		"Tokenized" -> True,
+		"Stored" -> False,
+		"Weight" -> 1,
+		"Searchable" -> True,
+		"Language" -> "English",
+		"IgnoreCase" -> True,
+		"StemmingMethod" -> Automatic,
+		"CamelCaseMatching" -> True,
+		"DeleteStopWords" -> True,
+		"StoreTermVectors" -> False,
+		"BulkRetrievalOptimized" -> False
 	|>
 }

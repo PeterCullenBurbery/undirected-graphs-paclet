@@ -8,15 +8,32 @@ Begin["`Private`"]
 
 ReliabilityPolynomial // ClearAll
 
-TadpoleGraph::usage = "TadpoleGraph[{m, n}] makes an m, n tadpole graph.";
+ReliabilityPolynomial::usage="ReliabilityPolynomial[graph] gives the reliability polynomial of graph. ReliabilityPolynomial[graph,indeterminate] gives the reliability polynomial of graph with the indeterminate indeterminate.";
 
-TadpoleGraph[{m_?PositiveIntegerQ /; 3 <= m, n_?PositiveIntegerQ}, opts
-     : OptionsPattern[Graph]] :=
-    Graph[EdgeAdd[CycleGraph[m], UndirectedEdge @@@ Partition[Range[n
-         + 1] + m - 1, 2, 1]], opts, VertexCoordinates -> Join[Thread[Range[m
-        ] -> CirclePoints[{1, (2 \[Pi]) / m}, m]], MapThread[#1 -> {#2, 0}&, 
-        {Range[m + 1, m + n], Range[2, n + 1]}]]]
+ReliabilityPolynomial[graph_?GraphQ, Optional[firstIndeterminate_, \[FormalP]
+     ]] :=
+     Module[{tuttePolynomial, vertexCount, connectedComponents, connectedComponentsCount,
+           edgeCount},
+          tuttePolynomial = TuttePolynomial[graph, {1, firstIndeterminate
+                ^ -1}];
+          connectedComponents = ConnectedGraphComponents[graph];
+          (*The number of connected components is denoted by c at MathWorld
+               *)
+          connectedComponentsCount = Length[connectedComponents];
+          (*The number of vertexes is denoted by n at MathWorld*)
+          vertexCount = VertexCount[graph];
+          (*The number of edges is denoted by m at MathWorld*)
+          edgeCount = EdgeCount[graph];
+(*This is based on C(p)=(1-p)^(n-c) p^(m-n+c) T(1, p^-1)
+where T is the Tutte polynomial from MathWorld.*)
+          Simplify[(1 - firstIndeterminate) ^ (vertexCount - connectedComponentsCount
+               ) firstIndeterminate ^ (edgeCount - vertexCount + connectedComponentsCount
+               ) tuttePolynomial]
+     ]
 
 End[]
 
 EndPackage[]
+
+
+

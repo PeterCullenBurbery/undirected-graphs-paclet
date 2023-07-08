@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23974,        608]
-NotebookOptionsPosition[     19788,        527]
-NotebookOutlinePosition[     21872,        574]
-CellTagsIndexPosition[     21829,        571]
+NotebookDataLength[     25473,        649]
+NotebookOptionsPosition[     21004,        562]
+NotebookOutlinePosition[     23088,        609]
+CellTagsIndexPosition[     23045,        606]
 WindowTitle->Graph Construction and Representation
 WindowFrame->Normal*)
 
@@ -28,11 +28,11 @@ Cell[BoxData[GridBox[{
            "Spacer1"], Cell[
           "PETER BURBERY/ UNDIRECTED GRAPHS GUIDE", "PacletNameCell",
            TextAlignment->Center,ExpressionUUID->
-           "bcc4ff90-08f7-4b8c-b1d3-9ec132a52e9f"], 
+           "8d4fb373-9ab5-413f-add2-ab70b710319d"], 
           TemplateBox[{8},
            "Spacer1"]}]],
          TextAlignment->Center,ExpressionUUID->
-         "515beeab-ea11-4489-af7f-99aba0d0961c"],
+         "2ae00efd-c20c-466d-ab26-3548d9ccbcd1"],
         Background->RGBColor[0.85098, 0.396078, 0],
         ItemSize->Full], ""}
      },
@@ -52,8 +52,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "c7aa11b2-b670-42e3-ae0d-e9fcc57aa76a"]
-         }],ExpressionUUID->"d32bfb12-b76a-43f1-bb0c-911b6025d76c"],
+           "785f3c0a-23c0-474c-b8d5-bcd272eca719"]
+         }],ExpressionUUID->"7a9c0d50-4228-485f-99df-be0138f2eeb8"],
          StripOnInput->False],{
         "\"AlternatingTreeGraph\"" :> 
          Documentation`HelpLookup[
@@ -80,6 +80,9 @@ Cell[BoxData[GridBox[{
          Documentation`HelpLookup[
           "paclet:Undirected Graphs/ref/LadderRungGraph"], "\"PanGraph\"" :> 
          Documentation`HelpLookup["paclet:Undirected Graphs/ref/PanGraph"], 
+         "\"ResistanceMatrix\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/UndirectedGraphs/ref/ResistanceMatrix"], 
          "\"SunletGraph\"" :> 
          Documentation`HelpLookup["paclet:Undirected Graphs/ref/SunletGraph"],
           "\"TadpoleGraph\"" :> 
@@ -90,7 +93,7 @@ Cell[BoxData[GridBox[{
         MenuStyle->"GuideFunction"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "b0591bd3-8642-4e71-b7d9-712d27b3697b"],
+      "19877aa5-6c57-4810-a20b-d446bbb92c5d"],
      "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
 \[ThickSpace]",
      Cell[BoxData[
@@ -106,8 +109,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "1462f383-4063-407e-ada8-c82b5076e009"]
-         }],ExpressionUUID->"ee4b4ee6-bfa3-4410-95f5-aa1a067de2db"],
+           "d39f3a5f-d639-4e65-95d4-7030564cc27a"]
+         }],ExpressionUUID->"4e0fc711-7a89-4d34-832d-6bc99368096c"],
          StripOnInput->False],{
         "\"Computation on Graphs\"" :> 
          Documentation`HelpLookup[
@@ -117,7 +120,7 @@ Cell[BoxData[GridBox[{
         MenuStyle->"GuideMoreAbout"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "06333a63-214e-4bde-a6d5-154c4f483aea"],
+      "977d4b54-f9d2-4b42-b693-864cc421961c"],
      "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
 \[ThickSpace]",
      Cell[BoxData[
@@ -133,8 +136,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "c38ba70f-1b5f-494e-a2b7-016ff580849a"]
-         }],ExpressionUUID->"ff93928b-98a4-4ce2-b885-f79e917acc3c"],
+           "d3c86208-2661-478c-ac6e-b0527d6f392e"]
+         }],ExpressionUUID->"a0d5fbd5-cfbc-4a88-8afb-ddad33411ef3"],
          StripOnInput->False],{
         "\"PeterBurbery/UndirectedGraphs\"" :> None, 
          "\"Copy Wolfram Documentation Center URL\"" :> 
@@ -163,7 +166,7 @@ UndirectedGraphs.html"], StandardForm]], "Input", TextClipboardType ->
          "\"Go to web URL\"" :> 
          FrontEndExecute[{
            NotebookLocate[{
-             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$348833], 
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$516995], 
                  "http://reference.wolfram.com/system-modeler/", 
                  "http://reference.wolfram.com/language/"] <> 
                "PeterBurbery/UndirectedGraphs" <> ".html"], None}]}]},
@@ -172,12 +175,12 @@ UndirectedGraphs.html"], StandardForm]], "Input", TextClipboardType ->
         MenuStyle->"URLMenu"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "a9774fa5-35ff-4984-a270-d4ec5c426f43"]
+      "12e69cda-65f1-4c01-8f7f-3268dac4fbef"]
     }], "AnchorBar",
      CacheGraphics->False,ExpressionUUID->
-     "2cd4b21a-c09e-4ac8-98d4-85aa28a66217"]}
+     "e3c55bfe-9403-4f3a-934b-66d81033043d"]}
   }]], "AnchorBarGrid",
- CellID->1,ExpressionUUID->"495aa8a7-02a8-4f44-abda-7ed0384c2524"],
+ CellID->1,ExpressionUUID->"485e495f-1ab7-45ce-a78c-43a0e8c54bf4"],
 
 Cell[CellGroupData[{
 
@@ -194,7 +197,7 @@ support all graph options.\
 \>", "GuideAbstract",
  CellID->291710020,ExpressionUUID->"72059bbc-d277-49ea-a791-4afad9b82270"],
 
-Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"ae5a061f-b043-4211-ab12-a8adc0c5d359"],
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"00d417a2-4024-41e6-af9b-739e50d4734f"],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -499,7 +502,39 @@ Cell[TextData[{
      Automatic, PassEventsUp -> True}]]],ExpressionUUID->
   "920f28e5-81de-4b96-bea0-6ed5e79ace1f"]
 }], "GuideText",
- CellID->979622823,ExpressionUUID->"1c48c2f9-5db9-46ac-8d6b-01ef893343b6"]
+ CellID->979622823,ExpressionUUID->"1c48c2f9-5db9-46ac-8d6b-01ef893343b6"],
+
+Cell[CellGroupData[{
+
+Cell["Matrix Representations", "GuideFunctionsSubsection",
+ CellID->78993503,ExpressionUUID->"ab721f45-cf85-42eb-b509-c8f83b8e5275"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["ResistanceMatrix"]], 
+    "paclet:PeterBurbery/UndirectedGraphs/ref/ResistanceMatrix", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cab85ade-e1f2-4d43-bbe3-4cab2ae7dc2f",ExpressionUUID->
+  "f4305edf-936f-4281-a134-9357b1a71b0a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ Cell[BoxData[
+  TagBox[
+   RowBox[{
+   "compute", " ", "the", " ", "resistance", " ", "matrix", " ", "of", " ", 
+    "a", " ", "graph"}],
+   EventHandlerTag[{"MouseClicked" :> SelectionMove[
+       EvaluationCell[], All, Cell], Method -> "Preemptive", PassEventsDown -> 
+     Automatic, PassEventsUp -> True}]]],ExpressionUUID->
+  "c6277b8b-182a-48dc-b42f-450018c97daf"]
+}], "GuideText",
+ CellID->14688003,ExpressionUUID->"52942f43-8ac1-48ea-98d2-300d094eeb7a"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[BoxData[GridBox[{
@@ -520,10 +555,10 @@ Cell[BoxData[GridBox[{
           BaseStyle->{"GuideMoreAbout"}]], "GuideMoreAbout",ExpressionUUID->
          "478e5fbf-d40a-4603-ba8f-254f4a4b1653"]}]}
      }]}
-  }]], "GuideMoreAboutSection",ExpressionUUID->"0df66f76-12ca-4baa-a8a5-\
-14b48e5ad67a"],
+  }]], "GuideMoreAboutSection",ExpressionUUID->"455e9aee-de3b-4ff8-9865-\
+6d99572f3f1a"],
 
-Cell[" ", "FooterCell",ExpressionUUID->"706f0a0a-79cb-4a06-ad56-ae64f0a1edf5"]
+Cell[" ", "FooterCell",ExpressionUUID->"dbaca0c7-326c-4c29-ab19-12218006b924"]
 },
 Saveable->False,
 ScreenStyleEnvironment->"Working",
@@ -538,7 +573,7 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2023, 7, 8, 12, 1, 29.3083380}", 
+   "built" -> "{2023, 7, 8, 16, 43, 6.1407184}", 
     "history" -> {"XX", "", "", ""}, "context" -> 
     "PeterBurbery`UndirectedGraphs`", "keywords" -> {}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
@@ -551,7 +586,7 @@ families. Some of these graph functions support custom graph embeddings and \
 layouts that calculate the vertex coordinates instead of using a specific \
 GraphLayout option to highlight features of the graph. All graph functions \
 support all graph options.", "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$348791, "title" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$516951, "title" -> 
     "Graph Construction and Representation", "titlemodifier" -> "", 
     "metadescription" -> "", "windowtitle" -> 
     "Graph Construction and Representation", "type" -> "Guide", "uri" -> 
@@ -560,7 +595,7 @@ CacheGraphics->False,
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
   CharacterEncoding -> "UTF-8"],
-ExpressionUUID->"57c5d60e-2699-4655-996e-a913aa7ec922"
+ExpressionUUID->"909d5c82-158c-4d53-8baa-1f6ae60fca1d"
 ]
 (* End of Notebook Content *)
 
@@ -573,43 +608,49 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[609, 21, 6752, 158, 70, "AnchorBarGrid",ExpressionUUID->"495aa8a7-02a8-4f44-abda-7ed0384c2524",
+Cell[609, 21, 6896, 161, 70, "AnchorBarGrid",ExpressionUUID->"485e495f-1ab7-45ce-a78c-43a0e8c54bf4",
  CellID->1],
 Cell[CellGroupData[{
-Cell[7386, 183, 133, 1, 70, "GuideTitle",ExpressionUUID->"12f30172-0298-4847-b943-692ed3fd2078",
+Cell[7530, 186, 133, 1, 70, "GuideTitle",ExpressionUUID->"12f30172-0298-4847-b943-692ed3fd2078",
  CellID->93145636],
-Cell[7522, 186, 513, 8, 70, "GuideAbstract",ExpressionUUID->"72059bbc-d277-49ea-a791-4afad9b82270",
+Cell[7666, 189, 513, 8, 70, "GuideAbstract",ExpressionUUID->"72059bbc-d277-49ea-a791-4afad9b82270",
  CellID->291710020],
-Cell[8038, 196, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"ae5a061f-b043-4211-ab12-a8adc0c5d359"],
-Cell[8134, 198, 846, 21, 70, "GuideText",ExpressionUUID->"d551e76a-cb53-486f-bfa0-b6bf0a982689",
+Cell[8182, 199, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"00d417a2-4024-41e6-af9b-739e50d4734f"],
+Cell[8278, 201, 846, 21, 70, "GuideText",ExpressionUUID->"d551e76a-cb53-486f-bfa0-b6bf0a982689",
  CellID->3450567],
-Cell[8983, 221, 836, 22, 70, "GuideText",ExpressionUUID->"db4b611f-da79-44af-bc10-20efcea85724",
+Cell[9127, 224, 836, 22, 70, "GuideText",ExpressionUUID->"db4b611f-da79-44af-bc10-20efcea85724",
  CellID->9848065],
-Cell[9822, 245, 806, 21, 70, "GuideText",ExpressionUUID->"9996c131-f59d-41da-ba57-da4188fcb805",
+Cell[9966, 248, 806, 21, 70, "GuideText",ExpressionUUID->"9996c131-f59d-41da-ba57-da4188fcb805",
  CellID->594853579],
-Cell[10631, 268, 806, 21, 70, "GuideText",ExpressionUUID->"b1770a05-29af-44e5-bddc-e634324cadc0",
+Cell[10775, 271, 806, 21, 70, "GuideText",ExpressionUUID->"b1770a05-29af-44e5-bddc-e634324cadc0",
  CellID->221374989],
-Cell[11440, 291, 831, 22, 70, "GuideText",ExpressionUUID->"84d3b11d-657e-4e00-8cd1-970992ffb698",
+Cell[11584, 294, 831, 22, 70, "GuideText",ExpressionUUID->"84d3b11d-657e-4e00-8cd1-970992ffb698",
  CellID->70251640],
-Cell[12274, 315, 806, 21, 70, "GuideText",ExpressionUUID->"28ec36e7-0740-4a5e-94c6-49ff9384fe14",
+Cell[12418, 318, 806, 21, 70, "GuideText",ExpressionUUID->"28ec36e7-0740-4a5e-94c6-49ff9384fe14",
  CellID->161431230],
-Cell[13083, 338, 896, 23, 70, "GuideText",ExpressionUUID->"15527653-0664-459c-a696-64331dc2c9ae",
+Cell[13227, 341, 896, 23, 70, "GuideText",ExpressionUUID->"15527653-0664-459c-a696-64331dc2c9ae",
  CellID->486506445],
-Cell[13982, 363, 806, 21, 70, "GuideText",ExpressionUUID->"525b6fae-b2f7-4da0-8314-0a7744261030",
+Cell[14126, 366, 806, 21, 70, "GuideText",ExpressionUUID->"525b6fae-b2f7-4da0-8314-0a7744261030",
  CellID->687111662],
-Cell[14791, 386, 841, 22, 70, "GuideText",ExpressionUUID->"eeca8517-c879-459f-821c-2417578ada68",
+Cell[14935, 389, 841, 22, 70, "GuideText",ExpressionUUID->"eeca8517-c879-459f-821c-2417578ada68",
  CellID->198992146],
-Cell[15635, 410, 838, 22, 70, "GuideText",ExpressionUUID->"076d8be0-ea1b-4dc2-8733-0674a6af6a84",
+Cell[15779, 413, 838, 22, 70, "GuideText",ExpressionUUID->"076d8be0-ea1b-4dc2-8733-0674a6af6a84",
  CellID->582017019],
-Cell[16476, 434, 803, 21, 70, "GuideText",ExpressionUUID->"3953cad8-ad18-4043-834e-1570742f3a4f",
+Cell[16620, 437, 803, 21, 70, "GuideText",ExpressionUUID->"3953cad8-ad18-4043-834e-1570742f3a4f",
  CellID->108180055],
-Cell[17282, 457, 811, 21, 70, "GuideText",ExpressionUUID->"db927c0c-b378-48fb-a97c-f2bdcfb915db",
+Cell[17426, 460, 811, 21, 70, "GuideText",ExpressionUUID->"db927c0c-b378-48fb-a97c-f2bdcfb915db",
  CellID->35998732],
-Cell[18096, 480, 815, 21, 70, "GuideText",ExpressionUUID->"1c48c2f9-5db9-46ac-8d6b-01ef893343b6",
- CellID->979622823]
+Cell[18240, 483, 815, 21, 70, "GuideText",ExpressionUUID->"1c48c2f9-5db9-46ac-8d6b-01ef893343b6",
+ CellID->979622823],
+Cell[CellGroupData[{
+Cell[19080, 508, 132, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"ab721f45-cf85-42eb-b509-c8f83b8e5275",
+ CellID->78993503],
+Cell[19215, 511, 900, 24, 70, "GuideText",ExpressionUUID->"52942f43-8ac1-48ea-98d2-300d094eeb7a",
+ CellID->14688003]
+}, Open  ]]
 }, Open  ]],
-Cell[18926, 504, 777, 19, 70, "GuideMoreAboutSection",ExpressionUUID->"0df66f76-12ca-4baa-a8a5-14b48e5ad67a"],
-Cell[19706, 525, 78, 0, 70, "FooterCell",ExpressionUUID->"706f0a0a-79cb-4a06-ad56-ae64f0a1edf5"]
+Cell[20142, 539, 777, 19, 70, "GuideMoreAboutSection",ExpressionUUID->"455e9aee-de3b-4ff8-9865-6d99572f3f1a"],
+Cell[20922, 560, 78, 0, 70, "FooterCell",ExpressionUUID->"dbaca0c7-326c-4c29-ab19-12218006b924"]
 }
 ]
 *)
